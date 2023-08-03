@@ -1,0 +1,17 @@
+94, 148, 255 - primary
+#5e94ff
+125, 137, 149 - secondary text
+#7d8995
+ ◐ ◑ ◒ ◓
+
+94, 105, 255 - primary dark
+#5e69ff
+	
+
+DarkViolet
+
+0, 118, 212
+#0076d4
+
+Control Size
+- 714, 597
