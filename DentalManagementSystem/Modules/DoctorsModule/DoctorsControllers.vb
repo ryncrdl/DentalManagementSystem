@@ -1,5 +1,5 @@
-﻿Imports System.Numerics
-Imports MongoDB.Bson
+﻿Imports MongoDB.Bson
+Imports MongoDB.Bson.Serialization.Attributes
 Imports MongoDB.Driver
 
 Module DoctorsControllers
@@ -67,14 +67,16 @@ Module DoctorsControllers
             ' Validate the ObjectId format of the doctorId
             If ObjectId.TryParse(doctorId, Nothing) Then
                 ' Create the filter to match the document with the specified doctorId
-                'Dim filter = Builders(Of BsonDocument).Filter.Eq("_id", ObjectId.Parse(doctorId))
+
                 Dim filter = Builders(Of BsonDocument).Filter.Empty
                 Dim data = collection.Find(filter).ToList()
 
                 ' Delete the document matching the filter
                 Dim deleteResult = collection.DeleteOne(filter)
                 If deleteResult.DeletedCount > 0 Then
-                    MessageBox.Show("Doctor deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    Dim DoctorsControl As New DoctorsControl()
+                    DoctorsControl.SuccessfulMessage.Show("Doctor deleted successfully!")
                     LoadDataIntoDataGridView("doctors", table)
                 Else
                     MessageBox.Show("Doctor not found or could not be deleted.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -88,6 +90,7 @@ Module DoctorsControllers
     End Sub
 
     'Update
+
 
     Public Function GetMongoDBCollection() As IMongoCollection(Of BsonDocument)
         If Connection.collection Is Nothing Then

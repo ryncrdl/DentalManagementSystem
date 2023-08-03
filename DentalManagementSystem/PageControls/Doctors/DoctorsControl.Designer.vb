@@ -50,7 +50,9 @@ Partial Class DoctorsControl
         BtnAdd = New Guna.UI2.WinForms.Guna2Button()
         BtnDelete = New Guna.UI2.WinForms.Guna2Button()
         BtnEdit = New Guna.UI2.WinForms.Guna2Button()
-        MessageDelete = New Guna.UI2.WinForms.Guna2MessageDialog()
+        QuestionMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         CType(DoctorsTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -282,14 +284,32 @@ Partial Class DoctorsControl
         BtnEdit.Size = New Size(30, 30)
         BtnEdit.TabIndex = 15
         ' 
-        ' MessageDelete
+        ' QuestionMessage
         ' 
-        MessageDelete.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo
-        MessageDelete.Caption = Nothing
-        MessageDelete.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question
-        MessageDelete.Parent = Nothing
-        MessageDelete.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
-        MessageDelete.Text = "Are you sure you want to delete this doctor?"
+        QuestionMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo
+        QuestionMessage.Caption = Nothing
+        QuestionMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question
+        QuestionMessage.Parent = Nothing
+        QuestionMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        QuestionMessage.Text = ""
+        ' 
+        ' SuccessfulMessage
+        ' 
+        SuccessfulMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        SuccessfulMessage.Caption = Nothing
+        SuccessfulMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        SuccessfulMessage.Parent = Nothing
+        SuccessfulMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        SuccessfulMessage.Text = Nothing
+        ' 
+        ' ErrorMessage
+        ' 
+        ErrorMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        ErrorMessage.Caption = Nothing
+        ErrorMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
+        ErrorMessage.Parent = Nothing
+        ErrorMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        ErrorMessage.Text = Nothing
         ' 
         ' DoctorsControl
         ' 
@@ -317,11 +337,13 @@ Partial Class DoctorsControl
     Friend WithEvents BtnAdd As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnEdit As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnDelete As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents QuestionMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Firstname As DataGridViewTextBoxColumn
     Friend WithEvents Lastname As DataGridViewTextBoxColumn
     Friend WithEvents Contact As DataGridViewTextBoxColumn
     Friend WithEvents Email As DataGridViewTextBoxColumn
     Friend WithEvents Address As DataGridViewTextBoxColumn
-    Friend WithEvents MessageDelete As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents SuccessfulMessage As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

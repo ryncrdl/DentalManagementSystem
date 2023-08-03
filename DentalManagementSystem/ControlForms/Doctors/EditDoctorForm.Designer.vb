@@ -56,6 +56,7 @@ Partial Class EditDoctorForm
         txtlastname = New Guna.UI2.WinForms.Guna2TextBox()
         BtnSave = New Guna.UI2.WinForms.Guna2GradientButton()
         txtfirstname = New Guna.UI2.WinForms.Guna2TextBox()
+        CustomMessageError = New Guna.UI2.WinForms.Guna2MessageDialog()
         SuspendLayout()
         ' 
         ' MessageSuccessfully
@@ -334,6 +335,15 @@ Partial Class EditDoctorForm
         txtfirstname.Size = New Size(390, 49)
         txtfirstname.TabIndex = 22
         ' 
+        ' CustomMessageError
+        ' 
+        CustomMessageError.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        CustomMessageError.Caption = Nothing
+        CustomMessageError.Icon = Guna.UI2.WinForms.MessageDialogIcon.None
+        CustomMessageError.Parent = Nothing
+        CustomMessageError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
+        CustomMessageError.Text = Nothing
+        ' 
         ' EditDoctorForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -377,4 +387,5 @@ Partial Class EditDoctorForm
     Friend WithEvents BtnSave As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents txtfirstname As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CreateMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents CustomMessageError As Guna.UI2.WinForms.Guna2MessageDialog
 End Class
