@@ -1,8 +1,8 @@
-﻿Imports MongoDB.Bson
+﻿Imports System.Numerics
+Imports MongoDB.Bson
 Imports MongoDB.Driver
 
 Module DoctorsControllers
-
 
     'Load Data
     Public Sub LoadDataIntoDataGridView(collectionName As String, dataGridView As Guna.UI2.WinForms.Guna2DataGridView)
@@ -46,6 +46,10 @@ Module DoctorsControllers
             doctor.Add("Address", address)
 
             collection.InsertOne(doctor)
+
+            'Load data
+
+
             Return True ' Insertion successful
         Catch ex As Exception
             Throw New Exception("Error inserting doctor data into MongoDB: " & ex.Message)
@@ -55,7 +59,7 @@ Module DoctorsControllers
     End Function
 
     'Delete 
-    Public Sub DeleteDoctor(doctorId As String, DoctorsTable As Guna.UI2.WinForms.Guna2DataGridView)
+    Public Sub DeleteDoctor(doctorId As String, table As Guna.UI2.WinForms.Guna2DataGridView)
         Try
             ' Connect to MongoDB and get the collection
             Dim collection As IMongoCollection(Of BsonDocument) = GetMongoDBCollection()
@@ -66,12 +70,12 @@ Module DoctorsControllers
                 'Dim filter = Builders(Of BsonDocument).Filter.Eq("_id", ObjectId.Parse(doctorId))
                 Dim filter = Builders(Of BsonDocument).Filter.Empty
                 Dim data = collection.Find(filter).ToList()
-                LoadDataIntoDataGridView("doctors", DoctorsTable)
 
                 ' Delete the document matching the filter
                 Dim deleteResult = collection.DeleteOne(filter)
                 If deleteResult.DeletedCount > 0 Then
                     MessageBox.Show("Doctor deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    LoadDataIntoDataGridView("doctors", table)
                 Else
                     MessageBox.Show("Doctor not found or could not be deleted.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
@@ -83,9 +87,7 @@ Module DoctorsControllers
         End Try
     End Sub
 
-    Private Sub LoadDataIntoDataGridView(v As String)
-        Throw New NotImplementedException()
-    End Sub
+    'Update
 
     Public Function GetMongoDBCollection() As IMongoCollection(Of BsonDocument)
         If Connection.collection Is Nothing Then
@@ -93,9 +95,5 @@ Module DoctorsControllers
         End If
         Return Connection.collection
     End Function
-
-
-
-
 
 End Module

@@ -5,11 +5,7 @@ Imports MongoDB.Driver
 
 Public Class CreateDoctorForm
     Private data As List(Of Guna.UI2.WinForms.Guna2TextBox)
-    Public DoctorsTable As New Guna.UI2.WinForms.Guna2DataGridView
-    Public Sub GetTable(table As Guna.UI2.WinForms.Guna2DataGridView)
-        DoctorsTable = table
-    End Sub
-
+    Public Event DoctorAdded As EventHandler
 
     Private Sub CreateDoctorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txtfirstname, txtlastname, txtcontact, txtemail, txtaddress}
@@ -34,14 +30,14 @@ Public Class CreateDoctorForm
             ' LoadingForm.ShowDialog()
             Try
                 If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
-                    MessageBox.Show("Doctor added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    ' MessageBox.Show("Doctor added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MessageSuccessfully.Show()
 
                     ' Clear the input fields after successful addition
                     Me.Close()
                     DoctorValidation.CreateData(data)
 
-                    'Fix to load data after adding new data
-                    LoadDataIntoDataGridView("doctors", DoctorsTable) 'fixed
+                    RaiseEvent DoctorAdded(Me, EventArgs.Empty)
                 End If
             Catch ex As Exception
                 MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
