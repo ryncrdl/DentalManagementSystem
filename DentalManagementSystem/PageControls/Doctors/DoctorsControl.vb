@@ -3,7 +3,6 @@ Imports MongoDB.Driver
 
 
 Public Class DoctorsControl
-
     Private collection As IMongoCollection(Of BsonDocument)
 
 
