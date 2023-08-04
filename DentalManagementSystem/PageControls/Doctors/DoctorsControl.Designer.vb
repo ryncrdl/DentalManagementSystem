@@ -84,6 +84,7 @@ Partial Class DoctorsControl
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionForeColor = Color.White
         DoctorsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        DoctorsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
         DoctorsTable.BackgroundColor = SystemColors.Control
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
@@ -160,30 +161,27 @@ Partial Class DoctorsControl
         ' 
         ' Firstname
         ' 
-        Firstname.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         Firstname.FillWeight = 150F
         Firstname.HeaderText = "First Name"
         Firstname.Name = "Firstname"
         Firstname.ReadOnly = True
-        Firstname.Width = 115
+        Firstname.Width = 160
         ' 
         ' Lastname
         ' 
-        Lastname.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         Lastname.FillWeight = 150F
         Lastname.HeaderText = "Last Name"
         Lastname.Name = "Lastname"
         Lastname.ReadOnly = True
-        Lastname.Width = 113
+        Lastname.Width = 161
         ' 
         ' Contact
         ' 
-        Contact.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         Contact.FillWeight = 150F
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 92
+        Contact.Width = 160
         ' 
         ' Email
         ' 

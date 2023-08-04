@@ -59,7 +59,7 @@ Partial Class LoadingForm
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(125, 137, 149)
         Guna2HtmlLabel1.Location = New Point(87, 189)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(118, 39)

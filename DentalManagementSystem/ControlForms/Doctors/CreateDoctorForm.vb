@@ -28,24 +28,22 @@ Public Class CreateDoctorForm
         Dim address As String = txtaddress.Text
 
         If (isValidate) Then
+            PerformDatabaseOperationWithLoadingScreen(
+                Sub()
+                    Try
+                        If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
+                            MessageSuccessfully.Show("Doctor added successfully!", "Doctor Success")
 
-            ' LoadingForm.ShowDialog()
-            Try
-                If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
-                    ' MessageBox.Show("Doctor added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    MessageSuccessfully.Show()
+                            ' Clear the input fields after successful addition
+                            Me.Close()
+                            DoctorValidation.CreateData(data)
 
-                    ' Clear the input fields after successful addition
-                    Me.Close()
-                    DoctorValidation.CreateData(data)
-
-                    RaiseEvent DoctorAdded(Me, EventArgs.Empty)
-                End If
-            Catch ex As Exception
-                MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                '  Finally
-                '    LoadingForm.Close()
-            End Try
+                            RaiseEvent DoctorAdded(Me, EventArgs.Empty)
+                        End If
+                    Catch ex As Exception
+                        MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End Try
+                End Sub)
         End If
 
     End Sub

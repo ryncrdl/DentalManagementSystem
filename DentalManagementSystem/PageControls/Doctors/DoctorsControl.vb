@@ -5,7 +5,6 @@ Imports MongoDB.Driver
 Public Class DoctorsControl
     Private collection As IMongoCollection(Of BsonDocument)
 
-
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
         Dim createDoctorForm As New CreateDoctorForm()
         AddHandler createDoctorForm.DoctorAdded, AddressOf LoadUpdatedData
@@ -18,9 +17,12 @@ Public Class DoctorsControl
     End Sub
 
     Private Sub DoctorsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadDataIntoDataGridView("doctors", DoctorsTable)
-        Connection.ConnectToMongoDB("doctors")
-        Me.collection = Connection.GetMongoDBCollection()
+        PerformDatabaseOperationWithLoadingScreen(
+        Sub()
+            LoadDataIntoDataGridView("doctors", DoctorsTable)
+            Connection.ConnectToMongoDB("doctors")
+            Me.collection = Connection.GetMongoDBCollection()
+        End Sub)
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
@@ -32,8 +34,11 @@ Public Class DoctorsControl
         Dim selectedRowIndex As Integer = DoctorsTable.CurrentRow.Index
         Dim doctorId As String = DoctorsTable.Rows(selectedRowIndex).Cells("ID").Value.ToString()
 
+
+
         Dim result = QuestionMessage.Show("Are you sure do you want to delete this record?")
         If result = DialogResult.Yes Then
+
             Try
                 ' Call the DeleteDoctor method from the DoctorsControllers module
                 DoctorsControllers.DeleteDoctor(doctorId, DoctorsTable)
@@ -41,8 +46,8 @@ Public Class DoctorsControl
                 ErrorMessage.Show("Error deleting doctor: ")
             End Try
         End If
-    End Sub
 
+    End Sub
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         ' Get the selected row data
         Dim rowData As Dictionary(Of String, String) = GetSelectedRowData()
@@ -78,6 +83,4 @@ Public Class DoctorsControl
 
         Return rowData
     End Function
-
-
 End Class
