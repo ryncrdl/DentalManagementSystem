@@ -27,10 +27,10 @@ Public Class CreateDoctorForm
         Dim email As String = txtemail.Text
         Dim address As String = txtaddress.Text
 
-        If (isValidate) Then
-            PerformDatabaseOperationWithLoadingScreen(
-                Sub()
-                    Try
+        ' If (isValidate) Then
+        ' PerformDatabaseOperationWithLoadingScreen(
+        ' Sub()
+        Try
                         If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
                             MessageSuccessfully.Show("Doctor added successfully!", "Doctor Success")
 
@@ -43,8 +43,8 @@ Public Class CreateDoctorForm
                     Catch ex As Exception
                         MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End Try
-                End Sub)
-        End If
+        ' End Sub)
+        ' End If
 
     End Sub
 
