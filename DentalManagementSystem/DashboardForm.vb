@@ -1,5 +1,6 @@
 ﻿
 Public Class DashboardForm
+    'TEST CHANGES
     'Controls
     Private DashboardControl As New DashboardControl()
     Private DoctorsControl As New DoctorsControl()
