@@ -50,6 +50,8 @@ Partial Class AdminRegistration
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(components)
+        SuccessMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         Guna2GradientPanel3.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Guna2GradientPanel1.SuspendLayout()
@@ -252,6 +254,24 @@ Partial Class AdminRegistration
         Guna2DragControl1.TargetControl = Guna2GradientPanel1
         Guna2DragControl1.UseTransparentDrag = True
         ' 
+        ' SuccessMessage
+        ' 
+        SuccessMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        SuccessMessage.Caption = Nothing
+        SuccessMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        SuccessMessage.Parent = Me
+        SuccessMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        SuccessMessage.Text = Nothing
+        ' 
+        ' ErrorMessage
+        ' 
+        ErrorMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        ErrorMessage.Caption = Nothing
+        ErrorMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
+        ErrorMessage.Parent = Me
+        ErrorMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        ErrorMessage.Text = Nothing
+        ' 
         ' AdminRegistration
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -281,4 +301,6 @@ Partial Class AdminRegistration
     Friend WithEvents txtconfirmpassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents txtpassword As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents SuccessMessage As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

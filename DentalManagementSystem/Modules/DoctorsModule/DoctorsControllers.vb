@@ -68,7 +68,7 @@ Module DoctorsControllers
             If ObjectId.TryParse(doctorId, Nothing) Then
                 ' Create the filter to match the document with the specified doctorId
 
-                Dim filter = Builders(Of BsonDocument).Filter.Empty
+                Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Eq(Of ObjectId)("_id", ObjectId.Parse(doctorId))
                 Dim data = collection.Find(filter).ToList()
 
                 ' Delete the document matching the filter

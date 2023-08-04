@@ -30,7 +30,7 @@ Public Class AdminRegistration
         Dim confirmPassword As String = txtconfirmpassword.Text
 
         If String.IsNullOrWhiteSpace(username) Or String.IsNullOrWhiteSpace(password) Or String.IsNullOrWhiteSpace(confirmPassword) Then
-            MessageBox.Show("ALL FIELDS REQUIRED!")
+            ErrorMessage.Show("All fields are required.", "Registration Error")
         Else
             Try
                 Dim admin As BsonDocument = New BsonDocument()
@@ -39,16 +39,16 @@ Public Class AdminRegistration
 
                 If confirmPassword = password Then
                     AdminControllers.InsertDataIntoMongoDB(admin)
-                    MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    txtusername.Text = ""
-                    txtpassword.Text = ""
-                    txtconfirmpassword.Text = ""
+                    SuccessMessage.Show("Registration successful!", "Registration Success")
+                    txtusername.Clear()
+                    txtpassword.Clear()
+                    txtconfirmpassword.Clear()
                     Me.Hide()
                 Else
-                    MessageBox.Show("Passwords do not match. Please re-enter your password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ErrorMessage.Show("Passwords do not match. Please re-enter your password.", "Registation Error")
                 End If
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ErrorMessage.Show(ex.Message, "Registration Error")
             End Try
         End If
     End Sub

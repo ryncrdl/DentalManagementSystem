@@ -79,7 +79,6 @@ Public Class EditDoctorForm
                 ' Create the equality filter for the doctor ID
                 Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Eq(Of ObjectId)("_id", ObjectId.Parse(doctorId))
 
-
                 ' Fetch the doctor information using the filter
                 Dim doctor = collection.Find(filter).FirstOrDefault()
 

@@ -17,12 +17,11 @@ Public Class LoginForm
     End Sub
 
     Private Sub Guna2CircleButton1_Click(sender As Object, e As EventArgs) Handles Guna2CircleButton1.Click
-        ' Display a confirmation dialog for exiting the application
-        Dim customDialog As New CustomMessageDialogForm("Are you sure you want to exit the application?")
-        Dim result As DialogResult = customDialog.ShowDialog()
+        ' Display a confirmation dialog for exiting the application  
+        Dim result As DialogResult = QuestionMessage.Show("Are you sure you want to exit the application?", "Login Question")
 
         ' Check the user's response
-        If result = DialogResult.OK Then
+        If result = DialogResult.Yes Then
             ' User chose "Yes," so close the applications
             Application.Exit()
         End If
@@ -44,31 +43,27 @@ Public Class LoginForm
                 Dim storedPassword As String = userDocument.GetValue("password").ToString()
 
                 If password = storedPassword Then
-                    Dim r As Integer
-
-                    r = MessageBox.Show("Are you sure to Log In?", "LOG IN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    Dim result As DialogResult = QuestionMessage.Show("Are you sure to Log In?", "Login Question")
                     ' Password matches; login successful.
-                    If r = vbYes Then
-
+                    If result = DialogResult.Yes Then
+                        SuccessMessage.Show("Login successful!", "Login Success")
                         DashboardForm.Show()
                         Me.Hide()
-                        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        ' Dim result = MessageBox.Show()
                     End If
-                    txtusername.Text = ""
-                    txtpassword.Text = ""
+                    txtusername.Clear()
+                    txtpassword.Clear()
 
 
                 Else
-                        ' Password doesn't match.
-                        MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    ' Password doesn't match.
+                    ErrorMessage.Show("Invalid username or password.", "Login Error")
                 End If
             Else
                 ' User not found (username doesn't exist in the database).
-                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                ErrorMessage.Show("Invalid username or password.", "Login Error")
             End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ErrorMessage.Show(ex.Message, "Login Error")
         End Try
     End Sub
 
