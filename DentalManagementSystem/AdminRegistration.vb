@@ -9,7 +9,7 @@ Public Class AdminRegistration
     Private Sub AdminRegistration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         password = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txtpassword, txtconfirmpassword}
         IconsPassword.LoadIcons(password)
-        Connection.ConnectToMongoDB("admin")
+        Connection.ConnectToMongoDB("admins")
     End Sub
 
     Private Sub txtpassword_IconRightClick(sender As Object, e As EventArgs) Handles txtpassword.IconRightClick

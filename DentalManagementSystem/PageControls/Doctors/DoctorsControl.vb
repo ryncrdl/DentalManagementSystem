@@ -32,7 +32,7 @@ Public Class DoctorsControl
         Dim selectedRowIndex As Integer = DoctorsTable.CurrentRow.Index
         Dim doctorId As String = DoctorsTable.Rows(selectedRowIndex).Cells("ID").Value.ToString()
 
-        Dim result = QuestionMessage.Show()
+        Dim result = QuestionMessage.Show("Are you sure do you want to delete this record?")
         If result = DialogResult.Yes Then
             Try
                 ' Call the DeleteDoctor method from the DoctorsControllers module

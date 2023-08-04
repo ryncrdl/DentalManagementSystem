@@ -9,6 +9,8 @@ Public Class CreateDoctorForm
 
     Private Sub CreateDoctorForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txtfirstname, txtlastname, txtcontact, txtemail, txtaddress}
+        Connection.ConnectToMongoDB("doctors")
+
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
