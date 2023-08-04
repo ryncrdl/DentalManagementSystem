@@ -1,3 +1,4 @@
-﻿Public Class LoadingForm
+﻿
+Public Class LoadingForm
 
 End Class

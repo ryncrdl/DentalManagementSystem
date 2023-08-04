@@ -23,11 +23,14 @@ Partial Class LoadingForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -44,12 +47,12 @@ Partial Class LoadingForm
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges3
         Guna2PictureBox1.Image = My.Resources.Resources.logo
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(55, 22)
+        Guna2PictureBox1.Location = New Point(63, 25)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2PictureBox1.Size = New Size(205, 161)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 0
@@ -59,18 +62,32 @@ Partial Class LoadingForm
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2HtmlLabel1.ForeColor = Color.FromArgb(125, 137, 149)
-        Guna2HtmlLabel1.Location = New Point(87, 189)
+        Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2HtmlLabel1.Location = New Point(38, 192)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(118, 39)
+        Guna2HtmlLabel1.Size = New Size(257, 39)
         Guna2HtmlLabel1.TabIndex = 1
-        Guna2HtmlLabel1.Text = "Loading..."
+        Guna2HtmlLabel1.Text = "Loading... Please wait"
+        ' 
+        ' Guna2GradientPanel1
+        ' 
+        Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges1
+        Guna2GradientPanel1.Dock = DockStyle.Bottom
+        Guna2GradientPanel1.FillColor = Color.DarkViolet
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        Guna2GradientPanel1.Location = New Point(0, 262)
+        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2GradientPanel1.Size = New Size(349, 30)
+        Guna2GradientPanel1.TabIndex = 2
         ' 
         ' LoadingForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(322, 264)
+        ClientSize = New Size(349, 292)
+        Controls.Add(Guna2GradientPanel1)
         Controls.Add(Guna2HtmlLabel1)
         Controls.Add(Guna2PictureBox1)
         FormBorderStyle = FormBorderStyle.None
@@ -86,4 +103,5 @@ Partial Class LoadingForm
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
 End Class
