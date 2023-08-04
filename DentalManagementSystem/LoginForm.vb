@@ -44,17 +44,24 @@ Public Class LoginForm
                 Dim storedPassword As String = userDocument.GetValue("password").ToString()
 
                 If password = storedPassword Then
-                    ' Password matches; login successful.
-                    MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    ' Dim result = MessageBox.Show()
+                    Dim r As Integer
 
-                    username = String.Empty
-                    password = String.Empty
-                    DashboardForm.Show()
-                    Me.Hide()
+                    r = MessageBox.Show("Are you sure to Log In?", "LOG IN", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    ' Password matches; login successful.
+                    If r = vbYes Then
+
+                        DashboardForm.Show()
+                        Me.Hide()
+                        MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        ' Dim result = MessageBox.Show()
+                    End If
+                    txtusername.Text = ""
+                    txtpassword.Text = ""
+
+
                 Else
-                    ' Password doesn't match.
-                    MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        ' Password doesn't match.
+                        MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             Else
                 ' User not found (username doesn't exist in the database).
