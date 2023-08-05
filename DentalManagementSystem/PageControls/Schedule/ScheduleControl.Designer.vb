@@ -38,7 +38,7 @@ Partial Class ScheduleControl
         BtnPending = New Guna.UI2.WinForms.Guna2GradientButton()
         BtnScheduled = New Guna.UI2.WinForms.Guna2GradientButton()
         BtnIneligible = New Guna.UI2.WinForms.Guna2GradientButton()
-        panel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        PanelTable = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         SuspendLayout()
         ' 
@@ -50,82 +50,109 @@ Partial Class ScheduleControl
         ' label1
         ' 
         label1.BackColor = Color.Transparent
-        label1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        label1.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
         label1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        label1.Location = New Point(39, 41)
+        label1.Location = New Point(29, 45)
         label1.Name = "label1"
-        label1.Size = New Size(85, 32)
+        label1.Size = New Size(109, 39)
         label1.TabIndex = 2
         label1.Text = "Pending"
         ' 
         ' BtnPending
         ' 
+        BtnPending.Animated = True
+        BtnPending.BackColor = Color.Transparent
+        BtnPending.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnPending.BorderRadius = 10
+        BtnPending.BorderThickness = 1
+        BtnPending.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        BtnPending.Checked = True
+        BtnPending.CheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnPending.CheckedState.FillColor2 = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnPending.CheckedState.ForeColor = Color.White
         BtnPending.CustomizableEdges = CustomizableEdges9
         BtnPending.DisabledState.BorderColor = Color.DarkGray
         BtnPending.DisabledState.CustomBorderColor = Color.DarkGray
         BtnPending.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnPending.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnPending.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        BtnPending.FillColor = Color.DarkViolet
-        BtnPending.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        BtnPending.FillColor = Color.Empty
+        BtnPending.FillColor2 = Color.Empty
         BtnPending.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        BtnPending.ForeColor = Color.White
-        BtnPending.Location = New Point(383, 45)
+        BtnPending.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnPending.Location = New Point(256, 45)
         BtnPending.Name = "BtnPending"
         BtnPending.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        BtnPending.Size = New Size(103, 28)
+        BtnPending.Size = New Size(137, 46)
         BtnPending.TabIndex = 10
         BtnPending.Text = "Pending"
         ' 
         ' BtnScheduled
         ' 
+        BtnScheduled.Animated = True
+        BtnScheduled.BackColor = Color.Transparent
+        BtnScheduled.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnScheduled.BorderRadius = 10
+        BtnScheduled.BorderThickness = 1
+        BtnScheduled.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        BtnScheduled.CheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnScheduled.CheckedState.FillColor2 = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnScheduled.CheckedState.ForeColor = Color.White
         BtnScheduled.CustomizableEdges = CustomizableEdges7
         BtnScheduled.DisabledState.BorderColor = Color.DarkGray
         BtnScheduled.DisabledState.CustomBorderColor = Color.DarkGray
         BtnScheduled.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnScheduled.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnScheduled.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        BtnScheduled.FillColor = Color.DarkViolet
-        BtnScheduled.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        BtnScheduled.FillColor = Color.Empty
+        BtnScheduled.FillColor2 = Color.Empty
         BtnScheduled.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        BtnScheduled.ForeColor = Color.White
-        BtnScheduled.Location = New Point(478, 45)
+        BtnScheduled.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnScheduled.Location = New Point(399, 45)
         BtnScheduled.Name = "BtnScheduled"
         BtnScheduled.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        BtnScheduled.Size = New Size(112, 28)
+        BtnScheduled.Size = New Size(137, 46)
         BtnScheduled.TabIndex = 11
         BtnScheduled.Text = "Scheduled"
         ' 
         ' BtnIneligible
         ' 
+        BtnIneligible.Animated = True
+        BtnIneligible.BackColor = Color.Transparent
+        BtnIneligible.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnIneligible.BorderRadius = 10
+        BtnIneligible.BorderThickness = 1
+        BtnIneligible.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        BtnIneligible.CheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnIneligible.CheckedState.FillColor2 = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnIneligible.CheckedState.ForeColor = Color.White
         BtnIneligible.CustomizableEdges = CustomizableEdges5
         BtnIneligible.DisabledState.BorderColor = Color.DarkGray
         BtnIneligible.DisabledState.CustomBorderColor = Color.DarkGray
         BtnIneligible.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnIneligible.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnIneligible.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        BtnIneligible.FillColor = Color.DarkViolet
-        BtnIneligible.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        BtnIneligible.FillColor = Color.Empty
+        BtnIneligible.FillColor2 = Color.Empty
         BtnIneligible.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        BtnIneligible.ForeColor = Color.White
-        BtnIneligible.Location = New Point(577, 45)
+        BtnIneligible.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        BtnIneligible.Location = New Point(542, 45)
         BtnIneligible.Name = "BtnIneligible"
         BtnIneligible.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        BtnIneligible.Size = New Size(112, 28)
+        BtnIneligible.Size = New Size(137, 46)
         BtnIneligible.TabIndex = 12
         BtnIneligible.Text = "ineligible"
         ' 
-        ' panel1
+        ' PanelTable
         ' 
-        panel1.CustomizableEdges = CustomizableEdges3
-        panel1.Location = New Point(39, 136)
-        panel1.Name = "panel1"
-        panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        panel1.Size = New Size(650, 465)
-        panel1.TabIndex = 13
+        PanelTable.BackColor = Color.Transparent
+        PanelTable.BorderRadius = 10
+        PanelTable.CustomizableEdges = CustomizableEdges3
+        PanelTable.Location = New Point(29, 164)
+        PanelTable.Name = "PanelTable"
+        PanelTable.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        PanelTable.Size = New Size(650, 386)
+        PanelTable.TabIndex = 13
         ' 
         ' Guna2TextBox1
         ' 
@@ -143,7 +170,7 @@ Partial Class ScheduleControl
         Guna2TextBox1.IconRight = My.Resources.Resources.icons8_search_100
         Guna2TextBox1.IconRightOffset = New Point(20, 0)
         Guna2TextBox1.IconRightSize = New Size(25, 25)
-        Guna2TextBox1.Location = New Point(39, 80)
+        Guna2TextBox1.Location = New Point(29, 105)
         Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
@@ -159,12 +186,12 @@ Partial Class ScheduleControl
         AutoScaleMode = AutoScaleMode.Font
         Controls.Add(label1)
         Controls.Add(Guna2TextBox1)
-        Controls.Add(panel1)
+        Controls.Add(PanelTable)
         Controls.Add(BtnIneligible)
         Controls.Add(BtnScheduled)
         Controls.Add(BtnPending)
         Name = "ScheduleControl"
-        Size = New Size(945, 640)
+        Size = New Size(714, 597)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -174,6 +201,6 @@ Partial Class ScheduleControl
     Friend WithEvents BtnPending As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnIneligible As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnScheduled As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents panel1 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents PanelTable As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
 End Class

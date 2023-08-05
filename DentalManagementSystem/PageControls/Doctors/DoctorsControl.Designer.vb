@@ -76,7 +76,6 @@ Partial Class DoctorsControl
         ' 
         DoctorsTable.AllowUserToAddRows = False
         DoctorsTable.AllowUserToDeleteRows = False
-        DoctorsTable.AllowUserToOrderColumns = True
         DoctorsTable.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.White
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
