@@ -184,6 +184,7 @@ Partial Class ScheduleControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         Controls.Add(label1)
         Controls.Add(Guna2TextBox1)
         Controls.Add(PanelTable)

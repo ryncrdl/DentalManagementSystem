@@ -64,11 +64,14 @@ Public Class DashboardForm
     End Sub
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
 
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "Confirm Logout",
-                                                      MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        Dim result As DialogResult = QuestionMessage.Show("Are you sure you want to logout?", "Confirm Logout")
         If result = DialogResult.Yes Then
             LoginForm.Show()
             Me.Hide()
         End If
+    End Sub
+
+    Private Sub ControlPanel_Paint(sender As Object, e As PaintEventArgs) Handles ControlPanel.Paint
+
     End Sub
 End Class

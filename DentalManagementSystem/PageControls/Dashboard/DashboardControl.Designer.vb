@@ -47,9 +47,10 @@ Partial Class DashboardControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         Controls.Add(Guna2HtmlLabel1)
         Name = "DashboardControl"
-        Size = New Size(945, 640)
+        Size = New Size(714, 597)
         ResumeLayout(False)
         PerformLayout()
     End Sub

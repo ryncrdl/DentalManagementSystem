@@ -66,7 +66,7 @@ Partial Class DoctorsControl
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2HtmlLabel1.Location = New Point(24, 28)
+        Guna2HtmlLabel1.Location = New Point(31, 30)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(266, 39)
         Guna2HtmlLabel1.TabIndex = 0
@@ -105,7 +105,7 @@ Partial Class DoctorsControl
         DoctorsTable.DefaultCellStyle = DataGridViewCellStyle3
         DoctorsTable.GridColor = Color.Silver
         DoctorsTable.ImeMode = ImeMode.NoControl
-        DoctorsTable.Location = New Point(24, 169)
+        DoctorsTable.Location = New Point(31, 171)
         DoctorsTable.Margin = New Padding(0)
         DoctorsTable.MultiSelect = False
         DoctorsTable.Name = "DoctorsTable"
@@ -216,7 +216,7 @@ Partial Class DoctorsControl
         Guna2TextBox1.IconRight = My.Resources.Resources.icons8_search_100
         Guna2TextBox1.IconRightOffset = New Point(20, 0)
         Guna2TextBox1.IconRightSize = New Size(25, 25)
-        Guna2TextBox1.Location = New Point(25, 97)
+        Guna2TextBox1.Location = New Point(32, 99)
         Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
@@ -245,7 +245,7 @@ Partial Class DoctorsControl
         BtnAdd.ForeColor = Color.White
         BtnAdd.Image = My.Resources.Resources.add1
         BtnAdd.ImageSize = New Size(30, 30)
-        BtnAdd.Location = New Point(644, 32)
+        BtnAdd.Location = New Point(651, 34)
         BtnAdd.Name = "BtnAdd"
         BtnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         BtnAdd.Size = New Size(30, 30)
@@ -265,7 +265,7 @@ Partial Class DoctorsControl
         BtnDelete.ForeColor = Color.White
         BtnDelete.Image = My.Resources.Resources.delete
         BtnDelete.ImageSize = New Size(30, 30)
-        BtnDelete.Location = New Point(595, 32)
+        BtnDelete.Location = New Point(602, 34)
         BtnDelete.Name = "BtnDelete"
         BtnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         BtnDelete.Size = New Size(30, 30)
@@ -285,7 +285,7 @@ Partial Class DoctorsControl
         BtnEdit.ForeColor = Color.White
         BtnEdit.Image = My.Resources.Resources.edit
         BtnEdit.ImageSize = New Size(30, 30)
-        BtnEdit.Location = New Point(546, 32)
+        BtnEdit.Location = New Point(553, 34)
         BtnEdit.Name = "BtnEdit"
         BtnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         BtnEdit.Size = New Size(30, 30)

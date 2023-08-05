@@ -67,6 +67,7 @@ Partial Class DashboardForm
         Guna2DragControl2 = New Guna.UI2.WinForms.Guna2DragControl(components)
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2Transition1 = New Guna.UI2.WinForms.Guna2Transition()
+        QuestionMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         Panel1.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel2.SuspendLayout()
@@ -481,6 +482,15 @@ Partial Class DashboardForm
         Animation1.TransparencyCoeff = 0F
         Guna2Transition1.DefaultAnimation = Animation1
         ' 
+        ' QuestionMessage
+        ' 
+        QuestionMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo
+        QuestionMessage.Caption = Nothing
+        QuestionMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question
+        QuestionMessage.Parent = Me
+        QuestionMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        QuestionMessage.Text = Nothing
+        ' 
         ' DashboardForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -522,4 +532,5 @@ Partial Class DashboardForm
     Friend WithEvents BtnBlogs As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Transition1 As Guna.UI2.WinForms.Guna2Transition
     Friend WithEvents BtnLogout As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents QuestionMessage As Guna.UI2.WinForms.Guna2MessageDialog
 End Class
