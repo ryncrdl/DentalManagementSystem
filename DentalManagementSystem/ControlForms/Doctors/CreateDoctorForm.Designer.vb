@@ -277,9 +277,9 @@ Partial Class CreateDoctorForm
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel1.Location = New Point(29, 56)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(115, 23)
+        Guna2HtmlLabel1.Size = New Size(119, 23)
         Guna2HtmlLabel1.TabIndex = 17
-        Guna2HtmlLabel1.Text = "Enter FirstName"
+        Guna2HtmlLabel1.Text = "Enter First Name"
         ' 
         ' Guna2HtmlLabel2
         ' 
@@ -288,9 +288,9 @@ Partial Class CreateDoctorForm
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel2.Location = New Point(29, 152)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(113, 23)
+        Guna2HtmlLabel2.Size = New Size(117, 23)
         Guna2HtmlLabel2.TabIndex = 18
-        Guna2HtmlLabel2.Text = "Enter LastName"
+        Guna2HtmlLabel2.Text = "Enter Last Name"
         ' 
         ' Guna2HtmlLabel3
         ' 
