@@ -1,9 +1,4 @@
-﻿Imports System.Buffers
-Imports System.Net
-Imports MongoDB.Bson
-Imports MongoDB.Driver
-
-Public Class CreateDoctorForm
+﻿Public Class CreateDoctorForm
     Private data As List(Of Guna.UI2.WinForms.Guna2TextBox)
     Public Event DoctorAdded As EventHandler
 
@@ -45,5 +40,12 @@ Public Class CreateDoctorForm
 
     End Sub
 
+    Private Sub txtcontact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcontact.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
 
+            CreateMessageDialog.Show("Numbers Only!", "Input")
+
+        End If
+    End Sub
 End Class

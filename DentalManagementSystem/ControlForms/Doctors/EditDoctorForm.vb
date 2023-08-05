@@ -112,6 +112,16 @@ Public Class EditDoctorForm
 
     End Sub
 
+    Private Sub txtcontact_TextChanged(sender As Object, e As EventArgs) Handles txtcontact.TextChanged
 
+    End Sub
 
+    Private Sub txtcontact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcontact.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+
+            CreateMessageDialog.Show("Numbers Only!", "Input")
+
+        End If
+    End Sub
 End Class

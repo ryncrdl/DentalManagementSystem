@@ -96,7 +96,7 @@ Partial Class DashboardForm
         Guna2ControlBox2.CustomizableEdges = CustomizableEdges1
         Guna2Transition1.SetDecoration(Guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None)
         Guna2ControlBox2.FillColor = Color.Transparent
-        Guna2ControlBox2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2ControlBox2.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2ControlBox2.IconColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2ControlBox2.Location = New Point(873, 7)
         Guna2ControlBox2.Name = "Guna2ControlBox2"
@@ -111,7 +111,7 @@ Partial Class DashboardForm
         BtnClose.CustomizableEdges = CustomizableEdges3
         Guna2Transition1.SetDecoration(BtnClose, Guna.UI2.AnimatorNS.DecorationType.None)
         BtnClose.FillColor = Color.Transparent
-        BtnClose.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnClose.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnClose.IconColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnClose.Location = New Point(907, 7)
         BtnClose.Name = "BtnClose"
@@ -191,7 +191,7 @@ Partial Class DashboardForm
         BtnLogout.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnLogout.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnLogout.FillColor = Color.Empty
-        BtnLogout.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnLogout.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnLogout.ForeColor = Color.White
         BtnLogout.Image = My.Resources.Resources.logout
         BtnLogout.ImageAlign = HorizontalAlignment.Left
@@ -223,7 +223,7 @@ Partial Class DashboardForm
         BtnBlogs.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnBlogs.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnBlogs.FillColor = Color.Transparent
-        BtnBlogs.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnBlogs.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnBlogs.ForeColor = Color.White
         BtnBlogs.Image = My.Resources.Resources.wblogs
         BtnBlogs.ImageAlign = HorizontalAlignment.Left
@@ -255,7 +255,7 @@ Partial Class DashboardForm
         BtnServices.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnServices.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnServices.FillColor = Color.Transparent
-        BtnServices.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnServices.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnServices.ForeColor = Color.White
         BtnServices.Image = My.Resources.Resources.wservices
         BtnServices.ImageAlign = HorizontalAlignment.Left
@@ -287,7 +287,7 @@ Partial Class DashboardForm
         BtnInventory.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnInventory.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnInventory.FillColor = Color.Transparent
-        BtnInventory.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnInventory.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnInventory.ForeColor = Color.White
         BtnInventory.Image = My.Resources.Resources.wmedicaltools
         BtnInventory.ImageAlign = HorizontalAlignment.Left
@@ -319,7 +319,7 @@ Partial Class DashboardForm
         BtnSchedule.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnSchedule.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnSchedule.FillColor = Color.Transparent
-        BtnSchedule.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnSchedule.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnSchedule.ForeColor = Color.White
         BtnSchedule.Image = My.Resources.Resources.wschedule
         BtnSchedule.ImageAlign = HorizontalAlignment.Left
@@ -351,7 +351,7 @@ Partial Class DashboardForm
         BtnClients.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnClients.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnClients.FillColor = Color.Transparent
-        BtnClients.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnClients.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnClients.ForeColor = Color.White
         BtnClients.Image = My.Resources.Resources.wclients
         BtnClients.ImageAlign = HorizontalAlignment.Left
@@ -383,7 +383,7 @@ Partial Class DashboardForm
         BtnDoctors.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnDoctors.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnDoctors.FillColor = Color.Transparent
-        BtnDoctors.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnDoctors.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnDoctors.ForeColor = Color.White
         BtnDoctors.Image = My.Resources.Resources.wdoctors
         BtnDoctors.ImageAlign = HorizontalAlignment.Left
@@ -417,7 +417,7 @@ Partial Class DashboardForm
         BtnDashboard.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         BtnDashboard.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnDashboard.FillColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        BtnDashboard.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnDashboard.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
         BtnDashboard.ForeColor = Color.White
         BtnDashboard.Image = My.Resources.Resources.woverview
         BtnDashboard.ImageAlign = HorizontalAlignment.Left
@@ -468,7 +468,7 @@ Partial Class DashboardForm
         Animation1.AnimateOnlyDifferences = True
         Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), PointF)
         Animation1.LeafCoeff = 0F
-        Animation1.MaxTime = 1F
+        Animation1.MaxTime = 1.0F
         Animation1.MinTime = 0F
         Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), PointF)
         Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), PointF)
@@ -493,7 +493,7 @@ Partial Class DashboardForm
         ' 
         ' DashboardForm
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         ClientSize = New Size(945, 640)

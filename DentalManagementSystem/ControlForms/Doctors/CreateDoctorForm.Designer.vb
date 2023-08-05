@@ -23,22 +23,22 @@ Partial Class CreateDoctorForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         txtfirstname = New Guna.UI2.WinForms.Guna2TextBox()
         BtnCreate = New Guna.UI2.WinForms.Guna2GradientButton()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
@@ -62,7 +62,7 @@ Partial Class CreateDoctorForm
         ' 
         txtfirstname.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtfirstname.BorderRadius = 10
-        txtfirstname.CustomizableEdges = CustomizableEdges17
+        txtfirstname.CustomizableEdges = CustomizableEdges1
         txtfirstname.DefaultText = ""
         txtfirstname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtfirstname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -79,14 +79,14 @@ Partial Class CreateDoctorForm
         txtfirstname.PasswordChar = ChrW(0)
         txtfirstname.PlaceholderText = "First Name"
         txtfirstname.SelectedText = ""
-        txtfirstname.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        txtfirstname.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         txtfirstname.Size = New Size(390, 49)
         txtfirstname.TabIndex = 3
         ' 
         ' BtnCreate
         ' 
         BtnCreate.BorderRadius = 10
-        BtnCreate.CustomizableEdges = CustomizableEdges19
+        BtnCreate.CustomizableEdges = CustomizableEdges3
         BtnCreate.DisabledState.BorderColor = Color.DarkGray
         BtnCreate.DisabledState.CustomBorderColor = Color.DarkGray
         BtnCreate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -98,7 +98,7 @@ Partial Class CreateDoctorForm
         BtnCreate.ForeColor = Color.White
         BtnCreate.Location = New Point(25, 604)
         BtnCreate.Name = "BtnCreate"
-        BtnCreate.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        BtnCreate.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         BtnCreate.Size = New Size(190, 50)
         BtnCreate.TabIndex = 11
         BtnCreate.Text = "Create"
@@ -106,13 +106,13 @@ Partial Class CreateDoctorForm
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges21
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.DarkViolet
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2GradientPanel1.Size = New Size(451, 30)
         Guna2GradientPanel1.TabIndex = 10
         ' 
@@ -120,7 +120,7 @@ Partial Class CreateDoctorForm
         ' 
         txtlastname.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtlastname.BorderRadius = 10
-        txtlastname.CustomizableEdges = CustomizableEdges23
+        txtlastname.CustomizableEdges = CustomizableEdges7
         txtlastname.DefaultText = ""
         txtlastname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtlastname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -137,7 +137,7 @@ Partial Class CreateDoctorForm
         txtlastname.PasswordChar = ChrW(0)
         txtlastname.PlaceholderText = "Last Name"
         txtlastname.SelectedText = ""
-        txtlastname.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        txtlastname.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         txtlastname.Size = New Size(390, 49)
         txtlastname.TabIndex = 12
         ' 
@@ -145,7 +145,7 @@ Partial Class CreateDoctorForm
         ' 
         txtcontact.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtcontact.BorderRadius = 10
-        txtcontact.CustomizableEdges = CustomizableEdges25
+        txtcontact.CustomizableEdges = CustomizableEdges9
         txtcontact.DefaultText = ""
         txtcontact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtcontact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -162,7 +162,7 @@ Partial Class CreateDoctorForm
         txtcontact.PasswordChar = ChrW(0)
         txtcontact.PlaceholderText = "Contact Number"
         txtcontact.SelectedText = ""
-        txtcontact.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        txtcontact.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtcontact.Size = New Size(390, 49)
         txtcontact.TabIndex = 13
         ' 
@@ -170,7 +170,7 @@ Partial Class CreateDoctorForm
         ' 
         txtemail.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtemail.BorderRadius = 10
-        txtemail.CustomizableEdges = CustomizableEdges27
+        txtemail.CustomizableEdges = CustomizableEdges11
         txtemail.DefaultText = ""
         txtemail.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtemail.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -187,7 +187,7 @@ Partial Class CreateDoctorForm
         txtemail.PasswordChar = ChrW(0)
         txtemail.PlaceholderText = "Email"
         txtemail.SelectedText = ""
-        txtemail.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        txtemail.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         txtemail.Size = New Size(390, 49)
         txtemail.TabIndex = 14
         ' 
@@ -195,7 +195,7 @@ Partial Class CreateDoctorForm
         ' 
         txtaddress.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtaddress.BorderRadius = 10
-        txtaddress.CustomizableEdges = CustomizableEdges29
+        txtaddress.CustomizableEdges = CustomizableEdges13
         txtaddress.DefaultText = ""
         txtaddress.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtaddress.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -213,7 +213,7 @@ Partial Class CreateDoctorForm
         txtaddress.PasswordChar = ChrW(0)
         txtaddress.PlaceholderText = "Permanent Address"
         txtaddress.SelectedText = ""
-        txtaddress.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        txtaddress.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         txtaddress.Size = New Size(390, 118)
         txtaddress.TabIndex = 15
         ' 
@@ -222,7 +222,7 @@ Partial Class CreateDoctorForm
         BtnCancel.BorderColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.BorderRadius = 10
         BtnCancel.BorderThickness = 1
-        BtnCancel.CustomizableEdges = CustomizableEdges31
+        BtnCancel.CustomizableEdges = CustomizableEdges15
         BtnCancel.DisabledState.BorderColor = Color.DarkGray
         BtnCancel.DisabledState.CustomBorderColor = Color.DarkGray
         BtnCancel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -237,7 +237,7 @@ Partial Class CreateDoctorForm
         BtnCancel.HoverState.ForeColor = Color.White
         BtnCancel.Location = New Point(225, 604)
         BtnCancel.Name = "BtnCancel"
-        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         BtnCancel.Size = New Size(190, 50)
         BtnCancel.TabIndex = 16
         BtnCancel.Text = "Cancel"
@@ -277,9 +277,9 @@ Partial Class CreateDoctorForm
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel1.Location = New Point(29, 56)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(115, 23)
+        Guna2HtmlLabel1.Size = New Size(119, 23)
         Guna2HtmlLabel1.TabIndex = 17
-        Guna2HtmlLabel1.Text = "Enter FirstName"
+        Guna2HtmlLabel1.Text = "Enter First Name"
         ' 
         ' Guna2HtmlLabel2
         ' 
@@ -288,9 +288,9 @@ Partial Class CreateDoctorForm
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel2.Location = New Point(29, 152)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(113, 23)
+        Guna2HtmlLabel2.Size = New Size(117, 23)
         Guna2HtmlLabel2.TabIndex = 18
-        Guna2HtmlLabel2.Text = "Enter LastName"
+        Guna2HtmlLabel2.Text = "Enter Last Name"
         ' 
         ' Guna2HtmlLabel3
         ' 
