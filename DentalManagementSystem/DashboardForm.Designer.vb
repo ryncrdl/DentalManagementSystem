@@ -408,7 +408,7 @@ Partial Class DashboardForm
         BtnDashboard.Checked = True
         BtnDashboard.CheckedState.FillColor = Color.White
         BtnDashboard.CheckedState.ForeColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        BtnDashboard.CheckedState.Image = My.Resources.Resources.dashboard
+        BtnDashboard.CheckedState.Image = My.Resources.Resources.boverview
         BtnDashboard.Cursor = Cursors.Hand
         BtnDashboard.CustomizableEdges = CustomizableEdges21
         Guna2Transition1.SetDecoration(BtnDashboard, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -419,7 +419,7 @@ Partial Class DashboardForm
         BtnDashboard.FillColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         BtnDashboard.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnDashboard.ForeColor = Color.White
-        BtnDashboard.Image = My.Resources.Resources.wdashboard
+        BtnDashboard.Image = My.Resources.Resources.woverview
         BtnDashboard.ImageAlign = HorizontalAlignment.Left
         BtnDashboard.ImageOffset = New Point(10, 0)
         BtnDashboard.ImageSize = New Size(25, 25)
@@ -428,7 +428,7 @@ Partial Class DashboardForm
         BtnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         BtnDashboard.Size = New Size(201, 45)
         BtnDashboard.TabIndex = 3
-        BtnDashboard.Text = "Dashboard"
+        BtnDashboard.Text = "Overview"
         BtnDashboard.TextAlign = HorizontalAlignment.Left
         BtnDashboard.TextOffset = New Point(15, 0)
         BtnDashboard.UseTransparentBackground = True

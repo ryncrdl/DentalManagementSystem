@@ -1,7 +1,7 @@
 ﻿
 Public Class DashboardForm
     'Controls
-    Private DashboardControl As New DashboardControl()
+    Private OverviewControl As New OverviewControl()
     Private DoctorsControl As New DoctorsControl()
     Private ClientsControl As New ClientsControl()
     Private ScheduleControl As New ScheduleControl()
@@ -19,7 +19,7 @@ Public Class DashboardForm
     End Sub
 
     Private Sub DashboardForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        AddControlForm(DashboardControl)
+        AddControlForm(OverviewControl)
     End Sub
 
     Private Sub BtnBlogs_CheckedChanged(sender As Object, e As EventArgs) Handles BtnBlogs.CheckedChanged, BtnServices.CheckedChanged, BtnInventory.CheckedChanged, BtnSchedule.CheckedChanged, BtnClients.CheckedChanged, BtnDoctors.CheckedChanged, BtnDashboard.CheckedChanged
@@ -32,7 +32,7 @@ Public Class DashboardForm
         imgSlide.SendToBack()
     End Sub
     Private Sub BtnDashboard_Click(sender As Object, e As EventArgs) Handles BtnDashboard.Click
-        AddControlForm(DashboardControl)
+        AddControlForm(OverviewControl)
     End Sub
 
     Private Sub BtnDoctors_Click(sender As Object, e As EventArgs) Handles BtnDoctors.Click
@@ -71,7 +71,5 @@ Public Class DashboardForm
         End If
     End Sub
 
-    Private Sub ControlPanel_Paint(sender As Object, e As PaintEventArgs) Handles ControlPanel.Paint
 
-    End Sub
 End Class

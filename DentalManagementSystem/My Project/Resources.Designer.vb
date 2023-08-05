@@ -133,6 +133,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property boverview() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("boverview", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property bschedule() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("bschedule", resourceCulture)
@@ -296,6 +306,16 @@ Namespace My.Resources
         Friend ReadOnly Property wmedicaltools() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("wmedicaltools", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property woverview() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("woverview", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
