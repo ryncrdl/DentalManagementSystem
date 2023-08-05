@@ -1,9 +1,4 @@
-﻿Imports System.Buffers
-Imports System.Net
-Imports MongoDB.Bson
-Imports MongoDB.Driver
-
-Public Class CreateDoctorForm
+﻿Public Class CreateDoctorForm
     Private data As List(Of Guna.UI2.WinForms.Guna2TextBox)
     Public Event DoctorAdded As EventHandler
 
@@ -30,23 +25,35 @@ Public Class CreateDoctorForm
         ' If (isValidate) Then
         ' PerformDatabaseOperationWithLoadingScreen(
         ' Sub()
+
         Try
-                        If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
-                            MessageSuccessfully.Show("Doctor added successfully!", "Doctor Success")
+                If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
+                    MessageSuccessfully.Show("Doctor added successfully!", "Doctor Success")
 
-                            ' Clear the input fields after successful addition
-                            Me.Close()
-                            DoctorValidation.CreateData(data)
+                    ' Clear the input fields after successful addition
+                    Me.Close()
+                    DoctorValidation.CreateData(data)
 
-                            RaiseEvent DoctorAdded(Me, EventArgs.Empty)
-                        End If
-                    Catch ex As Exception
-                        MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    End Try
+                    RaiseEvent DoctorAdded(Me, EventArgs.Empty)
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
         ' End Sub)
-        ' End If
+
 
     End Sub
 
+    Private Sub txtcontact_TextChanged(sender As Object, e As EventArgs) Handles txtcontact.TextChanged
 
+    End Sub
+
+    Private Sub txtcontact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtcontact.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+
+            MessageSuccessfully.Show("Numbers Only!")
+
+        End If
+    End Sub
 End Class
