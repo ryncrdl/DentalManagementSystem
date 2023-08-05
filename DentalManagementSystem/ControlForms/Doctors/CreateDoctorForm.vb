@@ -47,7 +47,7 @@
         If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
             e.Handled = True
 
-            MessageSuccessfully.Show("Numbers Only!")
+            CreateMessageDialog.Show("Numbers Only!", "Input")
 
         End If
     End Sub
