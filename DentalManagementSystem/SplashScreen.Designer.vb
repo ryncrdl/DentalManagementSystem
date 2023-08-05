@@ -23,49 +23,15 @@ Partial Class SplashScreen
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
-        Guna2TaskBarProgress1 = New Guna.UI2.WinForms.Guna2TaskBarProgress(components)
-        Guna2ProgressIndicator1 = New Guna.UI2.WinForms.Guna2ProgressIndicator()
         Guna2ProgressBar1 = New Guna.UI2.WinForms.Guna2ProgressBar()
-        Guna2WinProgressIndicator1 = New Guna.UI2.WinForms.Guna2WinProgressIndicator()
+        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
-        ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel1.Location = New Point(184, 79)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(123, 39)
-        Guna2HtmlLabel1.TabIndex = 0
-        Guna2HtmlLabel1.Text = "Welcome"
-        ' 
-        ' Guna2HtmlLabel2
-        ' 
-        Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel2.Location = New Point(228, 144)
-        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(36, 39)
-        Guna2HtmlLabel2.TabIndex = 1
-        Guna2HtmlLabel2.Text = "To"
-        ' 
-        ' Guna2HtmlLabel3
-        ' 
-        Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel3.Location = New Point(71, 216)
-        Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Guna2HtmlLabel3.Size = New Size(366, 39)
-        Guna2HtmlLabel3.TabIndex = 2
-        Guna2HtmlLabel3.Text = "Dental Management System"
         ' 
         ' Guna2BorderlessForm1
         ' 
@@ -79,62 +45,47 @@ Partial Class SplashScreen
         Guna2BorderlessForm1.DragOrientation = Guna.UI2.WinForms.Enums.DragOrientation.Horizontal
         Guna2BorderlessForm1.TransparentWhileDrag = True
         ' 
-        ' Guna2TaskBarProgress1
-        ' 
-        Guna2TaskBarProgress1.TargetForm = Me
-        ' 
-        ' Guna2ProgressIndicator1
-        ' 
-        Guna2ProgressIndicator1.Location = New Point(375, 70)
-        Guna2ProgressIndicator1.Name = "Guna2ProgressIndicator1"
-        Guna2ProgressIndicator1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2ProgressIndicator1.Size = New Size(90, 90)
-        Guna2ProgressIndicator1.TabIndex = 3
-        ' 
         ' Guna2ProgressBar1
         ' 
-        Guna2ProgressBar1.CustomizableEdges = CustomizableEdges2
+        Guna2ProgressBar1.CustomizableEdges = CustomizableEdges1
         Guna2ProgressBar1.Dock = DockStyle.Bottom
-        Guna2ProgressBar1.Location = New Point(0, 409)
+        Guna2ProgressBar1.Location = New Point(0, 371)
         Guna2ProgressBar1.Name = "Guna2ProgressBar1"
-        Guna2ProgressBar1.ShadowDecoration.CustomizableEdges = CustomizableEdges3
-        Guna2ProgressBar1.Size = New Size(554, 18)
+        Guna2ProgressBar1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2ProgressBar1.Size = New Size(596, 18)
         Guna2ProgressBar1.TabIndex = 4
         Guna2ProgressBar1.Text = "Guna2ProgressBar1"
         Guna2ProgressBar1.TextRenderingHint = Drawing.Text.TextRenderingHint.SystemDefault
+        Guna2ProgressBar1.Value = 60
         ' 
-        ' Guna2WinProgressIndicator1
+        ' Guna2PictureBox1
         ' 
-        Guna2WinProgressIndicator1.Location = New Point(54, 60)
-        Guna2WinProgressIndicator1.Name = "Guna2WinProgressIndicator1"
-        Guna2WinProgressIndicator1.ShadowDecoration.CustomizableEdges = CustomizableEdges1
-        Guna2WinProgressIndicator1.Size = New Size(90, 90)
-        Guna2WinProgressIndicator1.TabIndex = 5
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges3
+        Guna2PictureBox1.Dock = DockStyle.Fill
+        Guna2PictureBox1.Image = My.Resources.Resources.bgsplashscreen
+        Guna2PictureBox1.ImageRotate = 0F
+        Guna2PictureBox1.Location = New Point(0, 0)
+        Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2PictureBox1.Size = New Size(596, 389)
+        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        Guna2PictureBox1.TabIndex = 5
+        Guna2PictureBox1.TabStop = False
         ' 
         ' SplashScreen
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(554, 427)
-        Controls.Add(Guna2WinProgressIndicator1)
+        ClientSize = New Size(596, 389)
         Controls.Add(Guna2ProgressBar1)
-        Controls.Add(Guna2ProgressIndicator1)
-        Controls.Add(Guna2HtmlLabel3)
-        Controls.Add(Guna2HtmlLabel2)
-        Controls.Add(Guna2HtmlLabel1)
+        Controls.Add(Guna2PictureBox1)
         FormBorderStyle = FormBorderStyle.None
         Name = "SplashScreen"
         StartPosition = FormStartPosition.CenterScreen
+        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
-    Friend WithEvents Guna2TaskBarProgress1 As Guna.UI2.WinForms.Guna2TaskBarProgress
-    Friend WithEvents Guna2WinProgressIndicator1 As Guna.UI2.WinForms.Guna2WinProgressIndicator
     Friend WithEvents Guna2ProgressBar1 As Guna.UI2.WinForms.Guna2ProgressBar
-    Friend WithEvents Guna2ProgressIndicator1 As Guna.UI2.WinForms.Guna2ProgressIndicator
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
 End Class
