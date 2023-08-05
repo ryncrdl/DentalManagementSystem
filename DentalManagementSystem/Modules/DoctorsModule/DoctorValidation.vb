@@ -5,6 +5,7 @@
         For i As Integer = 0 To data.Count - 1
             If (String.IsNullOrEmpty(data(i).Text)) Then
                 CreateDoctorForm.CreateMessageDialog.Show("All fields are required.", "Create Doctor Error")
+                CreateDoctorForm.Parent = CreateDoctorForm
                 isValidate = False
                 Return False
 
