@@ -4,7 +4,8 @@
     Public Function ValidateData(data As List(Of Guna.UI2.WinForms.Guna2TextBox), ByRef isValidate As Boolean)
         For i As Integer = 0 To data.Count - 1
             If (String.IsNullOrEmpty(data(i).Text)) Then
-                CreateDoctorForm.CreateMessageDialog.Show()
+                CreateDoctorForm.CreateMessageDialog.Show("All fields are required.", "Create Doctor Error")
+                CreateDoctorForm.Parent = CreateDoctorForm
                 isValidate = False
                 Return False
 

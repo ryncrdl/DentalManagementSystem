@@ -25,26 +25,21 @@
         ' If (isValidate) Then
         ' PerformDatabaseOperationWithLoadingScreen(
         ' Sub()
-
         Try
-                If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
-                    MessageSuccessfully.Show("Doctor added successfully!", "Doctor Success")
+            If DoctorsControllers.InsertDoctor(firstname, lastname, contact, email, address) Then
+                MessageSuccessfully.Show("Doctor added successfully!", "Doctor Success")
 
-                    ' Clear the input fields after successful addition
-                    Me.Close()
-                    DoctorValidation.CreateData(data)
+                ' Clear the input fields after successful addition
+                Me.Close()
+                DoctorValidation.CreateData(data)
 
-                    RaiseEvent DoctorAdded(Me, EventArgs.Empty)
-                End If
-            Catch ex As Exception
-                MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End Try
+                RaiseEvent DoctorAdded(Me, EventArgs.Empty)
+            End If
+        Catch ex As Exception
+            MessageBox.Show("Error adding doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
         ' End Sub)
-
-
-    End Sub
-
-    Private Sub txtcontact_TextChanged(sender As Object, e As EventArgs) Handles txtcontact.TextChanged
+        ' End If
 
     End Sub
 

@@ -23,19 +23,19 @@ Partial Class BlogControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
@@ -45,14 +45,14 @@ Partial Class BlogControl
         BtnAdd = New Guna.UI2.WinForms.Guna2Button()
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         DoctorsTable = New Guna.UI2.WinForms.Guna2DataGridView()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ID = New DataGridViewTextBoxColumn()
         Title = New DataGridViewTextBoxColumn()
         Context = New DataGridViewTextBoxColumn()
         Image = New DataGridViewTextBoxColumn()
+        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         CType(DoctorsTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -61,7 +61,7 @@ Partial Class BlogControl
         Guna2HtmlLabel1.BackColor = Color.Transparent
         Guna2HtmlLabel1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2HtmlLabel1.Location = New Point(36, 38)
+        Guna2HtmlLabel1.Location = New Point(36, 37)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
         Guna2HtmlLabel1.Size = New Size(57, 32)
         Guna2HtmlLabel1.TabIndex = 1
@@ -94,7 +94,7 @@ Partial Class BlogControl
         ' 
         BtnEdit.BackColor = Color.Transparent
         BtnEdit.Cursor = Cursors.Hand
-        BtnEdit.CustomizableEdges = CustomizableEdges9
+        BtnEdit.CustomizableEdges = CustomizableEdges1
         BtnEdit.DisabledState.BorderColor = Color.DarkGray
         BtnEdit.DisabledState.CustomBorderColor = Color.DarkGray
         BtnEdit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -104,9 +104,9 @@ Partial Class BlogControl
         BtnEdit.ForeColor = Color.White
         BtnEdit.Image = My.Resources.Resources.edit
         BtnEdit.ImageSize = New Size(30, 30)
-        BtnEdit.Location = New Point(554, 39)
+        BtnEdit.Location = New Point(554, 38)
         BtnEdit.Name = "BtnEdit"
-        BtnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        BtnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         BtnEdit.Size = New Size(30, 30)
         BtnEdit.TabIndex = 21
         ' 
@@ -114,7 +114,7 @@ Partial Class BlogControl
         ' 
         BtnDelete.BackColor = Color.Transparent
         BtnDelete.Cursor = Cursors.Hand
-        BtnDelete.CustomizableEdges = CustomizableEdges11
+        BtnDelete.CustomizableEdges = CustomizableEdges3
         BtnDelete.DisabledState.BorderColor = Color.DarkGray
         BtnDelete.DisabledState.CustomBorderColor = Color.DarkGray
         BtnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -124,9 +124,9 @@ Partial Class BlogControl
         BtnDelete.ForeColor = Color.White
         BtnDelete.Image = My.Resources.Resources.delete
         BtnDelete.ImageSize = New Size(30, 30)
-        BtnDelete.Location = New Point(603, 39)
+        BtnDelete.Location = New Point(603, 38)
         BtnDelete.Name = "BtnDelete"
-        BtnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        BtnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         BtnDelete.Size = New Size(30, 30)
         BtnDelete.TabIndex = 20
         ' 
@@ -134,7 +134,7 @@ Partial Class BlogControl
         ' 
         BtnAdd.BackColor = Color.Transparent
         BtnAdd.Cursor = Cursors.Hand
-        BtnAdd.CustomizableEdges = CustomizableEdges13
+        BtnAdd.CustomizableEdges = CustomizableEdges5
         BtnAdd.DisabledState.BorderColor = Color.DarkGray
         BtnAdd.DisabledState.CustomBorderColor = Color.DarkGray
         BtnAdd.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -144,9 +144,9 @@ Partial Class BlogControl
         BtnAdd.ForeColor = Color.White
         BtnAdd.Image = My.Resources.Resources.add1
         BtnAdd.ImageSize = New Size(30, 30)
-        BtnAdd.Location = New Point(652, 39)
+        BtnAdd.Location = New Point(652, 38)
         BtnAdd.Name = "BtnAdd"
-        BtnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        BtnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         BtnAdd.Size = New Size(30, 30)
         BtnAdd.TabIndex = 19
         ' 
@@ -161,50 +161,50 @@ Partial Class BlogControl
         DoctorsTable.AllowUserToDeleteRows = False
         DoctorsTable.AllowUserToOrderColumns = True
         DoctorsTable.AllowUserToResizeRows = False
-        DataGridViewCellStyle6.BackColor = Color.White
-        DataGridViewCellStyle6.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle6.SelectionForeColor = Color.White
-        DoctorsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle1.BackColor = Color.White
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DoctorsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         DoctorsTable.BackgroundColor = SystemColors.Control
-        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        DataGridViewCellStyle7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle7.ForeColor = Color.White
-        DataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        DataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.False
-        DoctorsTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        DoctorsTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         DoctorsTable.ColumnHeadersHeight = 44
         DoctorsTable.Columns.AddRange(New DataGridViewColumn() {ID, Title, Context, Image})
-        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = Color.White
-        DataGridViewCellStyle8.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle8.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle8.SelectionForeColor = Color.White
-        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.False
-        DoctorsTable.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle3.SelectionForeColor = Color.White
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        DoctorsTable.DefaultCellStyle = DataGridViewCellStyle3
         DoctorsTable.GridColor = Color.Silver
         DoctorsTable.ImeMode = ImeMode.NoControl
-        DoctorsTable.Location = New Point(32, 176)
+        DoctorsTable.Location = New Point(32, 175)
         DoctorsTable.Margin = New Padding(0)
         DoctorsTable.MultiSelect = False
         DoctorsTable.Name = "DoctorsTable"
         DoctorsTable.ReadOnly = True
         DoctorsTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = Color.White
-        DataGridViewCellStyle9.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle9.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = Color.White
-        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.False
-        DoctorsTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = Color.White
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.White
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
+        DoctorsTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         DoctorsTable.RowHeadersVisible = False
-        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.True
-        DoctorsTable.RowsDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        DoctorsTable.RowsDefaultCellStyle = DataGridViewCellStyle5
         DoctorsTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
         DoctorsTable.RowTemplate.Height = 35
         DoctorsTable.Size = New Size(650, 386)
@@ -231,56 +231,6 @@ Partial Class BlogControl
         DoctorsTable.ThemeStyle.RowsStyle.Height = 35
         DoctorsTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DoctorsTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
-        ' 
-        ' Guna2TextBox1
-        ' 
-        Guna2TextBox1.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2TextBox1.BorderRadius = 10
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges15
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.IconRight = My.Resources.Resources.icons8_search_100
-        Guna2TextBox1.IconRightOffset = New Point(20, 0)
-        Guna2TextBox1.IconRightSize = New Size(25, 25)
-        Guna2TextBox1.Location = New Point(33, 104)
-        Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PasswordChar = ChrW(0)
-        Guna2TextBox1.PlaceholderText = "Search"
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        Guna2TextBox1.Size = New Size(650, 49)
-        Guna2TextBox1.TabIndex = 18
-        ' 
-        ' SuccessfulMessage
-        ' 
-        SuccessfulMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
-        SuccessfulMessage.Caption = Nothing
-        SuccessfulMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
-        SuccessfulMessage.Parent = Nothing
-        SuccessfulMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
-        SuccessfulMessage.Text = Nothing
-        ' 
-        ' Guna2HtmlLabel2
-        ' 
-        Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2HtmlLabel2.Location = New Point(32, 35)
-        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(62, 39)
-        Guna2HtmlLabel2.TabIndex = 16
-        Guna2HtmlLabel2.Text = "Blog"
-        ' 
-        ' Guna2Elipse3
-        ' 
-        Guna2Elipse3.BorderRadius = 20
         ' 
         ' ID
         ' 
@@ -311,6 +261,56 @@ Partial Class BlogControl
         Image.HeaderText = "Image"
         Image.Name = "Image"
         Image.ReadOnly = True
+        ' 
+        ' Guna2TextBox1
+        ' 
+        Guna2TextBox1.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2TextBox1.BorderRadius = 10
+        Guna2TextBox1.CustomizableEdges = CustomizableEdges7
+        Guna2TextBox1.DefaultText = ""
+        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.IconRight = My.Resources.Resources.icons8_search_100
+        Guna2TextBox1.IconRightOffset = New Point(20, 0)
+        Guna2TextBox1.IconRightSize = New Size(25, 25)
+        Guna2TextBox1.Location = New Point(33, 103)
+        Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
+        Guna2TextBox1.Name = "Guna2TextBox1"
+        Guna2TextBox1.PasswordChar = ChrW(0)
+        Guna2TextBox1.PlaceholderText = "Search"
+        Guna2TextBox1.SelectedText = ""
+        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2TextBox1.Size = New Size(650, 49)
+        Guna2TextBox1.TabIndex = 18
+        ' 
+        ' SuccessfulMessage
+        ' 
+        SuccessfulMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        SuccessfulMessage.Caption = Nothing
+        SuccessfulMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        SuccessfulMessage.Parent = Nothing
+        SuccessfulMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        SuccessfulMessage.Text = Nothing
+        ' 
+        ' Guna2HtmlLabel2
+        ' 
+        Guna2HtmlLabel2.BackColor = Color.Transparent
+        Guna2HtmlLabel2.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2HtmlLabel2.Location = New Point(32, 34)
+        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Guna2HtmlLabel2.Size = New Size(74, 39)
+        Guna2HtmlLabel2.TabIndex = 16
+        Guna2HtmlLabel2.Text = "Blogs"
+        ' 
+        ' Guna2Elipse3
+        ' 
+        Guna2Elipse3.BorderRadius = 20
         ' 
         ' BlogControl
         ' 
