@@ -17,12 +17,12 @@ Public Class DoctorsControl
     End Sub
 
     Private Sub DoctorsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        PerformDatabaseOperationWithLoadingScreen(
-        Sub()
-            LoadDataIntoDataGridView("doctors", DoctorsTable)
-            Connection.ConnectToMongoDB("doctors")
-            Me.collection = Connection.GetMongoDBCollection()
-        End Sub)
+        'PerformDatabaseOperationWithLoadingScreen(
+        'Sub()
+        LoadDataIntoDataGridView("doctors", DoctorsTable)
+        Connection.ConnectToMongoDB("doctors")
+        Me.collection = Connection.GetMongoDBCollection()
+        'End Sub)
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
