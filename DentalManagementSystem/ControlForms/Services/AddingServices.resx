@@ -117,14 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Our retainer service aims to maintain the alignment and position 
-of your teeth after orthodontic treatment. Whether you've had 
-braces or clear aligners, wearing a retainer is crucial to prevent
- teeth from shifting back to their original positions. We offer 
-removable and fixed retainers tailored to your needs, ensuring 
-that your beautiful smile stays intact for years to come. Our 
-expert team will guide you on proper retainer usage and care to
- maximize its effectiveness</value>
-  </data>
+  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
