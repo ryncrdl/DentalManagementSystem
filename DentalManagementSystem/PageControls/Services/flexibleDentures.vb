@@ -1,5 +1,5 @@
-﻿Public Class Whitening
-    Private Sub Guna2CirclePictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2CirclePictureBox1.Click
+﻿Public Class flexibleDentures
+    Private Sub flexibleDentures_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 

@@ -118,10 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Label1.Text" xml:space="preserve">
-    <value>Our professional teeth whitening service is designed to brighten
-your smile and remove stains and discoloration caused by factors 
-such as coffee, tea, tobacco, and aging. Using safe and effective
-techniques,we can help you achieve a noticeably whiter smile,
-enhancing your confidence and overall appearance.</value>
+    <value>Our retainer service aims to maintain the alignment and position 
+of your teeth after orthodontic treatment. Whether you've had 
+braces or clear aligners, wearing a retainer is crucial to prevent
+ teeth from shifting back to their original positions. We offer 
+removable and fixed retainers tailored to your needs, ensuring 
+that your beautiful smile stays intact for years to come. Our 
+expert team will guide you on proper retainer usage and care to
+ maximize its effectiveness</value>
   </data>
 </root>

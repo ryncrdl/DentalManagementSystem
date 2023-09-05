@@ -190,6 +190,9 @@
   <data name="bmedicaltools" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\bmedicaltools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dental-consultation.6bbd18ac5f90790bffdc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dental-consultation.6bbd18ac5f90790bffdc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -223,7 +226,7 @@
   <data name="bgsplashscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\bgsplashscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dental-consultation.6bbd18ac5f90790bffdc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dental-consultation.6bbd18ac5f90790bffdc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="porcelain." type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\porcelain..jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
