@@ -118,14 +118,23 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tooth-filling.d30e322f224964931f1a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tooth-filling.d30e322f224964931f1a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wblogs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\wblogs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bschedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\net6.0-windows\Assets\bschedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="denture.d26410ab4a91b8d096ce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\denture.d26410ab4a91b8d096ce.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jacketCrown.98c2694eb8fabc78f681" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jacketCrown.98c2694eb8fabc78f681.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whitening.e6a7ab426a9a61e4e91e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whitening.e6a7ab426a9a61e4e91e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bclients" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\bclients.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,17 +166,26 @@
   <data name="bdoctors" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\bdoctors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="braces" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\braces.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crown-and-fixed-bridge.557706d723e51bc344a5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crown-and-fixed-bridge.557706d723e51bc344a5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wdoctors" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\net6.0-windows\Assets\wdoctors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="retainer.b3b13e31d6ba9f5c899a" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\retainer.b3b13e31d6ba9f5c899a.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boverview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net6.0-windows\Assets\boverview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bmedicaltools" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\bmedicaltools.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,11 +196,14 @@
   <data name="icons8-search-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\icons8-search-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bschedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net6.0-windows\Assets\bschedule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="loginbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\loginbg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bblogs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\net6.0-windows\Assets\bblogs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wdoctors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net6.0-windows\Assets\wdoctors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,13 +214,16 @@
   <data name="wdashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\wdashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bblogs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net6.0-windows\Assets\bblogs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="wclients" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\wclients.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bgsplashscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\net6.0-windows\Assets\bgsplashscreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="boverview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\net6.0-windows\Assets\boverview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dental-consultation.6bbd18ac5f90790bffdc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dental-consultation.6bbd18ac5f90790bffdc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
