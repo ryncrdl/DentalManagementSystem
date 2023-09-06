@@ -48,4 +48,8 @@
 
         End If
     End Sub
+
+    Private Sub txtlastname_TextChanged(sender As Object, e As EventArgs) Handles txtlastname.TextChanged
+
+    End Sub
 End Class

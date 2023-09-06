@@ -83,4 +83,8 @@ Public Class DoctorsControl
 
         Return rowData
     End Function
+
+    Private Sub DoctorsTable_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DoctorsTable.CellContentClick
+
+    End Sub
 End Class

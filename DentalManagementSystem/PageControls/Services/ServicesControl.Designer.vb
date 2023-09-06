@@ -47,12 +47,14 @@ Partial Class ServicesControl
         SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        DoctorsTable = New Guna.UI2.WinForms.Guna2DataGridView()
+        ServicesTable = New Guna.UI2.WinForms.Guna2DataGridView()
         ID = New DataGridViewTextBoxColumn()
         Image = New DataGridViewTextBoxColumn()
         Title = New DataGridViewTextBoxColumn()
+        Description = New DataGridViewTextBoxColumn()
         Price = New DataGridViewTextBoxColumn()
-        CType(DoctorsTable, ComponentModel.ISupportInitialize).BeginInit()
+        Payment = New DataGridViewTextBoxColumn()
+        CType(ServicesTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2Elipse1
@@ -192,19 +194,19 @@ Partial Class ServicesControl
         ' 
         Guna2Elipse3.BorderRadius = 20
         ' 
-        ' DoctorsTable
+        ' ServicesTable
         ' 
-        DoctorsTable.AllowUserToAddRows = False
-        DoctorsTable.AllowUserToDeleteRows = False
-        DoctorsTable.AllowUserToOrderColumns = True
-        DoctorsTable.AllowUserToResizeRows = False
+        ServicesTable.AllowUserToAddRows = False
+        ServicesTable.AllowUserToDeleteRows = False
+        ServicesTable.AllowUserToOrderColumns = True
+        ServicesTable.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.White
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionForeColor = Color.White
-        DoctorsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DoctorsTable.BackgroundColor = SystemColors.Control
+        ServicesTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        ServicesTable.BackgroundColor = SystemColors.Control
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
@@ -212,9 +214,9 @@ Partial Class ServicesControl
         DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        DoctorsTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DoctorsTable.ColumnHeadersHeight = 44
-        DoctorsTable.Columns.AddRange(New DataGridViewColumn() {ID, Image, Title, Price})
+        ServicesTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        ServicesTable.ColumnHeadersHeight = 44
+        ServicesTable.Columns.AddRange(New DataGridViewColumn() {ID, Image, Title, Description, Price, Payment})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -222,15 +224,15 @@ Partial Class ServicesControl
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle3.SelectionForeColor = Color.White
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        DoctorsTable.DefaultCellStyle = DataGridViewCellStyle3
-        DoctorsTable.GridColor = Color.Silver
-        DoctorsTable.ImeMode = ImeMode.NoControl
-        DoctorsTable.Location = New Point(32, 171)
-        DoctorsTable.Margin = New Padding(0)
-        DoctorsTable.MultiSelect = False
-        DoctorsTable.Name = "DoctorsTable"
-        DoctorsTable.ReadOnly = True
-        DoctorsTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        ServicesTable.DefaultCellStyle = DataGridViewCellStyle3
+        ServicesTable.GridColor = Color.Silver
+        ServicesTable.ImeMode = ImeMode.NoControl
+        ServicesTable.Location = New Point(32, 171)
+        ServicesTable.Margin = New Padding(0)
+        ServicesTable.MultiSelect = False
+        ServicesTable.Name = "ServicesTable"
+        ServicesTable.ReadOnly = True
+        ServicesTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.White
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
@@ -238,36 +240,36 @@ Partial Class ServicesControl
         DataGridViewCellStyle4.SelectionBackColor = Color.White
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
-        DoctorsTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        DoctorsTable.RowHeadersVisible = False
+        ServicesTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        ServicesTable.RowHeadersVisible = False
         DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
-        DoctorsTable.RowsDefaultCellStyle = DataGridViewCellStyle5
-        DoctorsTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
-        DoctorsTable.RowTemplate.Height = 35
-        DoctorsTable.Size = New Size(650, 386)
-        DoctorsTable.TabIndex = 48
-        DoctorsTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
-        DoctorsTable.ThemeStyle.BackColor = SystemColors.Control
-        DoctorsTable.ThemeStyle.GridColor = Color.Silver
-        DoctorsTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        DoctorsTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        DoctorsTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        DoctorsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DoctorsTable.ThemeStyle.HeaderStyle.Height = 44
-        DoctorsTable.ThemeStyle.ReadOnly = True
-        DoctorsTable.ThemeStyle.RowsStyle.BackColor = Color.White
-        DoctorsTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        DoctorsTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.RowsStyle.Height = 35
-        DoctorsTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
+        ServicesTable.RowsDefaultCellStyle = DataGridViewCellStyle5
+        ServicesTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        ServicesTable.RowTemplate.Height = 35
+        ServicesTable.Size = New Size(650, 386)
+        ServicesTable.TabIndex = 48
+        ServicesTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
+        ServicesTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        ServicesTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ServicesTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ServicesTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ServicesTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
+        ServicesTable.ThemeStyle.BackColor = SystemColors.Control
+        ServicesTable.ThemeStyle.GridColor = Color.Silver
+        ServicesTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        ServicesTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        ServicesTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        ServicesTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        ServicesTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        ServicesTable.ThemeStyle.HeaderStyle.Height = 44
+        ServicesTable.ThemeStyle.ReadOnly = True
+        ServicesTable.ThemeStyle.RowsStyle.BackColor = Color.White
+        ServicesTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        ServicesTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ServicesTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ServicesTable.ThemeStyle.RowsStyle.Height = 35
+        ServicesTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ServicesTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
         ' ID
         ' 
@@ -292,6 +294,12 @@ Partial Class ServicesControl
         Title.Name = "Title"
         Title.ReadOnly = True
         ' 
+        ' Description
+        ' 
+        Description.HeaderText = "Description"
+        Description.Name = "Description"
+        Description.ReadOnly = True
+        ' 
         ' Price
         ' 
         Price.FillWeight = 150F
@@ -299,13 +307,19 @@ Partial Class ServicesControl
         Price.Name = "Price"
         Price.ReadOnly = True
         ' 
+        ' Payment
+        ' 
+        Payment.HeaderText = "Payment"
+        Payment.Name = "Payment"
+        Payment.ReadOnly = True
+        ' 
         ' ServicesControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.White
-        Controls.Add(DoctorsTable)
+        Controls.Add(ServicesTable)
         Controls.Add(BtnEdit)
         Controls.Add(BtnDelete)
         Controls.Add(BtnAdd)
@@ -313,7 +327,7 @@ Partial Class ServicesControl
         Controls.Add(Guna2HtmlLabel2)
         Name = "ServicesControl"
         Size = New Size(714, 597)
-        CType(DoctorsTable, ComponentModel.ISupportInitialize).EndInit()
+        CType(ServicesTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -330,9 +344,11 @@ Partial Class ServicesControl
     Friend WithEvents SuccessfulMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2vScrollBar1 As Guna.UI2.WinForms.Guna2VScrollBar
-    Friend WithEvents DoctorsTable As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents ServicesTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Image As DataGridViewTextBoxColumn
     Friend WithEvents Title As DataGridViewTextBoxColumn
+    Friend WithEvents Description As DataGridViewTextBoxColumn
     Friend WithEvents Price As DataGridViewTextBoxColumn
+    Friend WithEvents Payment As DataGridViewTextBoxColumn
 End Class
