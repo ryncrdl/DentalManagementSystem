@@ -2,7 +2,7 @@
 Imports MongoDB.Driver
 Module ServicesControllers
     'Load Data
-    Public Sub LoadDataInDataGridView(collectionName As String, dataGridView As Guna.UI2.WinForms.Guna2DataGridView)
+    Public Sub LoadDataInDataGridView(collectionName As String, dataGridViews As Guna.UI2.WinForms.Guna2DataGridView)
         Try
             ' Connect to MongoDB and get the collection
             Connection.ConnectToMongoDB(collectionName)
@@ -13,7 +13,7 @@ Module ServicesControllers
             Dim data = collection.Find(filter).ToList()
 
             ' Clear existing data in DataGridView
-            dataGridView.Rows.Clear()
+            dataGridViews.Rows.Clear()
 
             ' Populate the Guna2DataGridView with the fetched data
             For Each doc As BsonDocument In data
@@ -21,7 +21,7 @@ Module ServicesControllers
                 For Each element In doc.Elements
                     rowData.Add(element.Value.ToString())
                 Next
-                dataGridView.Rows.Add(rowData.ToArray())
+                dataGridViews.Rows.Add(rowData.ToArray())
             Next
         Catch ex As Exception
             MessageBox.Show("Error loading data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

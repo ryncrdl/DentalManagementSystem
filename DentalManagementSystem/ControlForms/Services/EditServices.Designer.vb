@@ -50,6 +50,8 @@ Partial Class EditServices
         Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         OpenFileDialog1 = New OpenFileDialog()
+        messageOK = New Guna.UI2.WinForms.Guna2MessageDialog()
+        messageERROR = New Guna.UI2.WinForms.Guna2MessageDialog()
         CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -267,6 +269,24 @@ Partial Class EditServices
         ' 
         OpenFileDialog1.FileName = "OpenFileDialog1"
         ' 
+        ' messageOK
+        ' 
+        messageOK.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        messageOK.Caption = Nothing
+        messageOK.Icon = Guna.UI2.WinForms.MessageDialogIcon.None
+        messageOK.Parent = Nothing
+        messageOK.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
+        messageOK.Text = Nothing
+        ' 
+        ' messageERROR
+        ' 
+        messageERROR.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        messageERROR.Caption = Nothing
+        messageERROR.Icon = Guna.UI2.WinForms.MessageDialogIcon.None
+        messageERROR.Parent = Nothing
+        messageERROR.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
+        messageERROR.Text = Nothing
+        ' 
         ' EditServices
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -305,4 +325,6 @@ Partial Class EditServices
     Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents messageOK As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents messageERROR As Guna.UI2.WinForms.Guna2MessageDialog
 End Class
