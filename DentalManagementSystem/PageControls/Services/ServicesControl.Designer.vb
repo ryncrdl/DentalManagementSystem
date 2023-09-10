@@ -44,16 +44,16 @@ Partial Class ServicesControl
         BtnAdd = New Guna.UI2.WinForms.Guna2Button()
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ServicesTable = New Guna.UI2.WinForms.Guna2DataGridView()
+        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ID = New DataGridViewTextBoxColumn()
         Image = New DataGridViewTextBoxColumn()
         Title = New DataGridViewTextBoxColumn()
         Description = New DataGridViewTextBoxColumn()
         Price = New DataGridViewTextBoxColumn()
         Payment = New DataGridViewTextBoxColumn()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         CType(ServicesTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -150,6 +150,7 @@ Partial Class ServicesControl
         ServicesTable.AllowUserToAddRows = False
         ServicesTable.AllowUserToDeleteRows = False
         ServicesTable.AllowUserToOrderColumns = True
+        ServicesTable.AllowUserToResizeColumns = False
         ServicesTable.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.White
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -157,6 +158,8 @@ Partial Class ServicesControl
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionForeColor = Color.White
         ServicesTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        ServicesTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
+        ServicesTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         ServicesTable.BackgroundColor = SystemColors.Control
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
@@ -222,48 +225,6 @@ Partial Class ServicesControl
         ServicesTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ServicesTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
-        ' ID
-        ' 
-        ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-        ID.HeaderText = "ID"
-        ID.Name = "ID"
-        ID.ReadOnly = True
-        ID.Visible = False
-        ID.Width = 50
-        ' 
-        ' Image
-        ' 
-        Image.FillWeight = 150F
-        Image.HeaderText = "Image"
-        Image.Name = "Image"
-        Image.ReadOnly = True
-        ' 
-        ' Title
-        ' 
-        Title.FillWeight = 150F
-        Title.HeaderText = "Title"
-        Title.Name = "Title"
-        Title.ReadOnly = True
-        ' 
-        ' Description
-        ' 
-        Description.HeaderText = "Description"
-        Description.Name = "Description"
-        Description.ReadOnly = True
-        ' 
-        ' Price
-        ' 
-        Price.FillWeight = 150F
-        Price.HeaderText = "Price"
-        Price.Name = "Price"
-        Price.ReadOnly = True
-        ' 
-        ' Payment
-        ' 
-        Payment.HeaderText = "Payment"
-        Payment.Name = "Payment"
-        Payment.ReadOnly = True
-        ' 
         ' Guna2TextBox1
         ' 
         Guna2TextBox1.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
@@ -313,6 +274,55 @@ Partial Class ServicesControl
         ' Guna2Elipse3
         ' 
         Guna2Elipse3.BorderRadius = 20
+        ' 
+        ' ID
+        ' 
+        ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        ID.HeaderText = "ID"
+        ID.Name = "ID"
+        ID.ReadOnly = True
+        ID.Visible = False
+        ID.Width = 50
+        ' 
+        ' Image
+        ' 
+        Image.FillWeight = 168.107956F
+        Image.HeaderText = "Image"
+        Image.Name = "Image"
+        Image.ReadOnly = True
+        Image.Width = 168
+        ' 
+        ' Title
+        ' 
+        Title.FillWeight = 112.182739F
+        Title.HeaderText = "Title"
+        Title.Name = "Title"
+        Title.ReadOnly = True
+        Title.Width = 112
+        ' 
+        ' Description
+        ' 
+        Description.FillWeight = 122.590652F
+        Description.HeaderText = "Description"
+        Description.Name = "Description"
+        Description.ReadOnly = True
+        Description.Width = 260
+        ' 
+        ' Price
+        ' 
+        Price.FillWeight = 148.271225F
+        Price.HeaderText = "Price"
+        Price.Name = "Price"
+        Price.ReadOnly = True
+        Price.Width = 148
+        ' 
+        ' Payment
+        ' 
+        Payment.FillWeight = 98.84747F
+        Payment.HeaderText = "Payment"
+        Payment.Name = "Payment"
+        Payment.ReadOnly = True
+        Payment.Width = 99
         ' 
         ' ServicesControl
         ' 

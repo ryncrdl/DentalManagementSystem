@@ -7,6 +7,7 @@ Module ServicesControllers
     'Load Data
 
     Public Sub loaddatas(collectionName As String, dataGridViews As Guna.UI2.WinForms.Guna2DataGridView)
+
         Try
             ' Connect to MongoDB and get the collection
             Connection.ConnectToMongoDB(collectionName)
@@ -21,29 +22,21 @@ Module ServicesControllers
 
             ' Populate the Guna2DataGridView with the fetched data
             For Each doc As BsonDocument In data
-                Dim rowData As New List(Of Object)()
+                Dim rowData As New List(Of String)()
+                Dim rdata As New List(Of Object)()
 
                 ' Retrieve the image data from MongoDB (replace "image" with the actual field name)
                 If doc.Contains("image") AndAlso Not doc("image").IsBsonNull Then
                     Dim imageBytes As Byte() = doc("image").AsByteArray
                     Dim Image As Image = ByteArrayToImage(imageBytes)
-                    rowData.Add(Image)
+                    rdata.Add(Image)
                 Else
                     rowData.Add(Nothing) ' Add a placeholder for missing images
                 End If
 
-
-                rowData.Add(doc("Title").AsString)
-                rowData.Add(doc("Description").AsString)
-                rowData.Add(doc("Price").AsString)
-                If doc.Contains("Payment") AndAlso Not doc("Payment").IsBsonNull Then
-                    rowData.Add(doc("Payment").AsString)
-                Else
-                    rowData.Add("") ' Handle the case where "Payment" is missing or null
-                End If
-
-
-                ' Add the row to the DataGridView
+                For Each element In doc.Elements
+                    rowData.Add(element.Value.ToString())
+                Next
                 dataGridViews.Rows.Add(rowData.ToArray())
             Next
         Catch ex As Exception
@@ -118,7 +111,7 @@ Module ServicesControllers
             End If
 
         Catch ex As Exception
-            MessageBox.Show("Error deleting doctor: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error deleting services: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
 
     End Sub
