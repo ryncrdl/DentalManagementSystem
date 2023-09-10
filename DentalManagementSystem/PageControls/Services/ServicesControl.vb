@@ -4,11 +4,10 @@ Public Class ServicesControl
     Private collection As IMongoCollection(Of BsonDocument)
     Private Sub LoadUpdatedDataS(sender As Object, e As EventArgs)
         ' Reload data into DataGridView with collection name "services"
-        LoadDataInDataGridView("services", ServicesTable)
+        loaddatas("services", ServicesTable)
     End Sub
     Private Sub ServicesControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadDataInDataGridView("services", ServicesTable)
-
+        loaddatas("services", ServicesTable)
         Connection.ConnectToMongoDB("services")
         Me.collection = Connection.GetMongoDBCollection()
     End Sub
@@ -46,8 +45,8 @@ Public Class ServicesControl
 
 
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-        Dim AddingServicesForm As New AddingServices()
-        AddHandler AddingServicesForm.ServicesAdded, AddressOf LoadUpdatedDataS
+        Dim AddingServices As New AddingServices()
+        AddHandler AddingServices.ServicesAdded, AddressOf LoadUpdatedDataS
         AddingServices.ShowDialog()
     End Sub
 
@@ -67,5 +66,28 @@ Public Class ServicesControl
         Dim editServices As New EditServices(rowData, collection)
         AddHandler editServices.ServicesUpdated, AddressOf LoadUpdatedDataS
         editServices.ShowDialog()
+    End Sub
+
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        If ServicesTable.CurrentRow Is Nothing Then
+            ErrorMessage.Show("Please select a row to delete.")
+            Return
+        End If
+
+        Dim selectedRowIndex As Integer = ServicesTable.CurrentRow.Index
+        Dim servicesId As String = ServicesTable.Rows(selectedRowIndex).Cells("ID").Value.ToString()
+
+
+
+        Dim result = QuestionMessage.Show("Are you sure do you want to delete this record?")
+        If result = DialogResult.Yes Then
+
+            Try
+                ' Call the DeleteDoctor method from the DoctorsControllers module
+                ServicesControllers.DeleteServices(servicesId, ServicesTable)
+            Catch ex As Exception
+                ErrorMessage.Show("Error deleting doctor: ")
+            End Try
+        End If
     End Sub
 End Class

@@ -1,22 +1,24 @@
 ﻿Public Class AddingServices
     Private datas As List(Of Guna.UI2.WinForms.Guna2TextBox)
     Public Event ServicesAdded As EventHandler
-    Private Sub Guna2CirclePictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2CirclePictureBox1.Click
-
-    End Sub
+    Private imagePath As String ' Variable to store the image file path
 
     Private Sub BtnBrowse_Click(sender As Object, e As EventArgs) Handles BtnBrowse.Click
         Try
             With OpenFileDialog1
                 .Filter = "Image Files |*.png; *.jpeg;*.jpg"
                 .FilterIndex = 1
-
             End With
-            OpenFileDialog1.FileName = ""
-            If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-                Guna2CirclePictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
-            End If
 
+            OpenFileDialog1.FileName = ""
+
+            If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+                ' Load the selected image into Guna2CirclePictureBox1
+                Guna2CirclePictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+
+                ' Store the image file path
+                imagePath = OpenFileDialog1.FileName
+            End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -37,11 +39,17 @@
         Dim title As String = txttitle.Text
         Dim description As String = txtdescription.Text
         Dim price As String = txtprice.Text
-
+        Dim payment As String = txtPayment.Text
 
         If (isValidate) Then
             Try
-                If ServicesControllers.InsertServices(title, description, price) Then
+                ' Check if an image has been selected
+                If String.IsNullOrEmpty(imagePath) Then
+                    MessageBox.Show("Please select an image.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Return
+                End If
+
+                If ServicesControllers.InsertServices(imagePath, title, description, price, payment) Then
                     messageOK.Show("Services added successfully!", "Services Success")
 
                     ' Clear the input fields after successful addition

@@ -60,17 +60,21 @@ Public Class ClientsControl
         Dim selectedRowIndex As Integer = ClientsTable.CurrentRow.Index
         Dim clientsId As String = ClientsTable.Rows(selectedRowIndex).Cells("ID").Value.ToString()
 
-
-
         Dim result = QuestionMessage.Show("Are you sure do you want to delete this record?")
         If result = DialogResult.Yes Then
 
             Try
                 ' Call the DeleteDoctor method from the DoctorsControllers module
-                DoctorsControllers.DeleteDoctor(clientsId, ClientsTable)
+                ClientsControllers.DELETECLIENT(clientsId, ClientsTable)
             Catch ex As Exception
                 ErrorMessage.Show("Error deleting doctor: ")
             End Try
         End If
+    End Sub
+
+    Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
+        Dim CreateClients As New CreateClients()
+        AddHandler CreateClients.ClientAdded, AddressOf LoadUpdatedData
+        CreateClients.ShowDialog()
     End Sub
 End Class

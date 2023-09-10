@@ -33,7 +33,27 @@ Module ClientsControllers
         End If
         Return Connection.collection
     End Function
-    Public Sub DeleteDoctor(clientsId As String, table As Guna.UI2.WinForms.Guna2DataGridView)
+    Public Function InsertClients(Fullname As String, Username As String, Password As String, Contact As String) As Boolean
+
+        Try
+            Dim collection As IMongoCollection(Of BsonDocument) = GetMongoDBCollection()
+
+            Dim clients As BsonDocument = New BsonDocument()
+            clients.Add("fullName", Fullname)
+            clients.Add("username", Username)
+            clients.Add("password", Password)
+            clients.Add("contactNumber", Contact)
+
+            collection.InsertOne(clients)
+
+            'Load data
+            Return True ' Insertion successful
+        Catch ex As Exception
+            Throw New Exception("Error inserting clients account into MongoDB: " & ex.Message)
+        End Try
+
+    End Function
+    Public Sub DELETECLIENT(clientsId As String, table As Guna.UI2.WinForms.Guna2DataGridView)
 
         Try
             ' Connect to MongoDB and get the collection

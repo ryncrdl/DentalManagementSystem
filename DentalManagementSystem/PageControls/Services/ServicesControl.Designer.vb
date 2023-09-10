@@ -29,13 +29,13 @@ Partial Class ServicesControl
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         QuestionMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
@@ -43,10 +43,6 @@ Partial Class ServicesControl
         BtnDelete = New Guna.UI2.WinForms.Guna2Button()
         BtnAdd = New Guna.UI2.WinForms.Guna2Button()
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
-        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ServicesTable = New Guna.UI2.WinForms.Guna2DataGridView()
         ID = New DataGridViewTextBoxColumn()
         Image = New DataGridViewTextBoxColumn()
@@ -54,6 +50,10 @@ Partial Class ServicesControl
         Description = New DataGridViewTextBoxColumn()
         Price = New DataGridViewTextBoxColumn()
         Payment = New DataGridViewTextBoxColumn()
+        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
+        SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         CType(ServicesTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -144,56 +144,6 @@ Partial Class ServicesControl
         ' 
         Guna2Elipse2.BorderRadius = 20
         Guna2Elipse2.TargetControl = ServicesTable
-        ' 
-        ' Guna2TextBox1
-        ' 
-        Guna2TextBox1.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2TextBox1.BorderRadius = 10
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges7
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.IconRight = My.Resources.Resources.icons8_search_100
-        Guna2TextBox1.IconRightOffset = New Point(20, 0)
-        Guna2TextBox1.IconRightSize = New Size(25, 25)
-        Guna2TextBox1.Location = New Point(32, 104)
-        Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PasswordChar = ChrW(0)
-        Guna2TextBox1.PlaceholderText = "Search"
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2TextBox1.Size = New Size(650, 49)
-        Guna2TextBox1.TabIndex = 18
-        ' 
-        ' SuccessfulMessage
-        ' 
-        SuccessfulMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
-        SuccessfulMessage.Caption = Nothing
-        SuccessfulMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
-        SuccessfulMessage.Parent = Nothing
-        SuccessfulMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
-        SuccessfulMessage.Text = Nothing
-        ' 
-        ' Guna2HtmlLabel2
-        ' 
-        Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        Guna2HtmlLabel2.Location = New Point(31, 35)
-        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(107, 39)
-        Guna2HtmlLabel2.TabIndex = 16
-        Guna2HtmlLabel2.Text = "Services"
-        ' 
-        ' Guna2Elipse3
-        ' 
-        Guna2Elipse3.BorderRadius = 20
         ' 
         ' ServicesTable
         ' 
@@ -313,6 +263,56 @@ Partial Class ServicesControl
         Payment.HeaderText = "Payment"
         Payment.Name = "Payment"
         Payment.ReadOnly = True
+        ' 
+        ' Guna2TextBox1
+        ' 
+        Guna2TextBox1.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2TextBox1.BorderRadius = 10
+        Guna2TextBox1.CustomizableEdges = CustomizableEdges7
+        Guna2TextBox1.DefaultText = ""
+        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Guna2TextBox1.IconRight = My.Resources.Resources.icons8_search_100
+        Guna2TextBox1.IconRightOffset = New Point(20, 0)
+        Guna2TextBox1.IconRightSize = New Size(25, 25)
+        Guna2TextBox1.Location = New Point(32, 104)
+        Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
+        Guna2TextBox1.Name = "Guna2TextBox1"
+        Guna2TextBox1.PasswordChar = ChrW(0)
+        Guna2TextBox1.PlaceholderText = "Search"
+        Guna2TextBox1.SelectedText = ""
+        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        Guna2TextBox1.Size = New Size(650, 49)
+        Guna2TextBox1.TabIndex = 18
+        ' 
+        ' SuccessfulMessage
+        ' 
+        SuccessfulMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        SuccessfulMessage.Caption = Nothing
+        SuccessfulMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        SuccessfulMessage.Parent = Nothing
+        SuccessfulMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        SuccessfulMessage.Text = Nothing
+        ' 
+        ' Guna2HtmlLabel2
+        ' 
+        Guna2HtmlLabel2.BackColor = Color.Transparent
+        Guna2HtmlLabel2.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        Guna2HtmlLabel2.Location = New Point(31, 35)
+        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Guna2HtmlLabel2.Size = New Size(107, 39)
+        Guna2HtmlLabel2.TabIndex = 16
+        Guna2HtmlLabel2.Text = "Services"
+        ' 
+        ' Guna2Elipse3
+        ' 
+        Guna2Elipse3.BorderRadius = 20
         ' 
         ' ServicesControl
         ' 
