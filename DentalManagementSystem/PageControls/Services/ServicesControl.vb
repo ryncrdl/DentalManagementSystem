@@ -26,10 +26,13 @@ Public Class ServicesControl
         Dim selectedRowIndex As Integer = ServicesTable.CurrentRow.Index
 
         ' Get the data from the selected row
-        Dim rowData As New Dictionary(Of String, String)()
+        Dim rowData As New Dictionary(Of String, String)
+        rowData("Id") = ServicesTable.Rows(selectedRowIndex).Cells("Id").Value.ToString()
         rowData("Image") = ServicesTable.Rows(selectedRowIndex).Cells("Image").Value.ToString()
         rowData("Title") = ServicesTable.Rows(selectedRowIndex).Cells("Title").Value.ToString()
         rowData("Description") = ServicesTable.Rows(selectedRowIndex).Cells("Description").Value.ToString()
+
+
 
 
 

@@ -23,19 +23,19 @@ Partial Class ClientsControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         QuestionMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
@@ -43,18 +43,17 @@ Partial Class ClientsControl
         BtnDelete = New Guna.UI2.WinForms.Guna2Button()
         BtnAdd = New Guna.UI2.WinForms.Guna2Button()
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        DoctorsTable = New Guna.UI2.WinForms.Guna2DataGridView()
+        ClientsTable = New Guna.UI2.WinForms.Guna2DataGridView()
         ID = New DataGridViewTextBoxColumn()
-        Firstname = New DataGridViewTextBoxColumn()
-        Lastname = New DataGridViewTextBoxColumn()
+        Fullname = New DataGridViewTextBoxColumn()
+        Username = New DataGridViewTextBoxColumn()
+        Password = New DataGridViewTextBoxColumn()
         Contact = New DataGridViewTextBoxColumn()
-        Email = New DataGridViewTextBoxColumn()
-        Address = New DataGridViewTextBoxColumn()
         Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        CType(DoctorsTable, ComponentModel.ISupportInitialize).BeginInit()
+        CType(ClientsTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2Elipse1
@@ -84,7 +83,7 @@ Partial Class ClientsControl
         ' 
         BtnEdit.BackColor = Color.Transparent
         BtnEdit.Cursor = Cursors.Hand
-        BtnEdit.CustomizableEdges = CustomizableEdges17
+        BtnEdit.CustomizableEdges = CustomizableEdges1
         BtnEdit.DisabledState.BorderColor = Color.DarkGray
         BtnEdit.DisabledState.CustomBorderColor = Color.DarkGray
         BtnEdit.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -96,7 +95,7 @@ Partial Class ClientsControl
         BtnEdit.ImageSize = New Size(30, 30)
         BtnEdit.Location = New Point(552, 36)
         BtnEdit.Name = "BtnEdit"
-        BtnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        BtnEdit.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         BtnEdit.Size = New Size(30, 30)
         BtnEdit.TabIndex = 21
         ' 
@@ -104,7 +103,7 @@ Partial Class ClientsControl
         ' 
         BtnDelete.BackColor = Color.Transparent
         BtnDelete.Cursor = Cursors.Hand
-        BtnDelete.CustomizableEdges = CustomizableEdges19
+        BtnDelete.CustomizableEdges = CustomizableEdges3
         BtnDelete.DisabledState.BorderColor = Color.DarkGray
         BtnDelete.DisabledState.CustomBorderColor = Color.DarkGray
         BtnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -116,7 +115,7 @@ Partial Class ClientsControl
         BtnDelete.ImageSize = New Size(30, 30)
         BtnDelete.Location = New Point(601, 36)
         BtnDelete.Name = "BtnDelete"
-        BtnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        BtnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         BtnDelete.Size = New Size(30, 30)
         BtnDelete.TabIndex = 20
         ' 
@@ -124,7 +123,7 @@ Partial Class ClientsControl
         ' 
         BtnAdd.BackColor = Color.Transparent
         BtnAdd.Cursor = Cursors.Hand
-        BtnAdd.CustomizableEdges = CustomizableEdges21
+        BtnAdd.CustomizableEdges = CustomizableEdges5
         BtnAdd.DisabledState.BorderColor = Color.DarkGray
         BtnAdd.DisabledState.CustomBorderColor = Color.DarkGray
         BtnAdd.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -136,91 +135,92 @@ Partial Class ClientsControl
         BtnAdd.ImageSize = New Size(30, 30)
         BtnAdd.Location = New Point(650, 36)
         BtnAdd.Name = "BtnAdd"
-        BtnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        BtnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         BtnAdd.Size = New Size(30, 30)
         BtnAdd.TabIndex = 19
         ' 
         ' Guna2Elipse2
         ' 
         Guna2Elipse2.BorderRadius = 20
-        Guna2Elipse2.TargetControl = DoctorsTable
+        Guna2Elipse2.TargetControl = ClientsTable
         ' 
-        ' DoctorsTable
+        ' ClientsTable
         ' 
-        DoctorsTable.AllowUserToAddRows = False
-        DoctorsTable.AllowUserToDeleteRows = False
-        DoctorsTable.AllowUserToResizeRows = False
-        DataGridViewCellStyle11.BackColor = Color.White
-        DataGridViewCellStyle11.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle11.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle11.SelectionForeColor = Color.White
-        DoctorsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle11
-        DoctorsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
-        DoctorsTable.BackgroundColor = SystemColors.Control
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        DataGridViewCellStyle12.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle12.ForeColor = Color.White
-        DataGridViewCellStyle12.SelectionBackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
-        DoctorsTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle12
-        DoctorsTable.ColumnHeadersHeight = 44
-        DoctorsTable.Columns.AddRange(New DataGridViewColumn() {ID, Firstname, Lastname, Contact, Email, Address})
-        DataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle13.BackColor = Color.White
-        DataGridViewCellStyle13.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle13.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle13.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DataGridViewCellStyle13.SelectionForeColor = Color.White
-        DataGridViewCellStyle13.WrapMode = DataGridViewTriState.False
-        DoctorsTable.DefaultCellStyle = DataGridViewCellStyle13
-        DoctorsTable.GridColor = Color.Silver
-        DoctorsTable.ImeMode = ImeMode.NoControl
-        DoctorsTable.Location = New Point(30, 173)
-        DoctorsTable.Margin = New Padding(0)
-        DoctorsTable.MultiSelect = False
-        DoctorsTable.Name = "DoctorsTable"
-        DoctorsTable.ReadOnly = True
-        DoctorsTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle14.BackColor = Color.White
-        DataGridViewCellStyle14.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle14.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle14.SelectionBackColor = Color.White
-        DataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle14.WrapMode = DataGridViewTriState.False
-        DoctorsTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle14
-        DoctorsTable.RowHeadersVisible = False
-        DataGridViewCellStyle15.WrapMode = DataGridViewTriState.True
-        DoctorsTable.RowsDefaultCellStyle = DataGridViewCellStyle15
-        DoctorsTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
-        DoctorsTable.RowTemplate.Height = 35
-        DoctorsTable.Size = New Size(650, 386)
-        DoctorsTable.TabIndex = 17
-        DoctorsTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
-        DoctorsTable.ThemeStyle.BackColor = SystemColors.Control
-        DoctorsTable.ThemeStyle.GridColor = Color.Silver
-        DoctorsTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        DoctorsTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        DoctorsTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        DoctorsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DoctorsTable.ThemeStyle.HeaderStyle.Height = 44
-        DoctorsTable.ThemeStyle.ReadOnly = True
-        DoctorsTable.ThemeStyle.RowsStyle.BackColor = Color.White
-        DoctorsTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        DoctorsTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.RowsStyle.Height = 35
-        DoctorsTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
+        ClientsTable.AllowUserToAddRows = False
+        ClientsTable.AllowUserToDeleteRows = False
+        ClientsTable.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.BackColor = Color.White
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        ClientsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        ClientsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
+        ClientsTable.BackgroundColor = SystemColors.Control
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = Color.White
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        ClientsTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        ClientsTable.ColumnHeadersHeight = 44
+        ClientsTable.Columns.AddRange(New DataGridViewColumn() {ID, Fullname, Username, Password, Contact})
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = Color.White
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        DataGridViewCellStyle3.SelectionForeColor = Color.White
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
+        ClientsTable.DefaultCellStyle = DataGridViewCellStyle3
+        ClientsTable.GridColor = Color.Silver
+        ClientsTable.ImeMode = ImeMode.NoControl
+        ClientsTable.Location = New Point(30, 165)
+        ClientsTable.Margin = New Padding(0)
+        ClientsTable.MultiSelect = False
+        ClientsTable.Name = "ClientsTable"
+        ClientsTable.ReadOnly = True
+        ClientsTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = Color.White
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
+        DataGridViewCellStyle4.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = Color.White
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
+        ClientsTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        ClientsTable.RowHeadersVisible = False
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        ClientsTable.RowsDefaultCellStyle = DataGridViewCellStyle5
+        ClientsTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        ClientsTable.RowTemplate.Height = 35
+        ClientsTable.ScrollBars = ScrollBars.None
+        ClientsTable.Size = New Size(650, 386)
+        ClientsTable.TabIndex = 22
+        ClientsTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
+        ClientsTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        ClientsTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ClientsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ClientsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ClientsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
+        ClientsTable.ThemeStyle.BackColor = SystemColors.Control
+        ClientsTable.ThemeStyle.GridColor = Color.Silver
+        ClientsTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        ClientsTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        ClientsTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        ClientsTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        ClientsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        ClientsTable.ThemeStyle.HeaderStyle.Height = 44
+        ClientsTable.ThemeStyle.ReadOnly = True
+        ClientsTable.ThemeStyle.RowsStyle.BackColor = Color.White
+        ClientsTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        ClientsTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ClientsTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ClientsTable.ThemeStyle.RowsStyle.Height = 35
+        ClientsTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ClientsTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
         ' ID
         ' 
@@ -231,53 +231,43 @@ Partial Class ClientsControl
         ID.Visible = False
         ID.Width = 50
         ' 
-        ' Firstname
+        ' Fullname
         ' 
-        Firstname.FillWeight = 150F
-        Firstname.HeaderText = "First Name"
-        Firstname.Name = "Firstname"
-        Firstname.ReadOnly = True
-        Firstname.Width = 160
+        Fullname.FillWeight = 150F
+        Fullname.HeaderText = "Full Name"
+        Fullname.Name = "Fullname"
+        Fullname.ReadOnly = True
+        Fullname.Width = 220
         ' 
-        ' Lastname
+        ' Username
         ' 
-        Lastname.FillWeight = 150F
-        Lastname.HeaderText = "Last Name"
-        Lastname.Name = "Lastname"
-        Lastname.ReadOnly = True
-        Lastname.Width = 161
+        Username.FillWeight = 150F
+        Username.HeaderText = "Username"
+        Username.Name = "Username"
+        Username.ReadOnly = True
+        Username.Width = 161
+        ' 
+        ' Password
+        ' 
+        Password.FillWeight = 150F
+        Password.HeaderText = "Password"
+        Password.Name = "Password"
+        Password.ReadOnly = True
+        Password.Width = 160
         ' 
         ' Contact
         ' 
+        Contact.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
         Contact.FillWeight = 150F
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 160
-        ' 
-        ' Email
-        ' 
-        Email.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Email.FillWeight = 150F
-        Email.HeaderText = "Email"
-        Email.Name = "Email"
-        Email.ReadOnly = True
-        Email.Width = 76
-        ' 
-        ' Address
-        ' 
-        Address.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Address.FillWeight = 200F
-        Address.HeaderText = "Address"
-        Address.Name = "Address"
-        Address.ReadOnly = True
-        Address.Width = 93
         ' 
         ' Guna2TextBox1
         ' 
         Guna2TextBox1.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2TextBox1.BorderRadius = 10
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges23
+        Guna2TextBox1.CustomizableEdges = CustomizableEdges7
         Guna2TextBox1.DefaultText = ""
         Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -295,7 +285,7 @@ Partial Class ClientsControl
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = "Search"
         Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2TextBox1.Size = New Size(650, 49)
         Guna2TextBox1.TabIndex = 18
         ' 
@@ -328,15 +318,15 @@ Partial Class ClientsControl
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
+        Controls.Add(ClientsTable)
         Controls.Add(BtnEdit)
         Controls.Add(BtnDelete)
         Controls.Add(BtnAdd)
         Controls.Add(Guna2TextBox1)
-        Controls.Add(DoctorsTable)
         Controls.Add(Guna2HtmlLabel1)
         Name = "ClientsControl"
         Size = New Size(714, 597)
-        CType(DoctorsTable, ComponentModel.ISupportInitialize).EndInit()
+        CType(ClientsTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -346,17 +336,16 @@ Partial Class ClientsControl
     Friend WithEvents BtnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnAdd As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents DoctorsTable As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Firstname As DataGridViewTextBoxColumn
-    Friend WithEvents Lastname As DataGridViewTextBoxColumn
-    Friend WithEvents Contact As DataGridViewTextBoxColumn
-    Friend WithEvents Email As DataGridViewTextBoxColumn
-    Friend WithEvents Address As DataGridViewTextBoxColumn
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents QuestionMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents SuccessfulMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents ClientsTable As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents Fullname As DataGridViewTextBoxColumn
+    Friend WithEvents Username As DataGridViewTextBoxColumn
+    Friend WithEvents Password As DataGridViewTextBoxColumn
+    Friend WithEvents Contact As DataGridViewTextBoxColumn
 End Class

@@ -143,6 +143,7 @@ Partial Class ServicesControl
         ' Guna2Elipse2
         ' 
         Guna2Elipse2.BorderRadius = 20
+        Guna2Elipse2.TargetControl = ServicesTable
         ' 
         ' Guna2TextBox1
         ' 
