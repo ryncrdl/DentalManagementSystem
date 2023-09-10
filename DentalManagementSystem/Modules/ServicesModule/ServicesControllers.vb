@@ -32,38 +32,16 @@ Module ServicesControllers
                     rowData.Add(Nothing) ' Add a placeholder for missing images
                 End If
 
-                ' Check for the "Price" field and handle it as Decimal128
-                If doc.Contains("Price") AndAlso Not doc("Price").IsBsonNull Then
-                    Dim priceAsString As String = doc("Price").AsString
-
-                    ' Try to parse the string as Decimal128
-                    Dim price As Decimal128
-                    If Decimal128.TryParse(priceAsString, price) Then
-                        rowData.Add(price)
-                    Else
-                        ' Handle the case where the string is not a valid Decimal128
-                        rowData.Add(Decimal128.Zero) ' or some other default value
-                    End If
-                Else
-                    rowData.Add(Decimal128.Zero) ' or some other default value
-                End If
-
-                ' Case-insensitive check for the "Payment" field
-
-                Dim paymentField As BsonElement = doc.Elements.FirstOrDefault(Function(e) String.Equals(e.Name, "Payment", StringComparison.OrdinalIgnoreCase))
-
-                If Not IsNothing(paymentField) AndAlso Not paymentField.Value.IsBsonNull Then
-                    rowData.Add(paymentField.Value.AsString)
-
-                    'If Not IsNothing(paymentField) AndAlso Not paymentField.Value.IsBsonNull Then
-                    'rowData.Add(paymentField.Value.AsString)
-
-                Else
-                    rowData.Add("Payment") ' Add a placeholder for missing payment data
-                End If
 
                 rowData.Add(doc("Title").AsString)
                 rowData.Add(doc("Description").AsString)
+                rowData.Add(doc("Price").AsString)
+                If doc.Contains("Payment") AndAlso Not doc("Payment").IsBsonNull Then
+                    rowData.Add(doc("Payment").AsString)
+                Else
+                    rowData.Add("") ' Handle the case where "Payment" is missing or null
+                End If
+
 
                 ' Add the row to the DataGridView
                 dataGridViews.Rows.Add(rowData.ToArray())
