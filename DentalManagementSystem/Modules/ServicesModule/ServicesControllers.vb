@@ -5,6 +5,7 @@ Imports System.Windows.Forms
 
 Module ServicesControllers
     'Load Data
+
     Public Sub loaddatas(collectionName As String, dataGridViews As Guna.UI2.WinForms.Guna2DataGridView)
         Try
             ' Connect to MongoDB and get the collection
@@ -22,20 +23,47 @@ Module ServicesControllers
             For Each doc As BsonDocument In data
                 Dim rowData As New List(Of Object)()
 
-                ' Retrieve the image data from MongoDB (replace "Image" with the actual field name)
-                Dim imageBytes As Byte() = doc("Image").AsByteArray ' Replace "YourImageFieldName"
-
-                If imageBytes IsNot Nothing AndAlso imageBytes.Length > 0 Then
-                    Dim image As Image = ByteArrayToImage(imageBytes)
-                    rowData.Add(image)
+                ' Retrieve the image data from MongoDB (replace "image" with the actual field name)
+                If doc.Contains("image") AndAlso Not doc("image").IsBsonNull Then
+                    Dim imageBytes As Byte() = doc("image").AsByteArray
+                    Dim Image As Image = ByteArrayToImage(imageBytes)
+                    rowData.Add(Image)
                 Else
                     rowData.Add(Nothing) ' Add a placeholder for missing images
                 End If
 
+                ' Check for the "Price" field and handle it as Decimal128
+                If doc.Contains("Price") AndAlso Not doc("Price").IsBsonNull Then
+                    Dim priceAsString As String = doc("Price").AsString
+
+                    ' Try to parse the string as Decimal128
+                    Dim price As Decimal128
+                    If Decimal128.TryParse(priceAsString, price) Then
+                        rowData.Add(price)
+                    Else
+                        ' Handle the case where the string is not a valid Decimal128
+                        rowData.Add(Decimal128.Zero) ' or some other default value
+                    End If
+                Else
+                    rowData.Add(Decimal128.Zero) ' or some other default value
+                End If
+
+                ' Case-insensitive check for the "Payment" field
+
+                Dim paymentField As BsonElement = doc.Elements.FirstOrDefault(Function(e) String.Equals(e.Name, "Payment", StringComparison.OrdinalIgnoreCase))
+
+                If Not IsNothing(paymentField) AndAlso Not paymentField.Value.IsBsonNull Then
+                    rowData.Add(paymentField.Value.AsString)
+
+                    'If Not IsNothing(paymentField) AndAlso Not paymentField.Value.IsBsonNull Then
+                    'rowData.Add(paymentField.Value.AsString)
+
+                Else
+                    rowData.Add("Payment") ' Add a placeholder for missing payment data
+                End If
+
                 rowData.Add(doc("Title").AsString)
                 rowData.Add(doc("Description").AsString)
-                rowData.Add(doc("Price").AsDecimal)
-                rowData.Add(doc("Payment").AsString)
 
                 ' Add the row to the DataGridView
                 dataGridViews.Rows.Add(rowData.ToArray())
@@ -44,6 +72,8 @@ Module ServicesControllers
             MessageBox.Show("Error loading data: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+
 
     ' Convert byte array to Image
     Private Function ByteArrayToImage(byteArray As Byte()) As Image
@@ -59,7 +89,7 @@ Module ServicesControllers
             Dim collection As IMongoCollection(Of BsonDocument) = GetMongoDBCollections()
 
             Dim services As BsonDocument = New BsonDocument()
-            services.Add("Image", imageBytes)
+            services.Add("image", imageBytes)
             services.Add("Title", title)
             services.Add("Description", description)
             services.Add("Price", price)
