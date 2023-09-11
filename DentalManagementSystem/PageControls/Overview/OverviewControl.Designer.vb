@@ -799,7 +799,7 @@ Partial Class OverviewControl
         BtnPending.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         BtnPending.Size = New Size(242, 50)
         BtnPending.TabIndex = 11
-        BtnPending.Text = "Create New Appointment"
+        BtnPending.Text = "Clients Account"
         ' 
         ' OverviewControl
         ' 
