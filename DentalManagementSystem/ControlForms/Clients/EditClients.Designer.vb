@@ -67,18 +67,18 @@ Partial Class EditClients
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel4.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel4.Location = New Point(27, 348)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Guna2HtmlLabel4.Size = New Size(96, 23)
+        Guna2HtmlLabel4.Size = New Size(56, 23)
         Guna2HtmlLabel4.TabIndex = 46
-        Guna2HtmlLabel4.Text = "Enter Contact"
+        Guna2HtmlLabel4.Text = " Contact"
         ' 
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel3.Location = New Point(29, 252)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
@@ -89,7 +89,7 @@ Partial Class EditClients
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel2.Location = New Point(29, 157)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
@@ -100,7 +100,7 @@ Partial Class EditClients
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel1.Location = New Point(29, 61)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
@@ -141,7 +141,7 @@ Partial Class EditClients
         txtfullname.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtfullname.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtfullname.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtfullname.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtfullname.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtfullname.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtfullname.IconRightOffset = New Point(20, 0)
         txtfullname.IconRightSize = New Size(25, 25)
@@ -187,7 +187,7 @@ Partial Class EditClients
         BtnCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnCancel.FillColor = Color.Empty
         BtnCancel.FillColor2 = Color.Empty
-        BtnCancel.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnCancel.ForeColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.HoverState.FillColor = Color.DarkViolet
         BtnCancel.HoverState.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
@@ -209,8 +209,9 @@ Partial Class EditClients
         txtContact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         txtContact.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtContact.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtContact.Enabled = False
         txtContact.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtContact.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtContact.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtContact.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtContact.IconRightOffset = New Point(20, 0)
         txtContact.IconRightSize = New Size(25, 25)
@@ -235,7 +236,7 @@ Partial Class EditClients
         txtPassword.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtPassword.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtPassword.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPassword.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtPassword.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtPassword.IconRightOffset = New Point(20, 0)
         txtPassword.IconRightSize = New Size(25, 25)
@@ -260,7 +261,7 @@ Partial Class EditClients
         txtUsername.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtUsername.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtUsername.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtUsername.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtUsername.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtUsername.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtUsername.IconRightOffset = New Point(20, 0)
         txtUsername.IconRightSize = New Size(25, 25)
@@ -285,7 +286,7 @@ Partial Class EditClients
         BtnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnSave.FillColor = Color.DarkViolet
         BtnSave.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        BtnSave.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnSave.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnSave.ForeColor = Color.White
         BtnSave.Location = New Point(27, 479)
         BtnSave.Name = "BtnSave"
@@ -305,7 +306,7 @@ Partial Class EditClients
         ' 
         ' EditClients
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(435, 573)
         ControlBox = False

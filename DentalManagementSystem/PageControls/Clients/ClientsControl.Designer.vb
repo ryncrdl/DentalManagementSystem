@@ -138,6 +138,7 @@ Partial Class ClientsControl
         BtnAdd.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         BtnAdd.Size = New Size(30, 30)
         BtnAdd.TabIndex = 19
+        BtnAdd.Visible = False
         ' 
         ' Guna2Elipse2
         ' 
