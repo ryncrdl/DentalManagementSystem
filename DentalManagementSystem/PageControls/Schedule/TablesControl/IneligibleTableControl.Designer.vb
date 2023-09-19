@@ -28,30 +28,37 @@ Partial Class IneligibleTableControl
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        IneligibleTable = New Guna.UI2.WinForms.Guna2DataGridView()
-        ID = New DataGridViewTextBoxColumn()
-        Firstname = New DataGridViewTextBoxColumn()
-        Lastname = New DataGridViewTextBoxColumn()
-        Contact = New DataGridViewTextBoxColumn()
-        Email = New DataGridViewTextBoxColumn()
-        Address = New DataGridViewTextBoxColumn()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        CType(IneligibleTable, ComponentModel.ISupportInitialize).BeginInit()
+        ScheduledTable = New Guna.UI2.WinForms.Guna2DataGridView()
+        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        ID = New DataGridViewTextBoxColumn()
+        Fullname = New DataGridViewTextBoxColumn()
+        Contact = New DataGridViewTextBoxColumn()
+        Dates = New DataGridViewTextBoxColumn()
+        Service = New DataGridViewTextBoxColumn()
+        Doctor = New DataGridViewTextBoxColumn()
+        Payment = New DataGridViewTextBoxColumn()
+        CType(ScheduledTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' IneligibleTable
+        ' Guna2Elipse1
         ' 
-        IneligibleTable.AllowUserToAddRows = False
-        IneligibleTable.AllowUserToDeleteRows = False
-        IneligibleTable.AllowUserToResizeRows = False
+        Guna2Elipse1.BorderRadius = 20
+        Guna2Elipse1.TargetControl = Me
+        ' 
+        ' ScheduledTable
+        ' 
+        ScheduledTable.AllowUserToAddRows = False
+        ScheduledTable.AllowUserToDeleteRows = False
+        ScheduledTable.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.White
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionForeColor = Color.White
-        IneligibleTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        IneligibleTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
-        IneligibleTable.BackgroundColor = SystemColors.Control
+        ScheduledTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        ScheduledTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
+        ScheduledTable.BackgroundColor = SystemColors.Control
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
@@ -59,9 +66,9 @@ Partial Class IneligibleTableControl
         DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        IneligibleTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        IneligibleTable.ColumnHeadersHeight = 44
-        IneligibleTable.Columns.AddRange(New DataGridViewColumn() {ID, Firstname, Lastname, Contact, Email, Address})
+        ScheduledTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        ScheduledTable.ColumnHeadersHeight = 44
+        ScheduledTable.Columns.AddRange(New DataGridViewColumn() {ID, Fullname, Contact, Dates, Service, Doctor, Payment})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -69,16 +76,16 @@ Partial Class IneligibleTableControl
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle3.SelectionForeColor = Color.White
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        IneligibleTable.DefaultCellStyle = DataGridViewCellStyle3
-        IneligibleTable.Dock = DockStyle.Fill
-        IneligibleTable.GridColor = Color.Silver
-        IneligibleTable.ImeMode = ImeMode.NoControl
-        IneligibleTable.Location = New Point(0, 0)
-        IneligibleTable.Margin = New Padding(0)
-        IneligibleTable.MultiSelect = False
-        IneligibleTable.Name = "IneligibleTable"
-        IneligibleTable.ReadOnly = True
-        IneligibleTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        ScheduledTable.DefaultCellStyle = DataGridViewCellStyle3
+        ScheduledTable.Dock = DockStyle.Fill
+        ScheduledTable.GridColor = Color.Silver
+        ScheduledTable.ImeMode = ImeMode.NoControl
+        ScheduledTable.Location = New Point(0, 0)
+        ScheduledTable.Margin = New Padding(0)
+        ScheduledTable.MultiSelect = False
+        ScheduledTable.Name = "ScheduledTable"
+        ScheduledTable.ReadOnly = True
+        ScheduledTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.White
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
@@ -86,36 +93,40 @@ Partial Class IneligibleTableControl
         DataGridViewCellStyle4.SelectionBackColor = Color.White
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
-        IneligibleTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        IneligibleTable.RowHeadersVisible = False
+        ScheduledTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        ScheduledTable.RowHeadersVisible = False
         DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
-        IneligibleTable.RowsDefaultCellStyle = DataGridViewCellStyle5
-        IneligibleTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
-        IneligibleTable.RowTemplate.Height = 35
-        IneligibleTable.Size = New Size(650, 386)
-        IneligibleTable.TabIndex = 4
-        IneligibleTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
-        IneligibleTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        IneligibleTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        IneligibleTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        IneligibleTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        IneligibleTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
-        IneligibleTable.ThemeStyle.BackColor = SystemColors.Control
-        IneligibleTable.ThemeStyle.GridColor = Color.Silver
-        IneligibleTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        IneligibleTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        IneligibleTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        IneligibleTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        IneligibleTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        IneligibleTable.ThemeStyle.HeaderStyle.Height = 44
-        IneligibleTable.ThemeStyle.ReadOnly = True
-        IneligibleTable.ThemeStyle.RowsStyle.BackColor = Color.White
-        IneligibleTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        IneligibleTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        IneligibleTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        IneligibleTable.ThemeStyle.RowsStyle.Height = 35
-        IneligibleTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        IneligibleTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
+        ScheduledTable.RowsDefaultCellStyle = DataGridViewCellStyle5
+        ScheduledTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        ScheduledTable.RowTemplate.Height = 35
+        ScheduledTable.Size = New Size(650, 386)
+        ScheduledTable.TabIndex = 4
+        ScheduledTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
+        ScheduledTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        ScheduledTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ScheduledTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ScheduledTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ScheduledTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
+        ScheduledTable.ThemeStyle.BackColor = SystemColors.Control
+        ScheduledTable.ThemeStyle.GridColor = Color.Silver
+        ScheduledTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        ScheduledTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        ScheduledTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        ScheduledTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        ScheduledTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        ScheduledTable.ThemeStyle.HeaderStyle.Height = 44
+        ScheduledTable.ThemeStyle.ReadOnly = True
+        ScheduledTable.ThemeStyle.RowsStyle.BackColor = Color.White
+        ScheduledTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        ScheduledTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        ScheduledTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ScheduledTable.ThemeStyle.RowsStyle.Height = 35
+        ScheduledTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        ScheduledTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
+        ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
         ' 
         ' ID
         ' 
@@ -126,21 +137,13 @@ Partial Class IneligibleTableControl
         ID.Visible = False
         ID.Width = 50
         ' 
-        ' Firstname
+        ' Fullname
         ' 
-        Firstname.FillWeight = 150F
-        Firstname.HeaderText = "First Name"
-        Firstname.Name = "Firstname"
-        Firstname.ReadOnly = True
-        Firstname.Width = 160
-        ' 
-        ' Lastname
-        ' 
-        Lastname.FillWeight = 150F
-        Lastname.HeaderText = "Last Name"
-        Lastname.Name = "Lastname"
-        Lastname.ReadOnly = True
-        Lastname.Width = 161
+        Fullname.FillWeight = 150F
+        Fullname.HeaderText = "Full Name"
+        Fullname.Name = "Fullname"
+        Fullname.ReadOnly = True
+        Fullname.Width = 160
         ' 
         ' Contact
         ' 
@@ -148,48 +151,58 @@ Partial Class IneligibleTableControl
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 160
+        Contact.Width = 161
         ' 
-        ' Email
+        ' Dates
         ' 
-        Email.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Email.FillWeight = 150F
-        Email.HeaderText = "Email"
-        Email.Name = "Email"
-        Email.ReadOnly = True
-        Email.Width = 76
+        Dates.FillWeight = 150F
+        Dates.HeaderText = "Date"
+        Dates.Name = "Dates"
+        Dates.ReadOnly = True
+        Dates.Width = 160
         ' 
-        ' Address
+        ' Service
         ' 
-        Address.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Address.FillWeight = 200F
-        Address.HeaderText = "Address"
-        Address.Name = "Address"
-        Address.ReadOnly = True
-        Address.Width = 93
+        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Service.FillWeight = 150F
+        Service.HeaderText = "Service"
+        Service.Name = "Service"
+        Service.ReadOnly = True
+        Service.Width = 89
         ' 
-        ' Guna2Elipse1
+        ' Doctor
         ' 
-        Guna2Elipse1.BorderRadius = 20
-        Guna2Elipse1.TargetControl = Me
+        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Doctor.FillWeight = 200F
+        Doctor.HeaderText = "Doctor"
+        Doctor.Name = "Doctor"
+        Doctor.ReadOnly = True
+        Doctor.Width = 85
+        ' 
+        ' Payment
+        ' 
+        Payment.HeaderText = "Payment"
+        Payment.Name = "Payment"
+        Payment.ReadOnly = True
         ' 
         ' IneligibleTableControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        Controls.Add(IneligibleTable)
+        Controls.Add(ScheduledTable)
         Name = "IneligibleTableControl"
         Size = New Size(650, 386)
-        CType(IneligibleTable, ComponentModel.ISupportInitialize).EndInit()
+        CType(ScheduledTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents IneligibleTable As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Firstname As DataGridViewTextBoxColumn
-    Friend WithEvents Lastname As DataGridViewTextBoxColumn
-    Friend WithEvents Contact As DataGridViewTextBoxColumn
-    Friend WithEvents Email As DataGridViewTextBoxColumn
-    Friend WithEvents Address As DataGridViewTextBoxColumn
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents ScheduledTable As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents Fullname As DataGridViewTextBoxColumn
+    Friend WithEvents Contact As DataGridViewTextBoxColumn
+    Friend WithEvents Dates As DataGridViewTextBoxColumn
+    Friend WithEvents Service As DataGridViewTextBoxColumn
+    Friend WithEvents Doctor As DataGridViewTextBoxColumn
+    Friend WithEvents Payment As DataGridViewTextBoxColumn
 End Class

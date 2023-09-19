@@ -29,13 +29,15 @@ Partial Class ScheduledTableControl
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         ScheduledTable = New Guna.UI2.WinForms.Guna2DataGridView()
-        ID = New DataGridViewTextBoxColumn()
-        Firstname = New DataGridViewTextBoxColumn()
-        Lastname = New DataGridViewTextBoxColumn()
-        Contact = New DataGridViewTextBoxColumn()
-        Email = New DataGridViewTextBoxColumn()
-        Address = New DataGridViewTextBoxColumn()
+        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        ID = New DataGridViewTextBoxColumn()
+        Fullname = New DataGridViewTextBoxColumn()
+        Contact = New DataGridViewTextBoxColumn()
+        Dates = New DataGridViewTextBoxColumn()
+        Service = New DataGridViewTextBoxColumn()
+        Doctor = New DataGridViewTextBoxColumn()
+        Payment = New DataGridViewTextBoxColumn()
         CType(ScheduledTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -61,7 +63,7 @@ Partial Class ScheduledTableControl
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
         ScheduledTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         ScheduledTable.ColumnHeadersHeight = 44
-        ScheduledTable.Columns.AddRange(New DataGridViewColumn() {ID, Firstname, Lastname, Contact, Email, Address})
+        ScheduledTable.Columns.AddRange(New DataGridViewColumn() {ID, Fullname, Contact, Dates, Service, Doctor, Payment})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -93,7 +95,7 @@ Partial Class ScheduledTableControl
         ScheduledTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
         ScheduledTable.RowTemplate.Height = 35
         ScheduledTable.Size = New Size(650, 386)
-        ScheduledTable.TabIndex = 3
+        ScheduledTable.TabIndex = 5
         ScheduledTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
         ScheduledTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         ScheduledTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -117,6 +119,15 @@ Partial Class ScheduledTableControl
         ScheduledTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ScheduledTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
+        Guna2Elipse2.TargetControl = ScheduledTable
+        ' 
+        ' Guna2Elipse1
+        ' 
+        Guna2Elipse1.BorderRadius = 20
+        ' 
         ' ID
         ' 
         ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
@@ -126,21 +137,13 @@ Partial Class ScheduledTableControl
         ID.Visible = False
         ID.Width = 50
         ' 
-        ' Firstname
+        ' Fullname
         ' 
-        Firstname.FillWeight = 150F
-        Firstname.HeaderText = "First Name"
-        Firstname.Name = "Firstname"
-        Firstname.ReadOnly = True
-        Firstname.Width = 160
-        ' 
-        ' Lastname
-        ' 
-        Lastname.FillWeight = 150F
-        Lastname.HeaderText = "Last Name"
-        Lastname.Name = "Lastname"
-        Lastname.ReadOnly = True
-        Lastname.Width = 161
+        Fullname.FillWeight = 150F
+        Fullname.HeaderText = "Full Name"
+        Fullname.Name = "Fullname"
+        Fullname.ReadOnly = True
+        Fullname.Width = 160
         ' 
         ' Contact
         ' 
@@ -148,30 +151,39 @@ Partial Class ScheduledTableControl
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 160
+        Contact.Width = 161
         ' 
-        ' Email
+        ' Dates
         ' 
-        Email.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Email.FillWeight = 150F
-        Email.HeaderText = "Email"
-        Email.Name = "Email"
-        Email.ReadOnly = True
-        Email.Width = 76
+        Dates.FillWeight = 150F
+        Dates.HeaderText = "Date"
+        Dates.Name = "Dates"
+        Dates.ReadOnly = True
+        Dates.Width = 160
         ' 
-        ' Address
+        ' Service
         ' 
-        Address.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Address.FillWeight = 200F
-        Address.HeaderText = "Address"
-        Address.Name = "Address"
-        Address.ReadOnly = True
-        Address.Width = 93
+        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Service.FillWeight = 150F
+        Service.HeaderText = "Service"
+        Service.Name = "Service"
+        Service.ReadOnly = True
+        Service.Width = 89
         ' 
-        ' Guna2Elipse1
+        ' Doctor
         ' 
-        Guna2Elipse1.BorderRadius = 20
-        Guna2Elipse1.TargetControl = Me
+        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Doctor.FillWeight = 200F
+        Doctor.HeaderText = "Doctor"
+        Doctor.Name = "Doctor"
+        Doctor.ReadOnly = True
+        Doctor.Width = 85
+        ' 
+        ' Payment
+        ' 
+        Payment.HeaderText = "Payment"
+        Payment.Name = "Payment"
+        Payment.ReadOnly = True
         ' 
         ' ScheduledTableControl
         ' 
@@ -185,11 +197,13 @@ Partial Class ScheduledTableControl
     End Sub
 
     Friend WithEvents ScheduledTable As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Firstname As DataGridViewTextBoxColumn
-    Friend WithEvents Lastname As DataGridViewTextBoxColumn
-    Friend WithEvents Contact As DataGridViewTextBoxColumn
-    Friend WithEvents Email As DataGridViewTextBoxColumn
-    Friend WithEvents Address As DataGridViewTextBoxColumn
+    Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents Fullname As DataGridViewTextBoxColumn
+    Friend WithEvents Contact As DataGridViewTextBoxColumn
+    Friend WithEvents Dates As DataGridViewTextBoxColumn
+    Friend WithEvents Service As DataGridViewTextBoxColumn
+    Friend WithEvents Doctor As DataGridViewTextBoxColumn
+    Friend WithEvents Payment As DataGridViewTextBoxColumn
 End Class

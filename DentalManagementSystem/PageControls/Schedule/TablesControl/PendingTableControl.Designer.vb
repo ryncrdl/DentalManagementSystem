@@ -28,16 +28,24 @@ Partial Class PendingTableControl
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         PendingTable = New Guna.UI2.WinForms.Guna2DataGridView()
         ID = New DataGridViewTextBoxColumn()
-        Firstname = New DataGridViewTextBoxColumn()
-        Lastname = New DataGridViewTextBoxColumn()
+        ClientsId = New DataGridViewTextBoxColumn()
+        Fullname = New DataGridViewTextBoxColumn()
         Contact = New DataGridViewTextBoxColumn()
-        Email = New DataGridViewTextBoxColumn()
-        Address = New DataGridViewTextBoxColumn()
-        Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        Dates = New DataGridViewTextBoxColumn()
+        Service = New DataGridViewTextBoxColumn()
+        Doctor = New DataGridViewTextBoxColumn()
+        Payment = New DataGridViewTextBoxColumn()
+        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         CType(PendingTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
+        ' 
+        ' Guna2Elipse1
+        ' 
+        Guna2Elipse1.BorderRadius = 20
+        Guna2Elipse1.TargetControl = Me
         ' 
         ' PendingTable
         ' 
@@ -61,7 +69,7 @@ Partial Class PendingTableControl
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
         PendingTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         PendingTable.ColumnHeadersHeight = 44
-        PendingTable.Columns.AddRange(New DataGridViewColumn() {ID, Firstname, Lastname, Contact, Email, Address})
+        PendingTable.Columns.AddRange(New DataGridViewColumn() {ID, ClientsId, Fullname, Contact, Dates, Service, Doctor, Payment})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -70,7 +78,6 @@ Partial Class PendingTableControl
         DataGridViewCellStyle3.SelectionForeColor = Color.White
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
         PendingTable.DefaultCellStyle = DataGridViewCellStyle3
-        PendingTable.Dock = DockStyle.Fill
         PendingTable.GridColor = Color.Silver
         PendingTable.ImeMode = ImeMode.NoControl
         PendingTable.Location = New Point(0, 0)
@@ -93,7 +100,7 @@ Partial Class PendingTableControl
         PendingTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
         PendingTable.RowTemplate.Height = 35
         PendingTable.Size = New Size(650, 386)
-        PendingTable.TabIndex = 2
+        PendingTable.TabIndex = 4
         PendingTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
         PendingTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         PendingTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -126,21 +133,20 @@ Partial Class PendingTableControl
         ID.Visible = False
         ID.Width = 50
         ' 
-        ' Firstname
+        ' ClientsId
         ' 
-        Firstname.FillWeight = 150F
-        Firstname.HeaderText = "First Name"
-        Firstname.Name = "Firstname"
-        Firstname.ReadOnly = True
-        Firstname.Width = 160
+        ClientsId.HeaderText = "Client ID"
+        ClientsId.Name = "ClientsId"
+        ClientsId.ReadOnly = True
+        ClientsId.Visible = False
         ' 
-        ' Lastname
+        ' Fullname
         ' 
-        Lastname.FillWeight = 150F
-        Lastname.HeaderText = "Last Name"
-        Lastname.Name = "Lastname"
-        Lastname.ReadOnly = True
-        Lastname.Width = 161
+        Fullname.FillWeight = 150F
+        Fullname.HeaderText = "Full Name"
+        Fullname.Name = "Fullname"
+        Fullname.ReadOnly = True
+        Fullname.Width = 160
         ' 
         ' Contact
         ' 
@@ -148,30 +154,43 @@ Partial Class PendingTableControl
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 160
+        Contact.Width = 161
         ' 
-        ' Email
+        ' Dates
         ' 
-        Email.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Email.FillWeight = 150F
-        Email.HeaderText = "Email"
-        Email.Name = "Email"
-        Email.ReadOnly = True
-        Email.Width = 76
+        Dates.FillWeight = 150F
+        Dates.HeaderText = "Date"
+        Dates.Name = "Dates"
+        Dates.ReadOnly = True
+        Dates.Width = 160
         ' 
-        ' Address
+        ' Service
         ' 
-        Address.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Address.FillWeight = 200F
-        Address.HeaderText = "Address"
-        Address.Name = "Address"
-        Address.ReadOnly = True
-        Address.Width = 93
+        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Service.FillWeight = 150F
+        Service.HeaderText = "Service"
+        Service.Name = "Service"
+        Service.ReadOnly = True
+        Service.Width = 89
         ' 
-        ' Guna2Elipse1
+        ' Doctor
         ' 
-        Guna2Elipse1.BorderRadius = 20
-        Guna2Elipse1.TargetControl = Me
+        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Doctor.FillWeight = 200F
+        Doctor.HeaderText = "Doctor"
+        Doctor.Name = "Doctor"
+        Doctor.ReadOnly = True
+        Doctor.Width = 85
+        ' 
+        ' Payment
+        ' 
+        Payment.HeaderText = "Payment"
+        Payment.Name = "Payment"
+        Payment.ReadOnly = True
+        ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
         ' 
         ' PendingTableControl
         ' 
@@ -183,13 +202,15 @@ Partial Class PendingTableControl
         CType(PendingTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents PendingTable As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Firstname As DataGridViewTextBoxColumn
-    Friend WithEvents Lastname As DataGridViewTextBoxColumn
-    Friend WithEvents Contact As DataGridViewTextBoxColumn
-    Friend WithEvents Email As DataGridViewTextBoxColumn
-    Friend WithEvents Address As DataGridViewTextBoxColumn
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents PendingTable As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents ClientsId As DataGridViewTextBoxColumn
+    Friend WithEvents Fullname As DataGridViewTextBoxColumn
+    Friend WithEvents Contact As DataGridViewTextBoxColumn
+    Friend WithEvents Dates As DataGridViewTextBoxColumn
+    Friend WithEvents Service As DataGridViewTextBoxColumn
+    Friend WithEvents Doctor As DataGridViewTextBoxColumn
+    Friend WithEvents Payment As DataGridViewTextBoxColumn
 End Class
