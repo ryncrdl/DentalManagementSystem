@@ -76,4 +76,29 @@ Public Class AcceptReject
     Private Sub txtdoctor_TextChanged(sender As Object, e As EventArgs) Handles txtdoctor.TextChanged
 
     End Sub
+
+    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+
+        Dim sourceCollectionName As String = "appointments"
+        Dim destCollectionName As String = "approved"
+
+        ' Call the MoveCollectionData function from the MongoDBHelper module
+        AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName)
+
+        ' Display a success message or perform any other necessary actions
+        MessageSuccessfully.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+        Dim sourceCollectionName As String = "appointments"
+        Dim destCollectionName As String = "rejected"
+
+        ' Call the MoveCollectionData function from the MongoDBHelper module
+        RejectControllers.TransferDataByOne(sourceCollectionName, destCollectionName)
+
+        ' Display a success message or perform any other necessary actions
+        rejectsuccessfully.Show()
+        Me.Close()
+    End Sub
 End Class
