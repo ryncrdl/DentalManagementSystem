@@ -30,6 +30,7 @@ Partial Class PendingTableControl
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         PendingTable = New Guna.UI2.WinForms.Guna2DataGridView()
+        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ID = New DataGridViewTextBoxColumn()
         ClientsId = New DataGridViewTextBoxColumn()
         Fullname = New DataGridViewTextBoxColumn()
@@ -37,8 +38,7 @@ Partial Class PendingTableControl
         Dates = New DataGridViewTextBoxColumn()
         Service = New DataGridViewTextBoxColumn()
         Doctor = New DataGridViewTextBoxColumn()
-        Payment = New DataGridViewTextBoxColumn()
-        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        Payment = New DataGridViewImageColumn()
         CType(PendingTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -124,9 +124,12 @@ Partial Class PendingTableControl
         PendingTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         PendingTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
+        ' 
         ' ID
         ' 
-        ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
         ID.HeaderText = "ID"
         ID.Name = "ID"
         ID.ReadOnly = True
@@ -139,34 +142,38 @@ Partial Class PendingTableControl
         ClientsId.Name = "ClientsId"
         ClientsId.ReadOnly = True
         ClientsId.Visible = False
+        ClientsId.Width = 99
         ' 
         ' Fullname
         ' 
+        Fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         Fullname.FillWeight = 150F
         Fullname.HeaderText = "Full Name"
         Fullname.Name = "Fullname"
         Fullname.ReadOnly = True
-        Fullname.Width = 160
+        Fullname.Width = 111
         ' 
         ' Contact
         ' 
+        Contact.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Contact.FillWeight = 150F
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 161
+        Contact.Width = 92
         ' 
         ' Dates
         ' 
+        Dates.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Dates.FillWeight = 150F
         Dates.HeaderText = "Date"
         Dates.Name = "Dates"
         Dates.ReadOnly = True
-        Dates.Width = 160
+        Dates.Width = 69
         ' 
         ' Service
         ' 
-        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Service.FillWeight = 150F
         Service.HeaderText = "Service"
         Service.Name = "Service"
@@ -175,7 +182,7 @@ Partial Class PendingTableControl
         ' 
         ' Doctor
         ' 
-        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Doctor.FillWeight = 200F
         Doctor.HeaderText = "Doctor"
         Doctor.Name = "Doctor"
@@ -187,10 +194,9 @@ Partial Class PendingTableControl
         Payment.HeaderText = "Payment"
         Payment.Name = "Payment"
         Payment.ReadOnly = True
-        ' 
-        ' Guna2Elipse2
-        ' 
-        Guna2Elipse2.BorderRadius = 20
+        Payment.Resizable = DataGridViewTriState.True
+        Payment.SortMode = DataGridViewColumnSortMode.Automatic
+        Payment.Width = 101
         ' 
         ' PendingTableControl
         ' 
@@ -212,5 +218,5 @@ Partial Class PendingTableControl
     Friend WithEvents Dates As DataGridViewTextBoxColumn
     Friend WithEvents Service As DataGridViewTextBoxColumn
     Friend WithEvents Doctor As DataGridViewTextBoxColumn
-    Friend WithEvents Payment As DataGridViewTextBoxColumn
+    Friend WithEvents Payment As DataGridViewImageColumn
 End Class

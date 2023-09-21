@@ -5,11 +5,13 @@ Imports MongoDB.Driver
 Public Class CompleteReject
     Private data As List(Of Guna.UI2.WinForms.Guna2TextBox)
     Private rowData As Dictionary(Of String, String)
+    Private rowImage As Dictionary(Of String, Image)
     Private collection As IMongoCollection(Of BsonDocument)
     Private CompleteId As String
-    Public Sub New(ByVal rowData As Dictionary(Of String, String), ByVal collection As IMongoCollection(Of BsonDocument))
+    Public Sub New(ByVal rowData As Dictionary(Of String, String), rowImage As Dictionary(Of String, Image), ByVal collection As IMongoCollection(Of BsonDocument))
         InitializeComponent()
         Me.rowData = rowData
+        Me.rowImage = rowImage
         Me.collection = collection
     End Sub
     Private Sub CompleteReject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -35,6 +37,10 @@ Public Class CompleteReject
             txtdoctor.Text = rowData("Doctor")
         End If
 
+        If rowImage.ContainsKey("Payment") Then
+            Guna2PictureBox1.Image = rowImage("Payment")
+        End If
+
         If rowData.ContainsKey("ID") Then
             Me.CompleteId = rowData("ID")
         End If
@@ -53,6 +59,18 @@ Public Class CompleteReject
             appointments("Date") = txtdate.Text
             appointments("Service") = txtservice.Text
             appointments("Doctor") = txtdoctor.Text
+
+            If Guna2PictureBox1.Image IsNot Nothing Then
+                ' Convert the image to a base64 string
+                Dim imageConverter As New ImageConverter()
+                Dim imageBytes As Byte() = DirectCast(imageConverter.ConvertTo(Guna2PictureBox1.Image, GetType(Byte())), Byte())
+                Dim base64String As String = Convert.ToBase64String(imageBytes)
+
+                ' Assign the base64 string to the "Payment" field in your MongoDB document
+                appointments("Payment") = base64String
+            Else
+                appointments("Payment") = ""
+            End If
 
 
         Else

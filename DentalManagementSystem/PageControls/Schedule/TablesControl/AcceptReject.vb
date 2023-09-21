@@ -5,11 +5,13 @@ Imports MongoDB.Driver
 Public Class AcceptReject
     Private data As List(Of Guna.UI2.WinForms.Guna2TextBox)
     Private rowData As Dictionary(Of String, String)
+    Private rowImage As Dictionary(Of String, Image)
     Private collection As IMongoCollection(Of BsonDocument)
     Private AppointmentsId As String
-    Public Sub New(ByVal rowData As Dictionary(Of String, String), ByVal collection As IMongoCollection(Of BsonDocument))
+    Public Sub New(ByVal rowData As Dictionary(Of String, String), ByVal rowImage As Dictionary(Of String, Image), ByVal collection As IMongoCollection(Of BsonDocument))
         InitializeComponent()
         Me.rowData = rowData
+        Me.rowImage = rowImage
         Me.collection = collection
     End Sub
     Private Sub AcceptReject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -35,6 +37,10 @@ Public Class AcceptReject
             txtdoctor.Text = rowData("Doctor")
         End If
 
+        If rowImage.ContainsKey("Payment") Then
+            Guna2PictureBox1.Image = DirectCast(rowImage("Payment"), Image)
+        End If
+
         If rowData.ContainsKey("ID") Then
             Me.AppointmentsId = rowData("ID")
         End If
@@ -55,27 +61,26 @@ Public Class AcceptReject
             appointments("Service") = txtservice.Text
             appointments("Doctor") = txtdoctor.Text
 
+            If Guna2PictureBox1.Image IsNot Nothing Then
+                ' Convert the image to a base64 string
+                Dim imageConverter As New ImageConverter()
+                Dim imageBytes As Byte() = DirectCast(imageConverter.ConvertTo(Guna2PictureBox1.Image, GetType(Byte())), Byte())
+                Dim base64String As String = Convert.ToBase64String(imageBytes)
 
-        Else
+                ' Assign the base64 string to the "Payment" field in your MongoDB document
+                appointments("Payment") = base64String
+            Else
+                appointments("Payment") = ""
+            End If
+
             MessageBox.Show("Clients not found.")
         End If
-    End Sub
-
-    Private Sub txtdate_TextChanged(sender As Object, e As EventArgs) Handles txtdate.TextChanged
-
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
     End Sub
 
-    Private Sub txtfullname_TextChanged(sender As Object, e As EventArgs) Handles txtfullname.TextChanged
-
-    End Sub
-
-    Private Sub txtdoctor_TextChanged(sender As Object, e As EventArgs) Handles txtdoctor.TextChanged
-
-    End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
 
@@ -100,5 +105,9 @@ Public Class AcceptReject
         ' Display a success message or perform any other necessary actions
         rejectsuccessfully.Show()
         Me.Close()
+    End Sub
+
+    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
+
     End Sub
 End Class

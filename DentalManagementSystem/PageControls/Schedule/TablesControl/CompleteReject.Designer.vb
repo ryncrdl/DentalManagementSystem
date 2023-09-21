@@ -112,11 +112,13 @@ Partial Class CompleteReject
         ' Guna2PictureBox1
         ' 
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges3
+        Guna2PictureBox1.Image = My.Resources.Resources.logo
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(447, 74)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2PictureBox1.Size = New Size(300, 432)
+        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 78
         Guna2PictureBox1.TabStop = False
         ' 
@@ -409,7 +411,7 @@ Partial Class CompleteReject
         BtnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         BtnSave.Size = New Size(234, 50)
         BtnSave.TabIndex = 66
-        BtnSave.Text = "Confirm"
+        BtnSave.Text = "Completed"
         ' 
         ' CustomMessageError
         ' 

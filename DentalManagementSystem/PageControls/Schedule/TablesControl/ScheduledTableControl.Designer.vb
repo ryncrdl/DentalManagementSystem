@@ -29,6 +29,8 @@ Partial Class ScheduledTableControl
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         ScheduledTable = New Guna.UI2.WinForms.Guna2DataGridView()
+        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ID = New DataGridViewTextBoxColumn()
         ClientsId = New DataGridViewTextBoxColumn()
         Fullname = New DataGridViewTextBoxColumn()
@@ -36,9 +38,7 @@ Partial Class ScheduledTableControl
         Dates = New DataGridViewTextBoxColumn()
         Service = New DataGridViewTextBoxColumn()
         Doctor = New DataGridViewTextBoxColumn()
-        Payment = New DataGridViewTextBoxColumn()
-        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        Payment = New DataGridViewImageColumn()
         CType(ScheduledTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -95,7 +95,7 @@ Partial Class ScheduledTableControl
         ScheduledTable.RowsDefaultCellStyle = DataGridViewCellStyle5
         ScheduledTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
         ScheduledTable.RowTemplate.Height = 35
-        ScheduledTable.Size = New Size(655, 386)
+        ScheduledTable.Size = New Size(650, 386)
         ScheduledTable.TabIndex = 5
         ScheduledTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
         ScheduledTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
@@ -119,6 +119,15 @@ Partial Class ScheduledTableControl
         ScheduledTable.ThemeStyle.RowsStyle.Height = 35
         ScheduledTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ScheduledTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
+        ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
+        Guna2Elipse2.TargetControl = ScheduledTable
+        ' 
+        ' Guna2Elipse1
+        ' 
+        Guna2Elipse1.BorderRadius = 20
         ' 
         ' ID
         ' 
@@ -183,15 +192,8 @@ Partial Class ScheduledTableControl
         Payment.HeaderText = "Payment"
         Payment.Name = "Payment"
         Payment.ReadOnly = True
-        ' 
-        ' Guna2Elipse2
-        ' 
-        Guna2Elipse2.BorderRadius = 20
-        Guna2Elipse2.TargetControl = ScheduledTable
-        ' 
-        ' Guna2Elipse1
-        ' 
-        Guna2Elipse1.BorderRadius = 20
+        Payment.Resizable = DataGridViewTriState.True
+        Payment.SortMode = DataGridViewColumnSortMode.Automatic
         ' 
         ' ScheduledTableControl
         ' 
@@ -214,5 +216,5 @@ Partial Class ScheduledTableControl
     Friend WithEvents Dates As DataGridViewTextBoxColumn
     Friend WithEvents Service As DataGridViewTextBoxColumn
     Friend WithEvents Doctor As DataGridViewTextBoxColumn
-    Friend WithEvents Payment As DataGridViewTextBoxColumn
+    Friend WithEvents Payment As DataGridViewImageColumn
 End Class

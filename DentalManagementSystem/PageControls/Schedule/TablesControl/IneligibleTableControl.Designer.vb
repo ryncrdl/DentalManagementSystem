@@ -191,6 +191,7 @@ Partial Class IneligibleTableControl
         Payment.HeaderText = "Payment"
         Payment.Name = "Payment"
         Payment.ReadOnly = True
+        Payment.Resizable = DataGridViewTriState.True
         ' 
         ' IneligibleTableControl
         ' 

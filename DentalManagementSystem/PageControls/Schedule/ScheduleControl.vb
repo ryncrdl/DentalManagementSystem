@@ -28,7 +28,4 @@
         SwitchTable("Pending", PendingTable)
     End Sub
 
-    Private Sub PanelTable_Paint(sender As Object, e As PaintEventArgs) Handles PanelTable.Paint
-
-    End Sub
 End Class
