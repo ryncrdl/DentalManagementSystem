@@ -30,7 +30,7 @@ Module RejectControllers
                 dataToTransfer = sourceCollection.FindOneAndDelete(filter)
                 If dataToTransfer IsNot Nothing Then
                     destCollection.InsertOne(dataToTransfer)
-                    destCollection.DeleteOne(dataToTransfer)
+
                 End If
             Loop While dataToTransfer IsNot Nothing
 

@@ -61,7 +61,7 @@ Partial Class EditServices
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.Transparent
-        Guna2HtmlLabel4.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel4.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel4.ForeColor = Color.Black
         Guna2HtmlLabel4.Location = New Point(188, 41)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
@@ -72,7 +72,7 @@ Partial Class EditServices
         ' Guna2HtmlLabel3
         ' 
         Guna2HtmlLabel3.BackColor = Color.Transparent
-        Guna2HtmlLabel3.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel3.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel3.Location = New Point(13, 610)
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
@@ -83,7 +83,7 @@ Partial Class EditServices
         ' Guna2HtmlLabel2
         ' 
         Guna2HtmlLabel2.BackColor = Color.Transparent
-        Guna2HtmlLabel2.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel2.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel2.Location = New Point(13, 430)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
@@ -94,7 +94,7 @@ Partial Class EditServices
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel1.Location = New Point(13, 344)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
@@ -114,7 +114,7 @@ Partial Class EditServices
         txtdescription.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtdescription.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtdescription.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtdescription.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtdescription.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtdescription.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtdescription.IconRightOffset = New Point(20, 0)
         txtdescription.IconRightSize = New Size(25, 25)
@@ -143,7 +143,7 @@ Partial Class EditServices
         BtnCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnCancel.FillColor = Color.Empty
         BtnCancel.FillColor2 = Color.Empty
-        BtnCancel.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnCancel.ForeColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.HoverState.FillColor = Color.DarkViolet
         BtnCancel.HoverState.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
@@ -166,7 +166,7 @@ Partial Class EditServices
         BtnCreate.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnCreate.FillColor = Color.DarkViolet
         BtnCreate.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        BtnCreate.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnCreate.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnCreate.ForeColor = Color.White
         BtnCreate.Location = New Point(26, 790)
         BtnCreate.Name = "BtnCreate"
@@ -186,7 +186,7 @@ Partial Class EditServices
         txtprice.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtprice.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtprice.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtprice.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtprice.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtprice.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtprice.IconRightOffset = New Point(20, 0)
         txtprice.IconRightSize = New Size(25, 25)
@@ -211,7 +211,7 @@ Partial Class EditServices
         txttitle.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txttitle.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txttitle.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txttitle.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txttitle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txttitle.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txttitle.IconRightOffset = New Point(20, 0)
         txttitle.IconRightSize = New Size(25, 25)
@@ -236,7 +236,7 @@ Partial Class EditServices
         BtnBrowse.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnBrowse.FillColor = Color.DarkViolet
         BtnBrowse.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        BtnBrowse.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnBrowse.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnBrowse.ForeColor = Color.White
         BtnBrowse.Location = New Point(147, 304)
         BtnBrowse.Name = "BtnBrowse"
@@ -284,7 +284,7 @@ Partial Class EditServices
         txtPayment.DropDownStyle = ComboBoxStyle.DropDownList
         txtPayment.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtPayment.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtPayment.Font = New Font("Segoe UI", 10.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtPayment.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
         txtPayment.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
         txtPayment.ItemHeight = 30
         txtPayment.Items.AddRange(New Object() {"Required Payment", "Not Required Payment"})
@@ -297,7 +297,7 @@ Partial Class EditServices
         ' Guna2HtmlLabel5
         ' 
         Guna2HtmlLabel5.BackColor = Color.Transparent
-        Guna2HtmlLabel5.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel5.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel5.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel5.Location = New Point(13, 696)
         Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
@@ -312,11 +312,11 @@ Partial Class EditServices
         messageOK.Icon = Guna.UI2.WinForms.MessageDialogIcon.None
         messageOK.Parent = Nothing
         messageOK.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
-        messageOK.Text = Nothing
+        messageOK.Text = "Services Updated!"
         ' 
         ' EditServices
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(446, 844)
         ControlBox = False

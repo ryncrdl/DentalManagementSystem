@@ -36,6 +36,44 @@ Public Class EditServices
         End If
     End Sub
     Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
+        Dim isValidate As Boolean = False
+        DoctorValidation.ValidateData(data, isValidate)
+
+
+        If (isValidate) Then
+            Try
+                ' Create the equality filter for the doctor ID
+                Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Eq(Of ObjectId)("_id", ObjectId.Parse(clientsId))
+
+                ' Fetch the doctor information using the filter
+                Dim service = collection.Find(filter).FirstOrDefault()
+
+                If service IsNot Nothing Then
+                    ' Update the doctor's fields
+                    service("Title") = txttitle.Text
+                    service("Description") = txtdescription.Text
+                    service("Price") = txtprice.Text
+                    service("Payment") = txtPayment.Text
+
+
+
+                    ' Replace the existing document with the updated one
+                    collection.FindOneAndUpdate(filter, service)
+
+                    messageOK.Show()
+                    CreateData(data)
+                    Me.Close()
+
+                    RaiseEvent Servicesupdated(Me, EventArgs.Empty)
+                Else
+                    ' MessageBox.Show("Doctor not found.")
+                    messageOK.Show("Services not found.", MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception
+                MessageBox.Show("BtnSave Errors:." & ex.Message)
+            End Try
+        End If
+
 
     End Sub
 
