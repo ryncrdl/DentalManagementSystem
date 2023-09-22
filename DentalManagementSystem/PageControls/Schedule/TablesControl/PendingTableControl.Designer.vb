@@ -30,7 +30,6 @@ Partial Class PendingTableControl
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         PendingTable = New Guna.UI2.WinForms.Guna2DataGridView()
-        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ID = New DataGridViewTextBoxColumn()
         ClientsId = New DataGridViewTextBoxColumn()
         Fullname = New DataGridViewTextBoxColumn()
@@ -39,6 +38,7 @@ Partial Class PendingTableControl
         Service = New DataGridViewTextBoxColumn()
         Doctor = New DataGridViewTextBoxColumn()
         Payment = New DataGridViewImageColumn()
+        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         CType(PendingTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -124,10 +124,6 @@ Partial Class PendingTableControl
         PendingTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         PendingTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
-        ' Guna2Elipse2
-        ' 
-        Guna2Elipse2.BorderRadius = 20
-        ' 
         ' ID
         ' 
         ID.HeaderText = "ID"
@@ -197,6 +193,10 @@ Partial Class PendingTableControl
         Payment.Resizable = DataGridViewTriState.True
         Payment.SortMode = DataGridViewColumnSortMode.Automatic
         Payment.Width = 101
+        ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
         ' 
         ' PendingTableControl
         ' 

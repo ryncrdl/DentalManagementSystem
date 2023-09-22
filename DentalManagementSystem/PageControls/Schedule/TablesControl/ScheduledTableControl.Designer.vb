@@ -28,9 +28,9 @@ Partial Class ScheduledTableControl
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        ScheduledTable = New Guna.UI2.WinForms.Guna2DataGridView()
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        ScheduledTable = New Guna.UI2.WinForms.Guna2DataGridView()
         ID = New DataGridViewTextBoxColumn()
         ClientsId = New DataGridViewTextBoxColumn()
         Fullname = New DataGridViewTextBoxColumn()
@@ -39,8 +39,18 @@ Partial Class ScheduledTableControl
         Service = New DataGridViewTextBoxColumn()
         Doctor = New DataGridViewTextBoxColumn()
         Payment = New DataGridViewImageColumn()
+        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(components)
         CType(ScheduledTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
+        ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
+        ' 
+        ' Guna2Elipse1
+        ' 
+        Guna2Elipse1.BorderRadius = 20
         ' 
         ' ScheduledTable
         ' 
@@ -120,18 +130,8 @@ Partial Class ScheduledTableControl
         ScheduledTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         ScheduledTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
-        ' Guna2Elipse2
-        ' 
-        Guna2Elipse2.BorderRadius = 20
-        Guna2Elipse2.TargetControl = ScheduledTable
-        ' 
-        ' Guna2Elipse1
-        ' 
-        Guna2Elipse1.BorderRadius = 20
-        ' 
         ' ID
         ' 
-        ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
         ID.HeaderText = "ID"
         ID.Name = "ID"
         ID.ReadOnly = True
@@ -140,38 +140,42 @@ Partial Class ScheduledTableControl
         ' 
         ' ClientsId
         ' 
-        ClientsId.HeaderText = "Clients id"
+        ClientsId.HeaderText = "Client ID"
         ClientsId.Name = "ClientsId"
         ClientsId.ReadOnly = True
         ClientsId.Visible = False
+        ClientsId.Width = 99
         ' 
         ' Fullname
         ' 
+        Fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         Fullname.FillWeight = 150F
         Fullname.HeaderText = "Full Name"
         Fullname.Name = "Fullname"
         Fullname.ReadOnly = True
-        Fullname.Width = 160
+        Fullname.Width = 111
         ' 
         ' Contact
         ' 
+        Contact.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Contact.FillWeight = 150F
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 161
+        Contact.Width = 92
         ' 
         ' Dates
         ' 
+        Dates.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Dates.FillWeight = 150F
         Dates.HeaderText = "Date"
         Dates.Name = "Dates"
         Dates.ReadOnly = True
-        Dates.Width = 160
+        Dates.Width = 69
         ' 
         ' Service
         ' 
-        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Service.FillWeight = 150F
         Service.HeaderText = "Service"
         Service.Name = "Service"
@@ -180,7 +184,7 @@ Partial Class ScheduledTableControl
         ' 
         ' Doctor
         ' 
-        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Doctor.FillWeight = 200F
         Doctor.HeaderText = "Doctor"
         Doctor.Name = "Doctor"
@@ -194,6 +198,15 @@ Partial Class ScheduledTableControl
         Payment.ReadOnly = True
         Payment.Resizable = DataGridViewTriState.True
         Payment.SortMode = DataGridViewColumnSortMode.Automatic
+        Payment.Width = 101
+        ' 
+        ' Guna2Elipse3
+        ' 
+        Guna2Elipse3.BorderRadius = 20
+        ' 
+        ' Guna2Elipse4
+        ' 
+        Guna2Elipse4.BorderRadius = 20
         ' 
         ' ScheduledTableControl
         ' 
@@ -205,10 +218,9 @@ Partial Class ScheduledTableControl
         CType(ScheduledTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
-
-    Friend WithEvents ScheduledTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents ScheduledTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents ClientsId As DataGridViewTextBoxColumn
     Friend WithEvents Fullname As DataGridViewTextBoxColumn
@@ -217,4 +229,6 @@ Partial Class ScheduledTableControl
     Friend WithEvents Service As DataGridViewTextBoxColumn
     Friend WithEvents Doctor As DataGridViewTextBoxColumn
     Friend WithEvents Payment As DataGridViewImageColumn
+    Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Guna2Elipse4 As Guna.UI2.WinForms.Guna2Elipse
 End Class

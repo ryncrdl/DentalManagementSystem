@@ -29,8 +29,8 @@ Partial Class IneligibleTableControl
         Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        RejectedTable = New Guna.UI2.WinForms.Guna2DataGridView()
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        RejectedTable = New Guna.UI2.WinForms.Guna2DataGridView()
         ID = New DataGridViewTextBoxColumn()
         ClientsId = New DataGridViewTextBoxColumn()
         Fullname = New DataGridViewTextBoxColumn()
@@ -38,7 +38,9 @@ Partial Class IneligibleTableControl
         Dates = New DataGridViewTextBoxColumn()
         Service = New DataGridViewTextBoxColumn()
         Doctor = New DataGridViewTextBoxColumn()
-        Payment = New DataGridViewTextBoxColumn()
+        Payment = New DataGridViewImageColumn()
+        Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(components)
         CType(RejectedTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -46,6 +48,10 @@ Partial Class IneligibleTableControl
         ' 
         Guna2Elipse1.BorderRadius = 20
         Guna2Elipse1.TargetControl = Me
+        ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
         ' 
         ' RejectedTable
         ' 
@@ -78,6 +84,7 @@ Partial Class IneligibleTableControl
         DataGridViewCellStyle3.SelectionForeColor = Color.White
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
         RejectedTable.DefaultCellStyle = DataGridViewCellStyle3
+        RejectedTable.Dock = DockStyle.Fill
         RejectedTable.GridColor = Color.Silver
         RejectedTable.ImeMode = ImeMode.NoControl
         RejectedTable.Location = New Point(0, 0)
@@ -100,7 +107,7 @@ Partial Class IneligibleTableControl
         RejectedTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
         RejectedTable.RowTemplate.Height = 35
         RejectedTable.Size = New Size(650, 386)
-        RejectedTable.TabIndex = 4
+        RejectedTable.TabIndex = 5
         RejectedTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
         RejectedTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         RejectedTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -124,13 +131,8 @@ Partial Class IneligibleTableControl
         RejectedTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         RejectedTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
-        ' Guna2Elipse2
-        ' 
-        Guna2Elipse2.BorderRadius = 20
-        ' 
         ' ID
         ' 
-        ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
         ID.HeaderText = "ID"
         ID.Name = "ID"
         ID.ReadOnly = True
@@ -139,38 +141,42 @@ Partial Class IneligibleTableControl
         ' 
         ' ClientsId
         ' 
-        ClientsId.HeaderText = "Column1"
+        ClientsId.HeaderText = "Client ID"
         ClientsId.Name = "ClientsId"
         ClientsId.ReadOnly = True
         ClientsId.Visible = False
+        ClientsId.Width = 99
         ' 
         ' Fullname
         ' 
+        Fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
         Fullname.FillWeight = 150F
         Fullname.HeaderText = "Full Name"
         Fullname.Name = "Fullname"
         Fullname.ReadOnly = True
-        Fullname.Width = 160
+        Fullname.Width = 111
         ' 
         ' Contact
         ' 
+        Contact.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Contact.FillWeight = 150F
         Contact.HeaderText = "Contact"
         Contact.Name = "Contact"
         Contact.ReadOnly = True
-        Contact.Width = 161
+        Contact.Width = 92
         ' 
         ' Dates
         ' 
+        Dates.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Dates.FillWeight = 150F
         Dates.HeaderText = "Date"
         Dates.Name = "Dates"
         Dates.ReadOnly = True
-        Dates.Width = 160
+        Dates.Width = 69
         ' 
         ' Service
         ' 
-        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Service.FillWeight = 150F
         Service.HeaderText = "Service"
         Service.Name = "Service"
@@ -179,7 +185,7 @@ Partial Class IneligibleTableControl
         ' 
         ' Doctor
         ' 
-        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
         Doctor.FillWeight = 200F
         Doctor.HeaderText = "Doctor"
         Doctor.Name = "Doctor"
@@ -192,6 +198,16 @@ Partial Class IneligibleTableControl
         Payment.Name = "Payment"
         Payment.ReadOnly = True
         Payment.Resizable = DataGridViewTriState.True
+        Payment.SortMode = DataGridViewColumnSortMode.Automatic
+        Payment.Width = 101
+        ' 
+        ' Guna2Elipse3
+        ' 
+        Guna2Elipse3.BorderRadius = 20
+        ' 
+        ' Guna2Elipse4
+        ' 
+        Guna2Elipse4.BorderRadius = 20
         ' 
         ' IneligibleTableControl
         ' 
@@ -204,8 +220,8 @@ Partial Class IneligibleTableControl
         ResumeLayout(False)
     End Sub
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents RejectedTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents RejectedTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents ClientsId As DataGridViewTextBoxColumn
     Friend WithEvents Fullname As DataGridViewTextBoxColumn
@@ -213,5 +229,7 @@ Partial Class IneligibleTableControl
     Friend WithEvents Dates As DataGridViewTextBoxColumn
     Friend WithEvents Service As DataGridViewTextBoxColumn
     Friend WithEvents Doctor As DataGridViewTextBoxColumn
-    Friend WithEvents Payment As DataGridViewTextBoxColumn
+    Friend WithEvents Payment As DataGridViewImageColumn
+    Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Guna2Elipse4 As Guna.UI2.WinForms.Guna2Elipse
 End Class

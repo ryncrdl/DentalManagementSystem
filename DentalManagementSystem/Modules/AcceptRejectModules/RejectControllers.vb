@@ -26,13 +26,12 @@ Module RejectControllers
         Dim dataToTransfer As BsonDocument
 
         Try
-            Do
-                dataToTransfer = sourceCollection.FindOneAndDelete(filter)
-                If dataToTransfer IsNot Nothing Then
-                    destCollection.InsertOne(dataToTransfer)
 
-                End If
-            Loop While dataToTransfer IsNot Nothing
+            dataToTransfer = sourceCollection.FindOneAndDelete(filter)
+            If dataToTransfer IsNot Nothing Then
+                destCollection.InsertOne(dataToTransfer)
+
+            End If
 
         Catch ex As Exception
             ' Handle any exceptions related to MongoDB operations here
