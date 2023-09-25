@@ -13,18 +13,29 @@ Public Class IneligibleTableControl
     End Sub
 
     Private Sub IneligibleTableControl_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
-        rejectdata("rejected", RejectedTable)
-        Connection.ConnectToMongoDB("rejected")
-        Me.collection = Connection.GetMongoDBCollection()
-        Dim pipeline = New EmptyPipelineDefinition(Of ChangeStreamDocument(Of BsonDocument))()
-        Dim options = New ChangeStreamOptions() With {
-            .FullDocument = ChangeStreamFullDocumentOption.UpdateLookup
-        }
-        changeStream = collection.Watch(pipeline, options)
+        Try
+            ' Load initial data into the DataGridView
+            rejectdata("rejected", RejectedTable)
 
-        ' Start monitoring for changes in a separate task
-        Task.Run(AddressOf MonitorForChanges)
+            ' Connect to MongoDB and get the collection
+            Connection.ConnectToMongoDB("rejected")
+            Me.collection = Connection.GetMongoDBCollection()
 
+            ' Define the change stream pipeline and options
+            Dim pipeline = New EmptyPipelineDefinition(Of ChangeStreamDocument(Of BsonDocument))()
+            Dim options = New ChangeStreamOptions() With {
+                .FullDocument = ChangeStreamFullDocumentOption.UpdateLookup
+            }
+
+            ' Start the change stream
+            changeStream = collection.Watch(pipeline, options)
+
+            ' Start monitoring for changes in a separate task
+            Task.Run(AddressOf MonitorForChanges)
+        Catch ex As Exception
+            ' Handle the exception here, e.g., show an error message or log it
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
     Private Async Sub MonitorForChanges()
         Await changeStream.ForEachAsync(Sub(change)
@@ -45,5 +56,9 @@ Public Class IneligibleTableControl
     Private Sub LoadUpdatedData(sender As Object, e As EventArgs)
         ' Reload data into DataGridView with collection name "doctors"
         rejectdata("rejected", RejectedTable)
+    End Sub
+
+    Private Sub RejectedTable_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles RejectedTable.CellContentClick
+
     End Sub
 End Class

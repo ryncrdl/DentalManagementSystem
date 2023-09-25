@@ -2,6 +2,10 @@
 Imports System.Windows.Forms
 Imports MongoDB.Bson
 Imports MongoDB.Driver
+Imports System.IO.Ports
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
+
 Public Class AcceptReject
     Private data As List(Of Guna.UI2.WinForms.Guna2TextBox)
     Private rowData As Dictionary(Of String, String)
@@ -15,8 +19,9 @@ Public Class AcceptReject
         Me.collection = collection
     End Sub
     Private Sub AcceptReject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txtfullname, txtcontact, txtdate, txtservice, txtdoctor}
-        Connection.ConnectToMongoDB("clients")
+        Connection.ConnectToMongoDB("appointments")
         ' Populate the form controls with the fetched data
 
         If rowData.ContainsKey("Fullname") Then
@@ -44,6 +49,7 @@ Public Class AcceptReject
         If rowData.ContainsKey("ID") Then
             Me.AppointmentsId = rowData("ID")
         End If
+        InitializeSerialPort()
 
     End Sub
     Private Sub FetchDoctorData(clientsId As String, collectionName As String)
@@ -83,6 +89,12 @@ Public Class AcceptReject
 
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+        Dim receiverNumber As String = txtcontact.Text
+        Dim messageContent As String = txtdate.Text
+        Dim services As String = txtservice.Text
+
+        ' Check if the receiver's number and message content are not empty
+        SendMessage(receiverNumber, services, messageContent)
 
         Dim sourceCollectionName As String = "appointments"
         Dim destCollectionName As String = "approved"
@@ -96,6 +108,11 @@ Public Class AcceptReject
     End Sub
 
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+        Dim receiverNumber As String = txtcontact.Text
+        Dim messageContent As String = txtdate.Text
+        Dim services As String = txtservice.Text
+        SendMessage1(receiverNumber, services, messageContent)
+
         Dim sourceCollectionName As String = "appointments"
         Dim destCollectionName As String = "rejected"
 

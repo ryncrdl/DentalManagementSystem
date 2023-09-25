@@ -30,17 +30,17 @@ Partial Class IneligibleTableControl
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        RejectedTable = New Guna.UI2.WinForms.Guna2DataGridView()
-        ID = New DataGridViewTextBoxColumn()
-        ClientsId = New DataGridViewTextBoxColumn()
-        Fullname = New DataGridViewTextBoxColumn()
-        Contact = New DataGridViewTextBoxColumn()
-        Dates = New DataGridViewTextBoxColumn()
-        Service = New DataGridViewTextBoxColumn()
-        Doctor = New DataGridViewTextBoxColumn()
-        Payment = New DataGridViewImageColumn()
         Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2Elipse4 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        Payment = New DataGridViewImageColumn()
+        Doctor = New DataGridViewTextBoxColumn()
+        Service = New DataGridViewTextBoxColumn()
+        Dates = New DataGridViewTextBoxColumn()
+        Contact = New DataGridViewTextBoxColumn()
+        Fullname = New DataGridViewTextBoxColumn()
+        ClientsId = New DataGridViewTextBoxColumn()
+        ID = New DataGridViewTextBoxColumn()
+        RejectedTable = New Guna.UI2.WinForms.Guna2DataGridView()
         CType(RejectedTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -52,6 +52,84 @@ Partial Class IneligibleTableControl
         ' Guna2Elipse2
         ' 
         Guna2Elipse2.BorderRadius = 20
+        ' 
+        ' Guna2Elipse3
+        ' 
+        Guna2Elipse3.BorderRadius = 20
+        ' 
+        ' Guna2Elipse4
+        ' 
+        Guna2Elipse4.BorderRadius = 20
+        ' 
+        ' Payment
+        ' 
+        Payment.HeaderText = "Payment"
+        Payment.Name = "Payment"
+        Payment.ReadOnly = True
+        Payment.Resizable = DataGridViewTriState.True
+        Payment.SortMode = DataGridViewColumnSortMode.Automatic
+        Payment.Width = 101
+        ' 
+        ' Doctor
+        ' 
+        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Doctor.FillWeight = 200F
+        Doctor.HeaderText = "Doctor"
+        Doctor.Name = "Doctor"
+        Doctor.ReadOnly = True
+        Doctor.Width = 85
+        ' 
+        ' Service
+        ' 
+        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Service.FillWeight = 150F
+        Service.HeaderText = "Service"
+        Service.Name = "Service"
+        Service.ReadOnly = True
+        Service.Width = 89
+        ' 
+        ' Dates
+        ' 
+        Dates.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Dates.FillWeight = 150F
+        Dates.HeaderText = "Date"
+        Dates.Name = "Dates"
+        Dates.ReadOnly = True
+        Dates.Width = 69
+        ' 
+        ' Contact
+        ' 
+        Contact.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
+        Contact.FillWeight = 150F
+        Contact.HeaderText = "Contact"
+        Contact.Name = "Contact"
+        Contact.ReadOnly = True
+        Contact.Width = 92
+        ' 
+        ' Fullname
+        ' 
+        Fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+        Fullname.FillWeight = 150F
+        Fullname.HeaderText = "Full Name"
+        Fullname.Name = "Fullname"
+        Fullname.ReadOnly = True
+        Fullname.Width = 111
+        ' 
+        ' ClientsId
+        ' 
+        ClientsId.HeaderText = "Client ID"
+        ClientsId.Name = "ClientsId"
+        ClientsId.ReadOnly = True
+        ClientsId.Visible = False
+        ClientsId.Width = 99
+        ' 
+        ' ID
+        ' 
+        ID.HeaderText = "ID"
+        ID.Name = "ID"
+        ID.ReadOnly = True
+        ID.Visible = False
+        ID.Width = 50
         ' 
         ' RejectedTable
         ' 
@@ -131,84 +209,6 @@ Partial Class IneligibleTableControl
         RejectedTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         RejectedTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
-        ' ID
-        ' 
-        ID.HeaderText = "ID"
-        ID.Name = "ID"
-        ID.ReadOnly = True
-        ID.Visible = False
-        ID.Width = 50
-        ' 
-        ' ClientsId
-        ' 
-        ClientsId.HeaderText = "Client ID"
-        ClientsId.Name = "ClientsId"
-        ClientsId.ReadOnly = True
-        ClientsId.Visible = False
-        ClientsId.Width = 99
-        ' 
-        ' Fullname
-        ' 
-        Fullname.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-        Fullname.FillWeight = 150F
-        Fullname.HeaderText = "Full Name"
-        Fullname.Name = "Fullname"
-        Fullname.ReadOnly = True
-        Fullname.Width = 111
-        ' 
-        ' Contact
-        ' 
-        Contact.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        Contact.FillWeight = 150F
-        Contact.HeaderText = "Contact"
-        Contact.Name = "Contact"
-        Contact.ReadOnly = True
-        Contact.Width = 92
-        ' 
-        ' Dates
-        ' 
-        Dates.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        Dates.FillWeight = 150F
-        Dates.HeaderText = "Date"
-        Dates.Name = "Dates"
-        Dates.ReadOnly = True
-        Dates.Width = 69
-        ' 
-        ' Service
-        ' 
-        Service.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        Service.FillWeight = 150F
-        Service.HeaderText = "Service"
-        Service.Name = "Service"
-        Service.ReadOnly = True
-        Service.Width = 89
-        ' 
-        ' Doctor
-        ' 
-        Doctor.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
-        Doctor.FillWeight = 200F
-        Doctor.HeaderText = "Doctor"
-        Doctor.Name = "Doctor"
-        Doctor.ReadOnly = True
-        Doctor.Width = 85
-        ' 
-        ' Payment
-        ' 
-        Payment.HeaderText = "Payment"
-        Payment.Name = "Payment"
-        Payment.ReadOnly = True
-        Payment.Resizable = DataGridViewTriState.True
-        Payment.SortMode = DataGridViewColumnSortMode.Automatic
-        Payment.Width = 101
-        ' 
-        ' Guna2Elipse3
-        ' 
-        Guna2Elipse3.BorderRadius = 20
-        ' 
-        ' Guna2Elipse4
-        ' 
-        Guna2Elipse4.BorderRadius = 20
-        ' 
         ' IneligibleTableControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -221,6 +221,8 @@ Partial Class IneligibleTableControl
     End Sub
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Guna2Elipse4 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents RejectedTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents ClientsId As DataGridViewTextBoxColumn
@@ -230,6 +232,4 @@ Partial Class IneligibleTableControl
     Friend WithEvents Service As DataGridViewTextBoxColumn
     Friend WithEvents Doctor As DataGridViewTextBoxColumn
     Friend WithEvents Payment As DataGridViewImageColumn
-    Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents Guna2Elipse4 As Guna.UI2.WinForms.Guna2Elipse
 End Class
