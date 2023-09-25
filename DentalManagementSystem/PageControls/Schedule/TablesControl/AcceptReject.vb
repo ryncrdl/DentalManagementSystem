@@ -12,6 +12,7 @@ Public Class AcceptReject
     Private rowImage As Dictionary(Of String, Image)
     Private collection As IMongoCollection(Of BsonDocument)
     Private AppointmentsId As String
+
     Public Sub New(ByVal rowData As Dictionary(Of String, String), ByVal rowImage As Dictionary(Of String, Image), ByVal collection As IMongoCollection(Of BsonDocument))
         InitializeComponent()
         Me.rowData = rowData
@@ -84,6 +85,7 @@ Public Class AcceptReject
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        cancelport()
         Me.Close()
     End Sub
 
@@ -94,14 +96,16 @@ Public Class AcceptReject
         Dim services As String = txtservice.Text
 
         ' Check if the receiver's number and message content are not empty
-        SendMessage(receiverNumber, services, messageContent)
+
 
         Dim sourceCollectionName As String = "appointments"
         Dim destCollectionName As String = "approved"
 
-        ' Call the MoveCollectionData function from the MongoDBHelper module
-        AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName)
 
+
+        ' Call the MoveCollectionData function from the MongoDBHelper module
+        AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName, AppointmentsId)
+        SendMessage(receiverNumber, services, messageContent)
         ' Display a success message or perform any other necessary actions
         MessageSuccessfully.Show()
         Me.Close()
@@ -111,14 +115,14 @@ Public Class AcceptReject
         Dim receiverNumber As String = txtcontact.Text
         Dim messageContent As String = txtdate.Text
         Dim services As String = txtservice.Text
-        SendMessage1(receiverNumber, services, messageContent)
+
 
         Dim sourceCollectionName As String = "appointments"
         Dim destCollectionName As String = "rejected"
 
         ' Call the MoveCollectionData function from the MongoDBHelper module
-        RejectControllers.TransferDataByOne(sourceCollectionName, destCollectionName)
-
+        RejectControllers.TransferDataByOne(sourceCollectionName, destCollectionName, AppointmentsId)
+        SendMessage1(receiverNumber, services, messageContent)
         ' Display a success message or perform any other necessary actions
         rejectsuccessfully.Show()
         Me.Close()

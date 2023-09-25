@@ -16,26 +16,25 @@ Module AcceptControllers
         End Try
     End Sub
 
-    Sub TransferDataOneByOne(appointments As String, approved As String)
+    Sub TransferDataOneByOne(appointments As String, approved As String, selectedDocumentId As String)
         ' Get references to the source and destination collections
         Dim sourceCollection As IMongoCollection(Of BsonDocument) = database.GetCollection(Of BsonDocument)(appointments)
         Dim destCollection As IMongoCollection(Of BsonDocument) = database.GetCollection(Of BsonDocument)(approved)
 
-        ' Retrieve one document from the source collection at a time and transfer it
-        Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Empty
-        Dim dataToTransfer As BsonDocument
-
         Try
+            ' Define a filter to target the selected document by its _id
+            Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Eq(Of ObjectId)("_id", ObjectId.Parse(selectedDocumentId))
 
-            dataToTransfer = sourceCollection.FindOneAndDelete(filter)
-                If dataToTransfer IsNot Nothing Then
-                    destCollection.InsertOne(dataToTransfer)
+            ' Retrieve the selected document from the source collection and transfer it
+            Dim dataToTransfer As BsonDocument = sourceCollection.FindOneAndDelete(filter)
 
-                End If
-
+            If dataToTransfer IsNot Nothing Then
+                destCollection.InsertOne(dataToTransfer)
+            End If
         Catch ex As Exception
             ' Handle any exceptions related to MongoDB operations here
             MessageBox.Show("Failed to transfer data: " & ex.Message)
         End Try
     End Sub
+
 End Module

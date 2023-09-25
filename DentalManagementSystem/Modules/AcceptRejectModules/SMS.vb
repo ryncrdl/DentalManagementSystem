@@ -80,5 +80,9 @@ Module SMS
         Else
             MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+
+    End Sub
+    Sub cancelport()
+        serialport1.Close()
     End Sub
 End Module
