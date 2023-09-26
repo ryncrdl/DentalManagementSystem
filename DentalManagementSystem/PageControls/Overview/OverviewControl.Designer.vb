@@ -23,8 +23,10 @@ Partial Class OverviewControl
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -47,14 +49,10 @@ Partial Class OverviewControl
         Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -93,11 +91,9 @@ Partial Class OverviewControl
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2HtmlLabel11 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel10 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        PCircleCompletedAppointments = New Guna.UI2.WinForms.Guna2CircleProgressBar()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2HtmlLabel12 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel13 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        PCircleCancelledAppointments = New Guna.UI2.WinForms.Guna2CircleProgressBar()
         Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
         NoOfAppointments = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -113,6 +109,8 @@ Partial Class OverviewControl
         Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         BtnPending = New Guna.UI2.WinForms.Guna2GradientButton()
         Timer1 = New Timer(components)
+        noOfCompleted = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        noOfCancelled = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel1.SuspendLayout()
         Guna2Panel2.SuspendLayout()
         Guna2Panel3.SuspendLayout()
@@ -154,14 +152,14 @@ Partial Class OverviewControl
         Guna2Panel1.Controls.Add(Guna2HtmlLabel14)
         Guna2Panel1.Controls.Add(Guna2vProgressBar2)
         Guna2Panel1.Controls.Add(Guna2vProgressBar1)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges41
+        Guna2Panel1.CustomizableEdges = CustomizableEdges39
         Guna2Panel1.FillColor = SystemColors.Control
         Guna2Panel1.Location = New Point(34, 97)
         Guna2Panel1.Name = "Guna2Panel1"
         Guna2Panel1.ShadowDecoration.BorderRadius = 10
-        CustomizableEdges42.TopLeft = False
-        CustomizableEdges42.TopRight = False
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        CustomizableEdges40.TopLeft = False
+        CustomizableEdges40.TopRight = False
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges40
         Guna2Panel1.ShadowDecoration.Depth = 5
         Guna2Panel1.ShadowDecoration.Enabled = True
         Guna2Panel1.ShadowDecoration.Shadow = New Padding(0, 0, 5, 5)
@@ -281,14 +279,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar11
         ' 
         Guna2vProgressBar11.BorderRadius = 5
-        Guna2vProgressBar11.CustomizableEdges = CustomizableEdges17
+        Guna2vProgressBar11.CustomizableEdges = CustomizableEdges15
         Guna2vProgressBar11.FillColor = SystemColors.Control
         Guna2vProgressBar11.Location = New Point(359, 18)
         Guna2vProgressBar11.Maximum = 40
         Guna2vProgressBar11.Name = "Guna2vProgressBar11"
         Guna2vProgressBar11.ProgressColor = Color.Red
         Guna2vProgressBar11.ProgressColor2 = Color.Red
-        Guna2vProgressBar11.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2vProgressBar11.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2vProgressBar11.Size = New Size(14, 253)
         Guna2vProgressBar11.TabIndex = 24
         Guna2vProgressBar11.Text = "Guna2vProgressBar11"
@@ -298,14 +296,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar12
         ' 
         Guna2vProgressBar12.BorderRadius = 5
-        Guna2vProgressBar12.CustomizableEdges = CustomizableEdges19
+        Guna2vProgressBar12.CustomizableEdges = CustomizableEdges17
         Guna2vProgressBar12.FillColor = SystemColors.Control
         Guna2vProgressBar12.Location = New Point(342, 18)
         Guna2vProgressBar12.Maximum = 40
         Guna2vProgressBar12.Name = "Guna2vProgressBar12"
         Guna2vProgressBar12.ProgressColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         Guna2vProgressBar12.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        Guna2vProgressBar12.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2vProgressBar12.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2vProgressBar12.Size = New Size(14, 253)
         Guna2vProgressBar12.TabIndex = 23
         Guna2vProgressBar12.Text = "Guna2vProgressBar12"
@@ -315,14 +313,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar9
         ' 
         Guna2vProgressBar9.BorderRadius = 5
-        Guna2vProgressBar9.CustomizableEdges = CustomizableEdges21
+        Guna2vProgressBar9.CustomizableEdges = CustomizableEdges19
         Guna2vProgressBar9.FillColor = SystemColors.Control
         Guna2vProgressBar9.Location = New Point(290, 18)
         Guna2vProgressBar9.Maximum = 40
         Guna2vProgressBar9.Name = "Guna2vProgressBar9"
         Guna2vProgressBar9.ProgressColor = Color.Red
         Guna2vProgressBar9.ProgressColor2 = Color.Red
-        Guna2vProgressBar9.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        Guna2vProgressBar9.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         Guna2vProgressBar9.Size = New Size(14, 253)
         Guna2vProgressBar9.TabIndex = 22
         Guna2vProgressBar9.Text = "Guna2vProgressBar9"
@@ -332,14 +330,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar10
         ' 
         Guna2vProgressBar10.BorderRadius = 5
-        Guna2vProgressBar10.CustomizableEdges = CustomizableEdges23
+        Guna2vProgressBar10.CustomizableEdges = CustomizableEdges21
         Guna2vProgressBar10.FillColor = SystemColors.Control
         Guna2vProgressBar10.Location = New Point(273, 18)
         Guna2vProgressBar10.Maximum = 40
         Guna2vProgressBar10.Name = "Guna2vProgressBar10"
         Guna2vProgressBar10.ProgressColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         Guna2vProgressBar10.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        Guna2vProgressBar10.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        Guna2vProgressBar10.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2vProgressBar10.Size = New Size(14, 253)
         Guna2vProgressBar10.TabIndex = 21
         Guna2vProgressBar10.Text = "Guna2vProgressBar10"
@@ -349,14 +347,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar7
         ' 
         Guna2vProgressBar7.BorderRadius = 5
-        Guna2vProgressBar7.CustomizableEdges = CustomizableEdges25
+        Guna2vProgressBar7.CustomizableEdges = CustomizableEdges23
         Guna2vProgressBar7.FillColor = SystemColors.Control
         Guna2vProgressBar7.Location = New Point(226, 18)
         Guna2vProgressBar7.Maximum = 40
         Guna2vProgressBar7.Name = "Guna2vProgressBar7"
         Guna2vProgressBar7.ProgressColor = Color.Red
         Guna2vProgressBar7.ProgressColor2 = Color.Red
-        Guna2vProgressBar7.ShadowDecoration.CustomizableEdges = CustomizableEdges26
+        Guna2vProgressBar7.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2vProgressBar7.Size = New Size(14, 253)
         Guna2vProgressBar7.TabIndex = 20
         Guna2vProgressBar7.Text = "Guna2vProgressBar7"
@@ -366,14 +364,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar8
         ' 
         Guna2vProgressBar8.BorderRadius = 5
-        Guna2vProgressBar8.CustomizableEdges = CustomizableEdges27
+        Guna2vProgressBar8.CustomizableEdges = CustomizableEdges25
         Guna2vProgressBar8.FillColor = SystemColors.Control
         Guna2vProgressBar8.Location = New Point(209, 18)
         Guna2vProgressBar8.Maximum = 40
         Guna2vProgressBar8.Name = "Guna2vProgressBar8"
         Guna2vProgressBar8.ProgressColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         Guna2vProgressBar8.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        Guna2vProgressBar8.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        Guna2vProgressBar8.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2vProgressBar8.Size = New Size(14, 253)
         Guna2vProgressBar8.TabIndex = 19
         Guna2vProgressBar8.Text = "Guna2vProgressBar8"
@@ -383,14 +381,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar5
         ' 
         Guna2vProgressBar5.BorderRadius = 5
-        Guna2vProgressBar5.CustomizableEdges = CustomizableEdges29
+        Guna2vProgressBar5.CustomizableEdges = CustomizableEdges27
         Guna2vProgressBar5.FillColor = SystemColors.Control
         Guna2vProgressBar5.Location = New Point(165, 18)
         Guna2vProgressBar5.Maximum = 40
         Guna2vProgressBar5.Name = "Guna2vProgressBar5"
         Guna2vProgressBar5.ProgressColor = Color.Red
         Guna2vProgressBar5.ProgressColor2 = Color.Red
-        Guna2vProgressBar5.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        Guna2vProgressBar5.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2vProgressBar5.Size = New Size(14, 253)
         Guna2vProgressBar5.TabIndex = 18
         Guna2vProgressBar5.Text = "Guna2vProgressBar5"
@@ -400,14 +398,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar6
         ' 
         Guna2vProgressBar6.BorderRadius = 5
-        Guna2vProgressBar6.CustomizableEdges = CustomizableEdges31
+        Guna2vProgressBar6.CustomizableEdges = CustomizableEdges29
         Guna2vProgressBar6.FillColor = SystemColors.Control
         Guna2vProgressBar6.Location = New Point(148, 18)
         Guna2vProgressBar6.Maximum = 40
         Guna2vProgressBar6.Name = "Guna2vProgressBar6"
         Guna2vProgressBar6.ProgressColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         Guna2vProgressBar6.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        Guna2vProgressBar6.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        Guna2vProgressBar6.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         Guna2vProgressBar6.Size = New Size(14, 253)
         Guna2vProgressBar6.TabIndex = 17
         Guna2vProgressBar6.Text = "Guna2vProgressBar6"
@@ -417,14 +415,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar3
         ' 
         Guna2vProgressBar3.BorderRadius = 5
-        Guna2vProgressBar3.CustomizableEdges = CustomizableEdges33
+        Guna2vProgressBar3.CustomizableEdges = CustomizableEdges31
         Guna2vProgressBar3.FillColor = SystemColors.Control
         Guna2vProgressBar3.Location = New Point(108, 18)
         Guna2vProgressBar3.Maximum = 40
         Guna2vProgressBar3.Name = "Guna2vProgressBar3"
         Guna2vProgressBar3.ProgressColor = Color.Red
         Guna2vProgressBar3.ProgressColor2 = Color.Red
-        Guna2vProgressBar3.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        Guna2vProgressBar3.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         Guna2vProgressBar3.Size = New Size(14, 253)
         Guna2vProgressBar3.TabIndex = 16
         Guna2vProgressBar3.Text = "Guna2vProgressBar3"
@@ -434,14 +432,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar4
         ' 
         Guna2vProgressBar4.BorderRadius = 5
-        Guna2vProgressBar4.CustomizableEdges = CustomizableEdges35
+        Guna2vProgressBar4.CustomizableEdges = CustomizableEdges33
         Guna2vProgressBar4.FillColor = SystemColors.Control
         Guna2vProgressBar4.Location = New Point(91, 18)
         Guna2vProgressBar4.Maximum = 40
         Guna2vProgressBar4.Name = "Guna2vProgressBar4"
         Guna2vProgressBar4.ProgressColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         Guna2vProgressBar4.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        Guna2vProgressBar4.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        Guna2vProgressBar4.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         Guna2vProgressBar4.Size = New Size(14, 253)
         Guna2vProgressBar4.TabIndex = 15
         Guna2vProgressBar4.Text = "Guna2vProgressBar4"
@@ -462,14 +460,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar2
         ' 
         Guna2vProgressBar2.BorderRadius = 5
-        Guna2vProgressBar2.CustomizableEdges = CustomizableEdges37
+        Guna2vProgressBar2.CustomizableEdges = CustomizableEdges35
         Guna2vProgressBar2.FillColor = SystemColors.Control
         Guna2vProgressBar2.Location = New Point(56, 18)
         Guna2vProgressBar2.Maximum = 40
         Guna2vProgressBar2.Name = "Guna2vProgressBar2"
         Guna2vProgressBar2.ProgressColor = Color.Red
         Guna2vProgressBar2.ProgressColor2 = Color.Red
-        Guna2vProgressBar2.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        Guna2vProgressBar2.ShadowDecoration.CustomizableEdges = CustomizableEdges36
         Guna2vProgressBar2.Size = New Size(14, 253)
         Guna2vProgressBar2.TabIndex = 10
         Guna2vProgressBar2.Text = "Guna2vProgressBar2"
@@ -479,14 +477,14 @@ Partial Class OverviewControl
         ' Guna2vProgressBar1
         ' 
         Guna2vProgressBar1.BorderRadius = 5
-        Guna2vProgressBar1.CustomizableEdges = CustomizableEdges39
+        Guna2vProgressBar1.CustomizableEdges = CustomizableEdges37
         Guna2vProgressBar1.FillColor = SystemColors.Control
         Guna2vProgressBar1.Location = New Point(39, 18)
         Guna2vProgressBar1.Maximum = 40
         Guna2vProgressBar1.Name = "Guna2vProgressBar1"
         Guna2vProgressBar1.ProgressColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         Guna2vProgressBar1.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        Guna2vProgressBar1.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        Guna2vProgressBar1.ShadowDecoration.CustomizableEdges = CustomizableEdges38
         Guna2vProgressBar1.Size = New Size(14, 253)
         Guna2vProgressBar1.TabIndex = 0
         Guna2vProgressBar1.Text = "Guna2vProgressBar1"
@@ -497,15 +495,15 @@ Partial Class OverviewControl
         ' 
         Guna2Panel2.BackColor = Color.Transparent
         Guna2Panel2.BorderRadius = 10
+        Guna2Panel2.Controls.Add(noOfCompleted)
         Guna2Panel2.Controls.Add(Guna2HtmlLabel11)
         Guna2Panel2.Controls.Add(Guna2HtmlLabel10)
-        Guna2Panel2.Controls.Add(PCircleCompletedAppointments)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges15
+        Guna2Panel2.CustomizableEdges = CustomizableEdges13
         Guna2Panel2.FillColor = SystemColors.Control
         Guna2Panel2.Location = New Point(434, 97)
         Guna2Panel2.Name = "Guna2Panel2"
         Guna2Panel2.ShadowDecoration.BorderRadius = 10
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         Guna2Panel2.ShadowDecoration.Depth = 5
         Guna2Panel2.ShadowDecoration.Enabled = True
         Guna2Panel2.ShadowDecoration.Shadow = New Padding(0, 0, 5, 5)
@@ -530,49 +528,23 @@ Partial Class OverviewControl
         Guna2HtmlLabel10.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel10.Location = New Point(13, 34)
         Guna2HtmlLabel10.Name = "Guna2HtmlLabel10"
-        Guna2HtmlLabel10.Size = New Size(77, 23)
+        Guna2HtmlLabel10.Size = New Size(87, 23)
         Guna2HtmlLabel10.TabIndex = 12
-        Guna2HtmlLabel10.Text = "Complete"
-        ' 
-        ' PCircleCompletedAppointments
-        ' 
-        PCircleCompletedAppointments.BackColor = SystemColors.Control
-        PCircleCompletedAppointments.FillColor = Color.FromArgb(CByte(200), CByte(213), CByte(218), CByte(223))
-        PCircleCompletedAppointments.FillThickness = 12
-        PCircleCompletedAppointments.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        PCircleCompletedAppointments.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        PCircleCompletedAppointments.Location = New Point(134, 18)
-        PCircleCompletedAppointments.Maximum = 40
-        PCircleCompletedAppointments.Minimum = 0
-        PCircleCompletedAppointments.Name = "PCircleCompletedAppointments"
-        PCircleCompletedAppointments.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid
-        PCircleCompletedAppointments.ProgressColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        PCircleCompletedAppointments.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        PCircleCompletedAppointments.ProgressEndCap = Drawing2D.LineCap.Round
-        PCircleCompletedAppointments.ProgressStartCap = Drawing2D.LineCap.Round
-        PCircleCompletedAppointments.ProgressThickness = 12
-        PCircleCompletedAppointments.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        PCircleCompletedAppointments.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        PCircleCompletedAppointments.ShowText = True
-        PCircleCompletedAppointments.Size = New Size(91, 91)
-        PCircleCompletedAppointments.TabIndex = 0
-        PCircleCompletedAppointments.Text = "Guna2CircleProgressBar1"
-        PCircleCompletedAppointments.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Value
-        PCircleCompletedAppointments.Value = 10
+        Guna2HtmlLabel10.Text = "Completed"
         ' 
         ' Guna2Panel3
         ' 
         Guna2Panel3.BackColor = Color.Transparent
         Guna2Panel3.BorderRadius = 10
+        Guna2Panel3.Controls.Add(noOfCancelled)
         Guna2Panel3.Controls.Add(Guna2HtmlLabel12)
         Guna2Panel3.Controls.Add(Guna2HtmlLabel13)
-        Guna2Panel3.Controls.Add(PCircleCancelledAppointments)
-        Guna2Panel3.CustomizableEdges = CustomizableEdges12
+        Guna2Panel3.CustomizableEdges = CustomizableEdges11
         Guna2Panel3.FillColor = SystemColors.Control
         Guna2Panel3.Location = New Point(434, 242)
         Guna2Panel3.Name = "Guna2Panel3"
         Guna2Panel3.ShadowDecoration.BorderRadius = 10
-        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Panel3.ShadowDecoration.Depth = 5
         Guna2Panel3.ShadowDecoration.Enabled = True
         Guna2Panel3.ShadowDecoration.Shadow = New Padding(0, 0, 5, 5)
@@ -600,32 +572,6 @@ Partial Class OverviewControl
         Guna2HtmlLabel13.Size = New Size(78, 23)
         Guna2HtmlLabel13.TabIndex = 15
         Guna2HtmlLabel13.Text = "Cancelled"
-        ' 
-        ' PCircleCancelledAppointments
-        ' 
-        PCircleCancelledAppointments.BackColor = SystemColors.Control
-        PCircleCancelledAppointments.FillColor = Color.FromArgb(CByte(200), CByte(213), CByte(218), CByte(223))
-        PCircleCancelledAppointments.FillThickness = 12
-        PCircleCancelledAppointments.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
-        PCircleCancelledAppointments.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        PCircleCancelledAppointments.Location = New Point(134, 17)
-        PCircleCancelledAppointments.Maximum = 40
-        PCircleCancelledAppointments.Minimum = 0
-        PCircleCancelledAppointments.Name = "PCircleCancelledAppointments"
-        PCircleCancelledAppointments.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.Solid
-        PCircleCancelledAppointments.ProgressColor = Color.Red
-        PCircleCancelledAppointments.ProgressColor2 = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        PCircleCancelledAppointments.ProgressEndCap = Drawing2D.LineCap.Round
-        PCircleCancelledAppointments.ProgressStartCap = Drawing2D.LineCap.Round
-        PCircleCancelledAppointments.ProgressThickness = 12
-        PCircleCancelledAppointments.ShadowDecoration.CustomizableEdges = CustomizableEdges11
-        PCircleCancelledAppointments.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        PCircleCancelledAppointments.ShowText = True
-        PCircleCancelledAppointments.Size = New Size(91, 91)
-        PCircleCancelledAppointments.TabIndex = 14
-        PCircleCancelledAppointments.Text = "Guna2CircleProgressBar2"
-        PCircleCancelledAppointments.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Value
-        PCircleCancelledAppointments.Value = 5
         ' 
         ' Guna2Panel5
         ' 
@@ -825,6 +771,28 @@ Partial Class OverviewControl
         Timer1.Enabled = True
         Timer1.Interval = 1000
         ' 
+        ' noOfCompleted
+        ' 
+        noOfCompleted.BackColor = Color.Transparent
+        noOfCompleted.Font = New Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point)
+        noOfCompleted.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        noOfCompleted.Location = New Point(168, 34)
+        noOfCompleted.Name = "noOfCompleted"
+        noOfCompleted.Size = New Size(43, 49)
+        noOfCompleted.TabIndex = 6
+        noOfCompleted.Text = "10"
+        ' 
+        ' noOfCancelled
+        ' 
+        noOfCancelled.BackColor = Color.Transparent
+        noOfCancelled.Font = New Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point)
+        noOfCancelled.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        noOfCancelled.Location = New Point(168, 33)
+        noOfCancelled.Name = "noOfCancelled"
+        noOfCancelled.Size = New Size(43, 49)
+        noOfCancelled.TabIndex = 14
+        noOfCancelled.Text = "10"
+        ' 
         ' OverviewControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -874,12 +842,10 @@ Partial Class OverviewControl
     Friend WithEvents Guna2HtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents DisplayTime As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents DisplayDate As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents PCircleCompletedAppointments As Guna.UI2.WinForms.Guna2CircleProgressBar
     Friend WithEvents Guna2HtmlLabel11 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel10 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel12 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel13 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents PCircleCancelledAppointments As Guna.UI2.WinForms.Guna2CircleProgressBar
     Friend WithEvents Guna2HtmlLabel14 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2vProgressBar2 As Guna.UI2.WinForms.Guna2VProgressBar
     Friend WithEvents Guna2vProgressBar1 As Guna.UI2.WinForms.Guna2VProgressBar
@@ -905,4 +871,6 @@ Partial Class OverviewControl
     Friend WithEvents Guna2HtmlLabel21 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel20 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents noOfCancelled As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents noOfCompleted As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

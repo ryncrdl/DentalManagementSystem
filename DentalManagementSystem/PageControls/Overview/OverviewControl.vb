@@ -18,6 +18,9 @@ Public Class OverviewControl
 
         ' Start listening for changes in "approved" collection
         StartChangeStreamListener("approved")
+
+        StartChangeStreamListener("completed")
+        StartChangeStreamListener("canceled")
     End Sub
     Private Sub StartChangeStreamListener(collectionName As String)
         Task.Run(Sub()
@@ -52,6 +55,9 @@ Public Class OverviewControl
         NoOfAppointments.Text = GetOverviewCount("appointments")
         DoctorsAvailable.Text = GetOverviewCount("doctors")
         NoOfScheduled.Text = GetOverviewCount("approved")
+        noOfCompleted.Text = GetOverviewCount("completed")
+        noOfCancelled.Text = GetOverviewCount("canceled")
+
     End Sub
 
     Private Sub BtnPending_Click(sender As Object, e As EventArgs) Handles BtnPending.Click
@@ -73,4 +79,9 @@ Public Class OverviewControl
     Private Sub Guna2Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel5.Paint
 
     End Sub
+
+    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
+
+    End Sub
+
 End Class
