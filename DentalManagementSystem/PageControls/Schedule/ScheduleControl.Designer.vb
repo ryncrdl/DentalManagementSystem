@@ -36,6 +36,8 @@ Partial Class ScheduleControl
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(ScheduleControl))
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         label1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         BtnPending = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -44,6 +46,7 @@ Partial Class ScheduleControl
         PanelTable = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        PanelCompleted = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         SuspendLayout()
         ' 
         ' Guna2Elipse1
@@ -198,11 +201,21 @@ Partial Class ScheduleControl
         Guna2Button1.ForeColor = Color.White
         Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), Image)
         Guna2Button1.ImageSize = New Size(30, 30)
-        Guna2Button1.Location = New Point(220, 54)
+        Guna2Button1.Location = New Point(205, 36)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button1.Size = New Size(30, 30)
+        Guna2Button1.Size = New Size(51, 62)
         Guna2Button1.TabIndex = 50
+        ' 
+        ' PanelCompleted
+        ' 
+        PanelCompleted.CustomizableEdges = CustomizableEdges13
+        PanelCompleted.Dock = DockStyle.Fill
+        PanelCompleted.Location = New Point(0, 0)
+        PanelCompleted.Name = "PanelCompleted"
+        PanelCompleted.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        PanelCompleted.Size = New Size(714, 597)
+        PanelCompleted.TabIndex = 51
         ' 
         ' ScheduleControl
         ' 
@@ -216,6 +229,7 @@ Partial Class ScheduleControl
         Controls.Add(BtnIneligible)
         Controls.Add(BtnScheduled)
         Controls.Add(BtnPending)
+        Controls.Add(PanelCompleted)
         Name = "ScheduleControl"
         Size = New Size(714, 597)
         ResumeLayout(False)
@@ -230,4 +244,5 @@ Partial Class ScheduleControl
     Friend WithEvents PanelTable As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents PanelCompleted As Guna.UI2.WinForms.Guna2CustomGradientPanel
 End Class

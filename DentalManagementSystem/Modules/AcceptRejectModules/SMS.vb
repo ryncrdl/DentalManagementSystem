@@ -33,7 +33,7 @@ Module SMS
             Do Until response.Contains(">")
                 response &= serialport1.ReadExisting()
             Loop
-            serialport1.Write("Your " & txtservice & " appointment is now successfully booked on " & txtdate & Chr(26))
+            serialport1.Write("Your " & txtservice & " appointment is successfully booked on " & txtdate & "." & Chr(26))
             System.Threading.Thread.Sleep(5000)
             Dim newresponse = serialport1.ReadExisting()
 
@@ -66,7 +66,7 @@ Module SMS
             Do Until response.Contains(">")
                 response &= serialport1.ReadExisting()
             Loop
-            serialport1.Write("Sorry your " & txtservice & " appointment on " & txtdate & " is rejected due to invalid receipt " & Chr(26))
+            serialport1.Write("Sorry your " & txtservice & " appointment on " & txtdate & " is rejected due to invalid receipt or information. " & Chr(26))
             System.Threading.Thread.Sleep(5000)
             Dim newresponse = serialport1.ReadExisting()
 
