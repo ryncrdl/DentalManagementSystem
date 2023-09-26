@@ -148,7 +148,7 @@ Partial Class ScheduleControl
         BtnIneligible.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         BtnIneligible.Size = New Size(137, 46)
         BtnIneligible.TabIndex = 12
-        BtnIneligible.Text = "ineligible"
+        BtnIneligible.Text = "Ineligible"
         ' 
         ' PanelTable
         ' 
