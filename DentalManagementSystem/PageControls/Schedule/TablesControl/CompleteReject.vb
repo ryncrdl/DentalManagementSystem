@@ -82,4 +82,36 @@ Public Class CompleteReject
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
     End Sub
+
+    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+
+
+        ' Check if the receiver's number and message content are not empty
+
+
+        Dim sourceCollectionName As String = "approved"
+        Dim destCollectionName As String = "completed"
+
+
+        ' Call the MoveCollectionData function from the MongoDBHelper module
+        Completed.completed(sourceCollectionName, destCollectionName, CompleteId)
+
+        ' Display a success message or perform any other necessary actions
+        MessageSuccessfully.Show()
+        Me.Close()
+    End Sub
+
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+
+        Dim sourceCollectionName As String = "approved"
+        Dim destCollectionName As String = "canceled"
+
+
+        ' Call the MoveCollectionData function from the MongoDBHelper module
+        Completed.completed(sourceCollectionName, destCollectionName, CompleteId)
+
+        ' Display a success message or perform any other necessary actions
+        rejectsuccessfully.Show()
+        Me.Close()
+    End Sub
 End Class
