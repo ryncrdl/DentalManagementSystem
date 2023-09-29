@@ -35,40 +35,59 @@ Public Class AvailRfid
 
     End Sub
 
-    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
-        Dim contactNumber As String = txtContact.Text.Trim()
-        Dim clientDocuments As List(Of BsonDocument) = REGISTERCONTROLLERS.FindDocumentsByContactNumber(contactNumber)
 
-        If clientDocuments IsNot Nothing AndAlso clientDocuments.Count > 0 Then
-            ' Create a StringBuilder to store full names
-            Dim fullNameBuilder As New StringBuilder()
 
-            ' Iterate through the list of documents and concatenate full names
-            For Each clientDocument As BsonDocument In clientDocuments
-                If clientDocument.Contains("fullName") Then
-                    Dim fullName As String = clientDocument("fullName").AsString
-                    fullNameBuilder.Append(fullName).Append(Environment.NewLine)
-                End If
-            Next
 
-            ' Set the textbox text to the concatenated full names
-            txtFullname.Text = fullNameBuilder.ToString()
-
-            ' Optionally, hide or show controls, clear error messages, etc.
-            txtname.Visible = True
-            txtrfidnumber.Visible = True
-            txtFullname.Visible = True
-            txtRfid.Visible = True
-            BtnSearch.Visible = False
-            Guna2CustomGradientPanel1.Visible = False
-            txterror.Visible = False
-        Else
-            txtFullname.Text = "" ' Clear the textbox if no matching documents are found
-            txterror.Visible = True
-        End If
-    End Sub
 
     Private Sub txtFullname_TextChanged(sender As Object, e As EventArgs) Handles txtFullname.TextChanged
 
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Timer1.Stop() ' Stop the timer
+
+        Try
+            Dim contactNumber As String = txtContact.Text.Trim()
+            Dim fullNames As String = REGISTERCONTROLLERS.FindFullNameByContactNumber(contactNumber)
+
+            If fullNames.Count > 0 Then
+                ' Join the list of full names into a single string with line breaks
+                Dim fullNamesText As String = String.Join(Environment.NewLine, fullNames)
+                txtFullname.Text = fullNamesText
+            Else
+                txtFullname.Text = "" ' Clear the textbox if no matching documents are found
+                txterror.Visible = True
+            End If
+        Catch ex As Exception
+            ' Handle any exceptions that occur during MongoDB operations
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
+        Try
+            Dim contactNumber As String = txtContact.Text.Trim()
+
+            ' Call the function to find all full names by contact number
+            Dim fullNames As List(Of String) = REGISTERCONTROLLERS.FindAllFullNamesByContactNumber(contactNumber)
+
+            If fullNames.Count > 0 Then
+                ' Display the full names, e.g., in a TextBox
+                txtFullname.Text = String.Join(Environment.NewLine, fullNames)
+                txtFullname.Visible = True
+                txtrfidnumber.Visible = True
+                txtRfid.Visible = True
+                txtname.Visible = True
+                Guna2CustomGradientPanel1.Visible = False
+            Else
+                ' Handle the case where no data is found
+                txtFullname.Text = ""
+                txterror.Text = "No full names found for the given contact number."
+                txterror.Visible = True
+            End If
+        Catch ex As Exception
+            ' Handle any exceptions that occur during MongoDB operations
+            txtFullname.Text = "An error occurred: " & ex.Message
+        End Try
     End Sub
 End Class

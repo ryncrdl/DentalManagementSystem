@@ -58,6 +58,7 @@ Partial Class AvailRfid
         Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         txterror = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2MessageDialog1 = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Timer1 = New Timer(components)
         Guna2CustomGradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -73,7 +74,7 @@ Partial Class AvailRfid
         ' Guna2HtmlLabel1
         ' 
         Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel1.Location = New Point(25, 107)
         Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
@@ -135,7 +136,7 @@ Partial Class AvailRfid
         BtnCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnCancel.FillColor = Color.Empty
         BtnCancel.FillColor2 = Color.Empty
-        BtnCancel.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnCancel.ForeColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.HoverState.FillColor = Color.DarkViolet
         BtnCancel.HoverState.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
@@ -158,7 +159,7 @@ Partial Class AvailRfid
         BtnSave.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnSave.FillColor = Color.DarkViolet
         BtnSave.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        BtnSave.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnSave.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnSave.ForeColor = Color.White
         BtnSave.Location = New Point(25, 398)
         BtnSave.Name = "BtnSave"
@@ -174,12 +175,12 @@ Partial Class AvailRfid
         MessageSuccessfully.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
         MessageSuccessfully.Parent = Nothing
         MessageSuccessfully.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
-        MessageSuccessfully.Text = "Clients updated successfully!"
+        MessageSuccessfully.Text = "Registered Successfully"
         ' 
         ' Guna2HtmlLabel4
         ' 
         Guna2HtmlLabel4.BackColor = Color.White
-        Guna2HtmlLabel4.Font = New Font("Segoe UI", 24.0F, FontStyle.Regular, GraphicsUnit.Point)
+        Guna2HtmlLabel4.Font = New Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel4.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel4.Location = New Point(66, 36)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
@@ -198,7 +199,7 @@ Partial Class AvailRfid
         txtContact.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtContact.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtContact.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtContact.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtContact.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtContact.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtContact.IconRight = My.Resources.Resources.icons8_search_100
         txtContact.IconRightOffset = New Point(20, 0)
@@ -224,7 +225,7 @@ Partial Class AvailRfid
         BtnSearch.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnSearch.FillColor = Color.IndianRed
         BtnSearch.FillColor2 = Color.RosyBrown
-        BtnSearch.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnSearch.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnSearch.ForeColor = Color.White
         BtnSearch.Location = New Point(100, 3)
         BtnSearch.Name = "BtnSearch"
@@ -245,7 +246,7 @@ Partial Class AvailRfid
         txtFullname.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtFullname.Enabled = False
         txtFullname.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtFullname.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtFullname.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtFullname.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtFullname.IconRightOffset = New Point(20, 0)
         txtFullname.IconRightSize = New Size(25, 25)
@@ -258,11 +259,12 @@ Partial Class AvailRfid
         txtFullname.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         txtFullname.Size = New Size(390, 49)
         txtFullname.TabIndex = 50
+        txtFullname.Visible = False
         ' 
         ' txtrfidnumber
         ' 
         txtrfidnumber.BackColor = Color.Transparent
-        txtrfidnumber.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtrfidnumber.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtrfidnumber.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtrfidnumber.Location = New Point(22, 279)
         txtrfidnumber.Name = "txtrfidnumber"
@@ -282,7 +284,7 @@ Partial Class AvailRfid
         txtRfid.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtRfid.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtRfid.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtRfid.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtRfid.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtRfid.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtRfid.IconRightOffset = New Point(20, 0)
         txtRfid.IconRightSize = New Size(25, 25)
@@ -295,11 +297,12 @@ Partial Class AvailRfid
         txtRfid.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         txtRfid.Size = New Size(390, 49)
         txtRfid.TabIndex = 61
+        txtRfid.Visible = False
         ' 
         ' txtname
         ' 
         txtname.BackColor = Color.Transparent
-        txtname.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtname.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtname.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtname.Location = New Point(25, 193)
         txtname.Name = "txtname"
@@ -313,7 +316,7 @@ Partial Class AvailRfid
         Guna2CustomGradientPanel1.Controls.Add(txterror)
         Guna2CustomGradientPanel1.Controls.Add(BtnSearch)
         Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges3
-        Guna2CustomGradientPanel1.Location = New Point(116, 193)
+        Guna2CustomGradientPanel1.Location = New Point(22, 193)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2CustomGradientPanel1.Size = New Size(390, 190)
@@ -322,13 +325,13 @@ Partial Class AvailRfid
         ' txterror
         ' 
         txterror.BackColor = Color.White
-        txterror.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txterror.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txterror.ForeColor = Color.Red
-        txterror.Location = New Point(59, 87)
+        txterror.Location = New Point(32, 86)
         txterror.Name = "txterror"
-        txterror.Size = New Size(290, 23)
+        txterror.Size = New Size(27, 23)
         txterror.TabIndex = 67
-        txterror.Text = """NO DATA, SEARCH ANOTHER NUMBER"""
+        txterror.Text = "ads"
         txterror.Visible = False
         ' 
         ' Guna2MessageDialog1
@@ -340,9 +343,12 @@ Partial Class AvailRfid
         Guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
         Guna2MessageDialog1.Text = Nothing
         ' 
+        ' Timer1
+        ' 
+        ' 
         ' AvailRfid
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(433, 490)
@@ -387,4 +393,5 @@ Partial Class AvailRfid
     Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents txterror As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2MessageDialog1 As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents Timer1 As Timer
 End Class
