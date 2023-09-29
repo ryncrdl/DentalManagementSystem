@@ -319,7 +319,7 @@ Partial Class AvailRfid
         Guna2CustomGradientPanel1.Location = New Point(22, 193)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2CustomGradientPanel1.Size = New Size(390, 190)
+        Guna2CustomGradientPanel1.Size = New Size(390, 176)
         Guna2CustomGradientPanel1.TabIndex = 66
         ' 
         ' txterror
@@ -342,9 +342,6 @@ Partial Class AvailRfid
         Guna2MessageDialog1.Parent = Nothing
         Guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
         Guna2MessageDialog1.Text = Nothing
-        ' 
-        ' Timer1
-        ' 
         ' 
         ' AvailRfid
         ' 

@@ -1,4 +1,5 @@
 ﻿Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
 Imports MongoDB.Bson
 Imports MongoDB.Driver
 Public Class AvailRfid
@@ -27,41 +28,16 @@ Public Class AvailRfid
     End Sub
 
     Private Sub AvailRfid_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txtContact, txtFullname, txtRfid}
-        Connection.ConnectToMongoDB("rfid")
+
+        Connection.ConnectToMongoDB("clients")
     End Sub
 
     Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtContact.TextChanged
 
     End Sub
 
-
-
-
-
     Private Sub txtFullname_TextChanged(sender As Object, e As EventArgs) Handles txtFullname.TextChanged
 
-    End Sub
-
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Timer1.Stop() ' Stop the timer
-
-        Try
-            Dim contactNumber As String = txtContact.Text.Trim()
-            Dim fullNames As String = REGISTERCONTROLLERS.FindFullNameByContactNumber(contactNumber)
-
-            If fullNames.Count > 0 Then
-                ' Join the list of full names into a single string with line breaks
-                Dim fullNamesText As String = String.Join(Environment.NewLine, fullNames)
-                txtFullname.Text = fullNamesText
-            Else
-                txtFullname.Text = "" ' Clear the textbox if no matching documents are found
-                txterror.Visible = True
-            End If
-        Catch ex As Exception
-            ' Handle any exceptions that occur during MongoDB operations
-            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
     End Sub
 
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
@@ -89,5 +65,9 @@ Public Class AvailRfid
             ' Handle any exceptions that occur during MongoDB operations
             txtFullname.Text = "An error occurred: " & ex.Message
         End Try
+    End Sub
+
+    Private Sub Guna2CustomGradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2CustomGradientPanel1.Paint
+
     End Sub
 End Class
