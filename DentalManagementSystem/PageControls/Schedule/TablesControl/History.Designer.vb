@@ -1,8 +1,8 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class HistoryControl
-    Inherits System.Windows.Forms.UserControl
+Partial Class History
+    Inherits System.Windows.Forms.Form
 
-    'UserControl overrides dispose to clean up the component list.
+    'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
@@ -23,6 +23,7 @@ Partial Class HistoryControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(History))
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -42,7 +43,9 @@ Partial Class HistoryControl
         BtnIneligible = New Guna.UI2.WinForms.Guna2GradientButton()
         BtnScheduled = New Guna.UI2.WinForms.Guna2GradientButton()
         BtnPending = New Guna.UI2.WinForms.Guna2GradientButton()
-        Panel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(components)
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
+        Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         SuspendLayout()
         ' 
         ' Guna2Elipse1
@@ -52,13 +55,9 @@ Partial Class HistoryControl
         ' label1
         ' 
         label1.BackColor = Color.Transparent
-        label1.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point)
+        resources.ApplyResources(label1, "label1")
         label1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        label1.Location = New Point(32, 46)
         label1.Name = "label1"
-        label1.Size = New Size(145, 39)
-        label1.TabIndex = 57
-        label1.Text = "Completed"
         ' 
         ' Guna2TextBox1
         ' 
@@ -71,31 +70,25 @@ Partial Class HistoryControl
         Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        resources.ApplyResources(Guna2TextBox1, "Guna2TextBox1")
         Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         Guna2TextBox1.IconRight = My.Resources.Resources.icons8_search_100
         Guna2TextBox1.IconRightOffset = New Point(20, 0)
         Guna2TextBox1.IconRightSize = New Size(25, 25)
-        Guna2TextBox1.Location = New Point(32, 106)
-        Guna2TextBox1.Margin = New Padding(4, 4, 4, 4)
         Guna2TextBox1.Name = "Guna2TextBox1"
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = "Search"
         Guna2TextBox1.SelectedText = ""
         Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2TextBox1.Size = New Size(650, 49)
-        Guna2TextBox1.TabIndex = 58
         ' 
         ' PanelTable
         ' 
         PanelTable.BackColor = Color.Transparent
         PanelTable.BorderRadius = 10
         PanelTable.CustomizableEdges = CustomizableEdges3
-        PanelTable.Location = New Point(32, 165)
+        resources.ApplyResources(PanelTable, "PanelTable")
         PanelTable.Name = "PanelTable"
         PanelTable.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        PanelTable.Size = New Size(650, 386)
-        PanelTable.TabIndex = 62
         ' 
         ' BtnIneligible
         ' 
@@ -116,14 +109,10 @@ Partial Class HistoryControl
         BtnIneligible.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnIneligible.FillColor = Color.Empty
         BtnIneligible.FillColor2 = Color.Empty
-        BtnIneligible.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        resources.ApplyResources(BtnIneligible, "BtnIneligible")
         BtnIneligible.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        BtnIneligible.Location = New Point(545, 46)
         BtnIneligible.Name = "BtnIneligible"
         BtnIneligible.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        BtnIneligible.Size = New Size(137, 46)
-        BtnIneligible.TabIndex = 61
-        BtnIneligible.Text = "Close"
         ' 
         ' BtnScheduled
         ' 
@@ -144,14 +133,10 @@ Partial Class HistoryControl
         BtnScheduled.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnScheduled.FillColor = Color.Empty
         BtnScheduled.FillColor2 = Color.Empty
-        BtnScheduled.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        resources.ApplyResources(BtnScheduled, "BtnScheduled")
         BtnScheduled.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        BtnScheduled.Location = New Point(402, 46)
         BtnScheduled.Name = "BtnScheduled"
         BtnScheduled.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        BtnScheduled.Size = New Size(137, 46)
-        BtnScheduled.TabIndex = 60
-        BtnScheduled.Text = "Canceled"
         ' 
         ' BtnPending
         ' 
@@ -173,39 +158,52 @@ Partial Class HistoryControl
         BtnPending.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnPending.FillColor = Color.Empty
         BtnPending.FillColor2 = Color.Empty
-        BtnPending.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        resources.ApplyResources(BtnPending, "BtnPending")
         BtnPending.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        BtnPending.Location = New Point(259, 46)
         BtnPending.Name = "BtnPending"
         BtnPending.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        BtnPending.Size = New Size(137, 46)
-        BtnPending.TabIndex = 59
-        BtnPending.Text = "Completed"
         ' 
-        ' Panel1
+        ' Guna2DragControl1
         ' 
-        Panel1.CustomizableEdges = CustomizableEdges11
-        Panel1.Dock = DockStyle.Fill
-        Panel1.Location = New Point(0, 0)
-        Panel1.Name = "Panel1"
-        Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Panel1.Size = New Size(714, 597)
-        Panel1.TabIndex = 63
+        Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Guna2DragControl1.TargetControl = Guna2GradientPanel1
+        Guna2DragControl1.UseTransparentDrag = True
         ' 
-        ' HistoryControl
+        ' Guna2BorderlessForm1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        Guna2BorderlessForm1.BorderRadius = 20
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
+        ' 
+        ' Guna2GradientPanel1
+        ' 
+        Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges11
+        resources.ApplyResources(Guna2GradientPanel1, "Guna2GradientPanel1")
+        Guna2GradientPanel1.FillColor = Color.DarkViolet
+        Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        Guna2GradientPanel1.Name = "Guna2GradientPanel1"
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        ' 
+        ' History
+        ' 
+        resources.ApplyResources(Me, "$this")
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
+        ControlBox = False
+        Controls.Add(Guna2GradientPanel1)
         Controls.Add(label1)
         Controls.Add(Guna2TextBox1)
         Controls.Add(PanelTable)
         Controls.Add(BtnIneligible)
         Controls.Add(BtnScheduled)
         Controls.Add(BtnPending)
-        Controls.Add(Panel1)
-        Name = "HistoryControl"
-        Size = New Size(714, 597)
+        FormBorderStyle = FormBorderStyle.None
+        MaximizeBox = False
+        MinimizeBox = False
+        Name = "History"
+        ShowIcon = False
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -217,5 +215,7 @@ Partial Class HistoryControl
     Friend WithEvents BtnIneligible As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnScheduled As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnPending As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Panel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
 End Class

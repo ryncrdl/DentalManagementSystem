@@ -23,8 +23,6 @@ Partial Class ScheduleControl
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -34,10 +32,9 @@ Partial Class ScheduleControl
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(ScheduleControl))
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         label1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         BtnPending = New Guna.UI2.WinForms.Guna2GradientButton()
@@ -45,7 +42,6 @@ Partial Class ScheduleControl
         BtnIneligible = New Guna.UI2.WinForms.Guna2GradientButton()
         PanelTable = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         PanelCompleted = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         SuspendLayout()
         ' 
@@ -77,7 +73,7 @@ Partial Class ScheduleControl
         BtnPending.CheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnPending.CheckedState.FillColor2 = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnPending.CheckedState.ForeColor = Color.White
-        BtnPending.CustomizableEdges = CustomizableEdges11
+        BtnPending.CustomizableEdges = CustomizableEdges9
         BtnPending.DisabledState.BorderColor = Color.DarkGray
         BtnPending.DisabledState.CustomBorderColor = Color.DarkGray
         BtnPending.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -89,7 +85,7 @@ Partial Class ScheduleControl
         BtnPending.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnPending.Location = New Point(256, 45)
         BtnPending.Name = "BtnPending"
-        BtnPending.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        BtnPending.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         BtnPending.Size = New Size(137, 46)
         BtnPending.TabIndex = 10
         BtnPending.Text = "Pending"
@@ -105,7 +101,7 @@ Partial Class ScheduleControl
         BtnScheduled.CheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnScheduled.CheckedState.FillColor2 = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnScheduled.CheckedState.ForeColor = Color.White
-        BtnScheduled.CustomizableEdges = CustomizableEdges9
+        BtnScheduled.CustomizableEdges = CustomizableEdges7
         BtnScheduled.DisabledState.BorderColor = Color.DarkGray
         BtnScheduled.DisabledState.CustomBorderColor = Color.DarkGray
         BtnScheduled.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -117,7 +113,7 @@ Partial Class ScheduleControl
         BtnScheduled.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnScheduled.Location = New Point(399, 45)
         BtnScheduled.Name = "BtnScheduled"
-        BtnScheduled.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        BtnScheduled.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         BtnScheduled.Size = New Size(137, 46)
         BtnScheduled.TabIndex = 11
         BtnScheduled.Text = "Scheduled"
@@ -133,7 +129,7 @@ Partial Class ScheduleControl
         BtnIneligible.CheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnIneligible.CheckedState.FillColor2 = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnIneligible.CheckedState.ForeColor = Color.White
-        BtnIneligible.CustomizableEdges = CustomizableEdges7
+        BtnIneligible.CustomizableEdges = CustomizableEdges5
         BtnIneligible.DisabledState.BorderColor = Color.DarkGray
         BtnIneligible.DisabledState.CustomBorderColor = Color.DarkGray
         BtnIneligible.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -145,7 +141,7 @@ Partial Class ScheduleControl
         BtnIneligible.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnIneligible.Location = New Point(542, 45)
         BtnIneligible.Name = "BtnIneligible"
-        BtnIneligible.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        BtnIneligible.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         BtnIneligible.Size = New Size(137, 46)
         BtnIneligible.TabIndex = 12
         BtnIneligible.Text = "Ineligible"
@@ -154,10 +150,10 @@ Partial Class ScheduleControl
         ' 
         PanelTable.BackColor = Color.Transparent
         PanelTable.BorderRadius = 10
-        PanelTable.CustomizableEdges = CustomizableEdges5
+        PanelTable.CustomizableEdges = CustomizableEdges3
         PanelTable.Location = New Point(29, 164)
         PanelTable.Name = "PanelTable"
-        PanelTable.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        PanelTable.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         PanelTable.Size = New Size(650, 386)
         PanelTable.TabIndex = 13
         ' 
@@ -165,7 +161,7 @@ Partial Class ScheduleControl
         ' 
         Guna2TextBox1.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2TextBox1.BorderRadius = 10
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges3
+        Guna2TextBox1.CustomizableEdges = CustomizableEdges1
         Guna2TextBox1.DefaultText = ""
         Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -183,37 +179,17 @@ Partial Class ScheduleControl
         Guna2TextBox1.PasswordChar = ChrW(0)
         Guna2TextBox1.PlaceholderText = "Search"
         Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2TextBox1.Size = New Size(650, 49)
         Guna2TextBox1.TabIndex = 3
         ' 
-        ' Guna2Button1
-        ' 
-        Guna2Button1.BackColor = Color.Transparent
-        Guna2Button1.Cursor = Cursors.Hand
-        Guna2Button1.CustomizableEdges = CustomizableEdges1
-        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button1.FillColor = Color.Transparent
-        Guna2Button1.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        Guna2Button1.ForeColor = Color.White
-        Guna2Button1.Image = CType(resources.GetObject("Guna2Button1.Image"), Image)
-        Guna2Button1.ImageSize = New Size(30, 30)
-        Guna2Button1.Location = New Point(205, 36)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button1.Size = New Size(51, 62)
-        Guna2Button1.TabIndex = 50
-        ' 
         ' PanelCompleted
         ' 
-        PanelCompleted.CustomizableEdges = CustomizableEdges13
+        PanelCompleted.CustomizableEdges = CustomizableEdges11
         PanelCompleted.Dock = DockStyle.Fill
         PanelCompleted.Location = New Point(0, 0)
         PanelCompleted.Name = "PanelCompleted"
-        PanelCompleted.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        PanelCompleted.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         PanelCompleted.Size = New Size(714, 597)
         PanelCompleted.TabIndex = 51
         ' 
@@ -222,7 +198,6 @@ Partial Class ScheduleControl
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        Controls.Add(Guna2Button1)
         Controls.Add(label1)
         Controls.Add(Guna2TextBox1)
         Controls.Add(PanelTable)
@@ -243,6 +218,5 @@ Partial Class ScheduleControl
     Friend WithEvents BtnScheduled As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents PanelTable As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents PanelCompleted As Guna.UI2.WinForms.Guna2CustomGradientPanel
 End Class

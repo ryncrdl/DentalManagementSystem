@@ -22,6 +22,7 @@ Partial Class EditServices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -55,6 +56,8 @@ Partial Class EditServices
         txtPayment = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         messageOK = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
+        Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(components)
         CType(image1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -314,6 +317,19 @@ Partial Class EditServices
         messageOK.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
         messageOK.Text = "Services Updated!"
         ' 
+        ' Guna2BorderlessForm1
+        ' 
+        Guna2BorderlessForm1.BorderRadius = 20
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
+        ' 
+        ' Guna2DragControl1
+        ' 
+        Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Guna2DragControl1.TargetControl = Guna2GradientPanel1
+        Guna2DragControl1.UseTransparentDrag = True
+        ' 
         ' EditServices
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -334,6 +350,7 @@ Partial Class EditServices
         Controls.Add(Guna2GradientPanel1)
         Controls.Add(txtPayment)
         Controls.Add(Guna2HtmlLabel5)
+        FormBorderStyle = FormBorderStyle.None
         Name = "EditServices"
         StartPosition = FormStartPosition.CenterScreen
         CType(image1, ComponentModel.ISupportInitialize).EndInit()
@@ -357,4 +374,6 @@ Partial Class EditServices
     Friend WithEvents txtPayment As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents messageOK As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
 End Class

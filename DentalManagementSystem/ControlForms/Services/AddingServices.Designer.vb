@@ -22,23 +22,24 @@ Partial Class AddingServices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        components = New ComponentModel.Container()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges27 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges28 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges30 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges31 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         BtnCancel = New Guna.UI2.WinForms.Guna2GradientButton()
         BtnCreate = New Guna.UI2.WinForms.Guna2GradientButton()
         txtprice = New Guna.UI2.WinForms.Guna2TextBox()
@@ -55,6 +56,8 @@ Partial Class AddingServices
         Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         txtPayment = New Guna.UI2.WinForms.Guna2ComboBox()
         messageOK = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
+        Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(components)
         CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -63,7 +66,7 @@ Partial Class AddingServices
         BtnCancel.BorderColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.BorderRadius = 10
         BtnCancel.BorderThickness = 1
-        BtnCancel.CustomizableEdges = CustomizableEdges1
+        BtnCancel.CustomizableEdges = CustomizableEdges18
         BtnCancel.DisabledState.BorderColor = Color.DarkGray
         BtnCancel.DisabledState.CustomBorderColor = Color.DarkGray
         BtnCancel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -78,7 +81,7 @@ Partial Class AddingServices
         BtnCancel.HoverState.ForeColor = Color.White
         BtnCancel.Location = New Point(245, 785)
         BtnCancel.Name = "BtnCancel"
-        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges19
         BtnCancel.Size = New Size(190, 50)
         BtnCancel.TabIndex = 27
         BtnCancel.Text = "Cancel"
@@ -86,7 +89,7 @@ Partial Class AddingServices
         ' BtnCreate
         ' 
         BtnCreate.BorderRadius = 10
-        BtnCreate.CustomizableEdges = CustomizableEdges3
+        BtnCreate.CustomizableEdges = CustomizableEdges20
         BtnCreate.DisabledState.BorderColor = Color.DarkGray
         BtnCreate.DisabledState.CustomBorderColor = Color.DarkGray
         BtnCreate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -98,7 +101,7 @@ Partial Class AddingServices
         BtnCreate.ForeColor = Color.White
         BtnCreate.Location = New Point(26, 785)
         BtnCreate.Name = "BtnCreate"
-        BtnCreate.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        BtnCreate.ShadowDecoration.CustomizableEdges = CustomizableEdges21
         BtnCreate.Size = New Size(190, 50)
         BtnCreate.TabIndex = 26
         BtnCreate.Text = "Create"
@@ -107,7 +110,7 @@ Partial Class AddingServices
         ' 
         txtprice.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtprice.BorderRadius = 10
-        txtprice.CustomizableEdges = CustomizableEdges5
+        txtprice.CustomizableEdges = CustomizableEdges22
         txtprice.DefaultText = ""
         txtprice.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtprice.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -124,7 +127,7 @@ Partial Class AddingServices
         txtprice.PasswordChar = ChrW(0)
         txtprice.PlaceholderText = "Price"
         txtprice.SelectedText = ""
-        txtprice.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        txtprice.ShadowDecoration.CustomizableEdges = CustomizableEdges23
         txtprice.Size = New Size(423, 49)
         txtprice.TabIndex = 25
         ' 
@@ -132,7 +135,7 @@ Partial Class AddingServices
         ' 
         txttitle.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txttitle.BorderRadius = 10
-        txttitle.CustomizableEdges = CustomizableEdges7
+        txttitle.CustomizableEdges = CustomizableEdges24
         txttitle.DefaultText = ""
         txttitle.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txttitle.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -149,14 +152,14 @@ Partial Class AddingServices
         txttitle.PasswordChar = ChrW(0)
         txttitle.PlaceholderText = "Title"
         txttitle.SelectedText = ""
-        txttitle.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        txttitle.ShadowDecoration.CustomizableEdges = CustomizableEdges25
         txttitle.Size = New Size(423, 49)
         txttitle.TabIndex = 24
         ' 
         ' BtnBrowse
         ' 
         BtnBrowse.BorderRadius = 10
-        BtnBrowse.CustomizableEdges = CustomizableEdges9
+        BtnBrowse.CustomizableEdges = CustomizableEdges26
         BtnBrowse.DisabledState.BorderColor = Color.DarkGray
         BtnBrowse.DisabledState.CustomBorderColor = Color.DarkGray
         BtnBrowse.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -168,7 +171,7 @@ Partial Class AddingServices
         BtnBrowse.ForeColor = Color.White
         BtnBrowse.Location = New Point(147, 299)
         BtnBrowse.Name = "BtnBrowse"
-        BtnBrowse.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        BtnBrowse.ShadowDecoration.CustomizableEdges = CustomizableEdges27
         BtnBrowse.Size = New Size(172, 38)
         BtnBrowse.TabIndex = 22
         BtnBrowse.Text = "Browse"
@@ -178,7 +181,7 @@ Partial Class AddingServices
         Guna2CirclePictureBox1.ImageRotate = 0F
         Guna2CirclePictureBox1.Location = New Point(92, 65)
         Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Guna2CirclePictureBox1.Size = New Size(290, 218)
         Guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.Zoom
@@ -188,13 +191,13 @@ Partial Class AddingServices
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges12
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges29
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.DarkViolet
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         Guna2GradientPanel1.Size = New Size(460, 30)
         Guna2GradientPanel1.TabIndex = 20
         ' 
@@ -203,7 +206,7 @@ Partial Class AddingServices
         txtdescription.AcceptsTab = True
         txtdescription.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtdescription.BorderRadius = 10
-        txtdescription.CustomizableEdges = CustomizableEdges14
+        txtdescription.CustomizableEdges = CustomizableEdges31
         txtdescription.DefaultText = ""
         txtdescription.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtdescription.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -222,7 +225,7 @@ Partial Class AddingServices
         txtdescription.PlaceholderText = "Description"
         txtdescription.ScrollBars = ScrollBars.Vertical
         txtdescription.SelectedText = ""
-        txtdescription.ShadowDecoration.CustomizableEdges = CustomizableEdges15
+        txtdescription.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         txtdescription.Size = New Size(423, 143)
         txtdescription.TabIndex = 28
         ' 
@@ -290,7 +293,7 @@ Partial Class AddingServices
         txtPayment.AutoRoundedCorners = True
         txtPayment.BackColor = Color.Transparent
         txtPayment.BorderRadius = 17
-        txtPayment.CustomizableEdges = CustomizableEdges16
+        txtPayment.CustomizableEdges = CustomizableEdges33
         txtPayment.DrawMode = DrawMode.OwnerDrawFixed
         txtPayment.DropDownStyle = ComboBoxStyle.DropDownList
         txtPayment.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -301,7 +304,7 @@ Partial Class AddingServices
         txtPayment.Items.AddRange(New Object() {"Required Payment", "Not Required Payment"})
         txtPayment.Location = New Point(11, 720)
         txtPayment.Name = "txtPayment"
-        txtPayment.ShadowDecoration.CustomizableEdges = CustomizableEdges17
+        txtPayment.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         txtPayment.Size = New Size(424, 36)
         txtPayment.TabIndex = 35
         ' 
@@ -313,6 +316,19 @@ Partial Class AddingServices
         messageOK.Parent = Nothing
         messageOK.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
         messageOK.Text = Nothing
+        ' 
+        ' Guna2BorderlessForm1
+        ' 
+        Guna2BorderlessForm1.BorderRadius = 20
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
+        ' 
+        ' Guna2DragControl1
+        ' 
+        Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
+        Guna2DragControl1.TargetControl = Guna2GradientPanel1
+        Guna2DragControl1.UseTransparentDrag = True
         ' 
         ' AddingServices
         ' 
@@ -334,7 +350,7 @@ Partial Class AddingServices
         Controls.Add(BtnBrowse)
         Controls.Add(Guna2CirclePictureBox1)
         Controls.Add(Guna2GradientPanel1)
-        FormBorderStyle = FormBorderStyle.FixedSingle
+        FormBorderStyle = FormBorderStyle.None
         Name = "AddingServices"
         StartPosition = FormStartPosition.CenterScreen
         CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).EndInit()
@@ -358,4 +374,6 @@ Partial Class AddingServices
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents txtPayment As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents messageOK As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
 End Class

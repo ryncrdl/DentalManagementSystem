@@ -305,7 +305,7 @@ Partial Class CreateClients
         ' 
         ' CreateClients
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(435, 573)
         ControlBox = False
