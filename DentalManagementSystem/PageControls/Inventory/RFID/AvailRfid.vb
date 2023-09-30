@@ -16,9 +16,9 @@ Public Class AvailRfid
         Dim Contact As String = txtContact.Text
         Dim Fullname As String = txtFullname.Text
         Dim RFIDNUM As String = txtRfid.Text
+        Dim services As String = cbservice.Text
 
-
-        If RFIDINSERTCONTROLLERS.Insertrfid(Contact, Fullname, RFIDNUM) Then
+        If RFIDINSERTCONTROLLERS.Insertrfid1(Contact, Fullname, RFIDNUM, services) Then
             MessageSuccessfully.Show()
 
             ' Clear the input fields after successful addition
@@ -54,6 +54,8 @@ Public Class AvailRfid
                 txtrfidnumber.Visible = True
                 txtRfid.Visible = True
                 txtname.Visible = True
+                txtser.Visible = True
+                cbservice.Visible = True
                 Guna2CustomGradientPanel1.Visible = False
             Else
                 ' Handle the case where no data is found

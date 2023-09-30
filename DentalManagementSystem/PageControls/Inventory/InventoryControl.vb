@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub Guna2GradientButton4_Click(sender As Object, e As EventArgs) Handles BtnPoints.Click
-
+        AddPoints.Show()
     End Sub
 
     Private Sub BtnAvail_Click(sender As Object, e As EventArgs) Handles BtnAvail.Click
