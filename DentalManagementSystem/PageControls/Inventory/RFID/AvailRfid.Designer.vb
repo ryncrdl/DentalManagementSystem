@@ -70,10 +70,10 @@ Partial Class AvailRfid
         ' 
         CustomMessageError.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
         CustomMessageError.Caption = Nothing
-        CustomMessageError.Icon = Guna.UI2.WinForms.MessageDialogIcon.None
+        CustomMessageError.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
         CustomMessageError.Parent = Nothing
-        CustomMessageError.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
-        CustomMessageError.Text = Nothing
+        CustomMessageError.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        CustomMessageError.Text = "RFID NUMBER IS ALREADY TAKEN!"
         ' 
         ' Guna2HtmlLabel1
         ' 

@@ -18,11 +18,23 @@ Public Class AvailRfid
         Dim RFIDNUM As String = txtRfid.Text
         Dim services As String = cbservice.Text
 
-        If RFIDINSERTCONTROLLERS.Insertrfid1(Contact, Fullname, RFIDNUM, services) Then
+        If services = "" And txtRfid.Text = "" Then
+            ' Show a message if the "services" field is empty
+            CreateMessageDialog.Show()
+        ElseIf RFIDINSERTCONTROLLERS.Insertrfid1(Contact, Fullname, RFIDNUM, services) Then
+            ' Show a success message if the insertion is successful
             MessageSuccessfully.Show()
 
             ' Clear the input fields after successful addition
+            txtContact.Clear()
+            txtFullname.Clear()
+            txtRfid.Clear()
+            cbservice.SelectedIndex = -1
             Me.Close()
+        Else
+            ' Show an error message if the RFID number is not unique
+            CustomMessageError.Show()
+            txtRfid.Clear()
         End If
 
     End Sub
@@ -70,6 +82,16 @@ Public Class AvailRfid
     End Sub
 
     Private Sub Guna2CustomGradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2CustomGradientPanel1.Paint
+
+    End Sub
+
+    Private Sub txtContact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContact.KeyPress
+        If Not Char.IsNumber(e.KeyChar) And Not e.KeyChar = Chr(Keys.Delete) And Not e.KeyChar = Chr(Keys.Back) And Not e.KeyChar = Chr(Keys.Space) Then
+            e.Handled = True
+
+            CreateMessageDialog.Show("Numbers Only!", "Input")
+
+        End If
 
     End Sub
 End Class

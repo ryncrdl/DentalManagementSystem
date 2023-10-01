@@ -11,8 +11,19 @@ Module RFIDINSERTCONTROLLERS
         Return database.GetCollection(Of BsonDocument)("rfid")
     End Function
 
+    Public Function IsRfidNumberUnique(RFIDNUM As String) As Boolean
+        ' Get the "rfid" collection
+        Dim collection As IMongoCollection(Of BsonDocument) = GetRfidMongoCollection()
+
+        ' Define a filter to check for the existence of the RFID number
+        Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Eq(Of String)("RfidNumber", RFIDNUM)
+
+        ' Check if there is any document with the given RFID number
+        Return Not collection.Find(filter).Any()
+    End Function
+
     Public Function Insertrfid1(Contact As String, Fullname As String, RFIDNUM As String, service As String) As Boolean
-        Try
+        If IsRfidNumberUnique(RFIDNUM) Then
             ' Get the "rfid" collection
             Dim collection As IMongoCollection(Of BsonDocument) = GetRfidMongoCollection()
 
@@ -28,9 +39,9 @@ Module RFIDINSERTCONTROLLERS
 
             ' Return true to indicate a successful insertion
             Return True
-        Catch ex As Exception
-            ' Handle any exceptions that occur during the insertion process
-            Throw New Exception("Error inserting RFID NUMBER into MongoDB: " & ex.Message)
-        End Try
+        Else
+            ' Return false to indicate a duplicate RFID number
+            Return False
+        End If
     End Function
 End Module

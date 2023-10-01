@@ -52,4 +52,8 @@
     Private Sub txtlastname_TextChanged(sender As Object, e As EventArgs) Handles txtlastname.TextChanged
 
     End Sub
+
+    Private Sub txtcontact_TextChanged(sender As Object, e As EventArgs) Handles txtcontact.TextChanged
+
+    End Sub
 End Class
