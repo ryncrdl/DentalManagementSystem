@@ -5,43 +5,38 @@ Module RFIDINSERTCONTROLLERS
     Private ReadOnly connectionString As String = "mongodb+srv://capstone12023:caps2023tone@cluster0.vwa9od5.mongodb.net"
     Private ReadOnly dbName As String = "dentalManagementSystemDB"
 
-    Public Function GetRfidMongoCollection() As IMongoCollection(Of BsonDocument)
+    Public Function GetClientsMongoCollection() As IMongoCollection(Of BsonDocument)
         Dim client As New MongoClient(connectionString)
         Dim database As IMongoDatabase = client.GetDatabase(dbName)
-        Return database.GetCollection(Of BsonDocument)("rfid")
+        Return database.GetCollection(Of BsonDocument)("clients")
     End Function
 
     Public Function IsRfidNumberUnique(RFIDNUM As String) As Boolean
-        ' Get the "rfid" collection
-        Dim collection As IMongoCollection(Of BsonDocument) = GetRfidMongoCollection()
+        Dim collection As IMongoCollection(Of BsonDocument) = GetClientsMongoCollection()
 
-        ' Define a filter to check for the existence of the RFID number
-        Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Eq(Of String)("RfidNumber", RFIDNUM)
+        Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.Eq(Of String)("rfidnumber", RFIDNUM)
 
-        ' Check if there is any document with the given RFID number
         Return Not collection.Find(filter).Any()
     End Function
 
-    Public Function Insertrfid1(Contact As String, Fullname As String, RFIDNUM As String, service As String) As Boolean
-        If IsRfidNumberUnique(RFIDNUM) Then
-            ' Get the "rfid" collection
-            Dim collection As IMongoCollection(Of BsonDocument) = GetRfidMongoCollection()
+    Public Function AddRfidNumberToClients(RFIDNUM As String, contactNumber As String, fullName As String) As Boolean
+        Try
+            Dim collection As IMongoCollection(Of BsonDocument) = GetClientsMongoCollection()
 
-            ' Create a new document to insert into the "rfid" collection
-            Dim rfid As BsonDocument = New BsonDocument()
-            rfid.Add("Contact", Contact)
-            rfid.Add("Fullname", Fullname)
-            rfid.Add("RfidNumber", RFIDNUM)
-            rfid.Add("Services", service)
+            Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.And(
+            Builders(Of BsonDocument).Filter.Eq(Of String)("contactNumber", contactNumber),
+            Builders(Of BsonDocument).Filter.Eq(Of String)("fullName", fullName)
+        )
+            Dim update As UpdateDefinition(Of BsonDocument) = Builders(Of BsonDocument).Update.Set(Of String)("rfidNumber", RFIDNUM)
+            Dim result As UpdateResult = collection.UpdateOne(filter, update)
 
-            ' Insert the document into the "rfid" collection
-            collection.InsertOne(rfid)
-
-            ' Return true to indicate a successful insertion
-            Return True
-        Else
-            ' Return false to indicate a duplicate RFID number
+            If result.ModifiedCount > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
             Return False
-        End If
+        End Try
     End Function
 End Module

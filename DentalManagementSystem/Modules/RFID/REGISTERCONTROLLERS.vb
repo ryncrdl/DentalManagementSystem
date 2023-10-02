@@ -20,7 +20,7 @@ Module REGISTERCONTROLLERS
             Return document("fullName").AsString
         End If
 
-        Return String.Empty ' Return empty string if not found
+        Return String.Empty
     End Function
 
     Public Function FindAllFullNamesByContactNumber(contactNumber As String) As List(Of String)
@@ -28,10 +28,8 @@ Module REGISTERCONTROLLERS
         Dim collection = GetMongoDBCollection()
         Dim fullNames As New List(Of String)()
 
-        ' Create a filter to find all documents with the given contact number
         Dim filter = Builders(Of BsonDocument).Filter.Eq(Of String)("contactNumber", contactNumber)
 
-        ' Use the filter to find all documents that match the contact number
         Dim documents = collection.Find(filter).ToList()
 
         For Each doc As BsonDocument In documents

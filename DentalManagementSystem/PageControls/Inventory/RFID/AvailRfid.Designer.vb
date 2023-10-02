@@ -39,8 +39,6 @@ Partial Class AvailRfid
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         CustomMessageError = New Guna.UI2.WinForms.Guna2MessageDialog()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CreateMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
@@ -61,8 +59,6 @@ Partial Class AvailRfid
         txterror = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2MessageDialog1 = New Guna.UI2.WinForms.Guna2MessageDialog()
         Timer1 = New Timer(components)
-        txtser = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        cbservice = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2CustomGradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -71,7 +67,7 @@ Partial Class AvailRfid
         CustomMessageError.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
         CustomMessageError.Caption = Nothing
         CustomMessageError.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
-        CustomMessageError.Parent = Nothing
+        CustomMessageError.Parent = Me
         CustomMessageError.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
         CustomMessageError.Text = "RFID NUMBER IS ALREADY TAKEN!"
         ' 
@@ -91,7 +87,7 @@ Partial Class AvailRfid
         CreateMessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
         CreateMessageDialog.Caption = ""
         CreateMessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning
-        CreateMessageDialog.Parent = Nothing
+        CreateMessageDialog.Parent = Me
         CreateMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
         CreateMessageDialog.Text = "All fields are required."
         ' 
@@ -145,7 +141,7 @@ Partial Class AvailRfid
         BtnCancel.HoverState.FillColor = Color.DarkViolet
         BtnCancel.HoverState.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.HoverState.ForeColor = Color.White
-        BtnCancel.Location = New Point(222, 458)
+        BtnCancel.Location = New Point(222, 404)
         BtnCancel.Name = "BtnCancel"
         BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         BtnCancel.Size = New Size(190, 50)
@@ -165,7 +161,7 @@ Partial Class AvailRfid
         BtnSave.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnSave.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnSave.ForeColor = Color.White
-        BtnSave.Location = New Point(26, 458)
+        BtnSave.Location = New Point(26, 404)
         BtnSave.Name = "BtnSave"
         BtnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         BtnSave.Size = New Size(190, 50)
@@ -323,7 +319,7 @@ Partial Class AvailRfid
         Guna2CustomGradientPanel1.Location = New Point(22, 193)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2CustomGradientPanel1.Size = New Size(390, 259)
+        Guna2CustomGradientPanel1.Size = New Size(390, 184)
         Guna2CustomGradientPanel1.TabIndex = 66
         ' 
         ' txterror
@@ -347,43 +343,12 @@ Partial Class AvailRfid
         Guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
         Guna2MessageDialog1.Text = Nothing
         ' 
-        ' txtser
-        ' 
-        txtser.BackColor = Color.Transparent
-        txtser.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        txtser.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        txtser.Location = New Point(25, 373)
-        txtser.Name = "txtser"
-        txtser.Size = New Size(53, 23)
-        txtser.TabIndex = 68
-        txtser.Text = "Service"
-        txtser.Visible = False
-        ' 
-        ' cbservice
-        ' 
-        cbservice.BackColor = Color.Transparent
-        cbservice.CustomizableEdges = CustomizableEdges17
-        cbservice.DrawMode = DrawMode.OwnerDrawFixed
-        cbservice.DropDownStyle = ComboBoxStyle.DropDownList
-        cbservice.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cbservice.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        cbservice.Font = New Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point)
-        cbservice.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        cbservice.ItemHeight = 30
-        cbservice.Items.AddRange(New Object() {"Whitening", "Braces", "Porcelain", "Flexible Dentures", "Crown & Fixed Bridge", "Jacket Crowns", "Tooth Filling", "Retainer"})
-        cbservice.Location = New Point(22, 402)
-        cbservice.Name = "cbservice"
-        cbservice.ShadowDecoration.CustomizableEdges = CustomizableEdges18
-        cbservice.Size = New Size(380, 36)
-        cbservice.TabIndex = 69
-        cbservice.Visible = False
-        ' 
         ' AvailRfid
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(433, 533)
+        ClientSize = New Size(433, 483)
         ControlBox = False
         Controls.Add(Guna2CustomGradientPanel1)
         Controls.Add(txtContact)
@@ -396,8 +361,6 @@ Partial Class AvailRfid
         Controls.Add(txtFullname)
         Controls.Add(BtnSave)
         Controls.Add(Guna2GradientPanel1)
-        Controls.Add(cbservice)
-        Controls.Add(txtser)
         FormBorderStyle = FormBorderStyle.None
         Name = "AvailRfid"
         StartPosition = FormStartPosition.CenterScreen
@@ -428,6 +391,4 @@ Partial Class AvailRfid
     Friend WithEvents txterror As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2MessageDialog1 As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents cbservice As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents txtser As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
