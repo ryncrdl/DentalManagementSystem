@@ -13,24 +13,40 @@ Public Class AvailRfid
         Dim Fullname As String = txtFullname.Text
         Dim RFIDNUM As String = txtRfid.Text
 
-        If AddRfidNumberToClients(RFIDNUM, Contact, Fullname) Then
-            MessageSuccessfully.Show()
-            txtContact.Clear()
-            txtFullname.Clear()
-            txtRfid.Clear()
-            Me.Close()
+        If (RFIDNUM.ToString.Length = 10) Then
+            If AddRfidNumberToClients(RFIDNUM, Contact, Fullname) Then
+                MessageSuccessfully.Show()
+                txtContact.Clear()
+                txtFullname.Clear()
+                txtFullname.Visible = False
+                txtrfidnumber.Visible = False
+                txtRfid.Visible = False
+                txtname.Visible = False
+                Guna2CustomGradientPanel1.Visible = True
+                txtRfid.Clear()
+                Me.Close()
+            Else
+                CustomMessageError.Caption = "Invalid RFID!"
+                CustomMessageError.Text = "RFID No. is already used."
+                CustomMessageError.Show()
+                txtRfid.Clear()
+            End If
         Else
+            CustomMessageError.Caption = "Invalid RFID!"
+            CustomMessageError.Text = "RFID No. Should contain of" + Environment.NewLine + "10 numbers."
             CustomMessageError.Show()
             txtRfid.Clear()
         End If
 
+
     End Sub
 
     Private Sub AvailRfid_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Connection.ConnectToMongoDB("clients")
+
     End Sub
     Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles BtnSearch.Click
         Try
+            Connection.ConnectToMongoDB("clients")
             Dim contactNumber As String = txtContact.Text.Trim()
             Dim fullNames As List(Of String) = FindAllFullNamesByContactNumber(contactNumber)
             If fullNames.Count > 0 Then

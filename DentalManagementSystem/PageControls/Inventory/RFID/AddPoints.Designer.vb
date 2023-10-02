@@ -23,17 +23,19 @@ Partial Class AddPoints
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(AddPoints))
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         rfidnumber = New Guna.UI2.WinForms.Guna2TextBox()
+        SuccessMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -47,24 +49,24 @@ Partial Class AddPoints
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges7
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.DarkViolet
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2GradientPanel1.Size = New Size(485, 30)
         Guna2GradientPanel1.TabIndex = 49
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges3
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges9
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(97, 74)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2PictureBox1.Size = New Size(291, 287)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 50
@@ -72,7 +74,7 @@ Partial Class AddPoints
         ' 
         ' rfidnumber
         ' 
-        rfidnumber.CustomizableEdges = CustomizableEdges1
+        rfidnumber.CustomizableEdges = CustomizableEdges11
         rfidnumber.DefaultText = ""
         rfidnumber.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         rfidnumber.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -86,9 +88,27 @@ Partial Class AddPoints
         rfidnumber.PasswordChar = ChrW(0)
         rfidnumber.PlaceholderText = ""
         rfidnumber.SelectedText = ""
-        rfidnumber.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        rfidnumber.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         rfidnumber.Size = New Size(200, 36)
         rfidnumber.TabIndex = 51
+        ' 
+        ' SuccessMessage
+        ' 
+        SuccessMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        SuccessMessage.Caption = Nothing
+        SuccessMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        SuccessMessage.Parent = Me
+        SuccessMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        SuccessMessage.Text = "Points Successfully added."
+        ' 
+        ' ErrorMessage
+        ' 
+        ErrorMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        ErrorMessage.Caption = "Failed"
+        ErrorMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
+        ErrorMessage.Parent = Me
+        ErrorMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        ErrorMessage.Text = "Invalid RFID!"
         ' 
         ' AddPoints
         ' 
@@ -111,4 +131,6 @@ Partial Class AddPoints
     Friend WithEvents rfidnumber As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
+    Friend WithEvents SuccessMessage As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

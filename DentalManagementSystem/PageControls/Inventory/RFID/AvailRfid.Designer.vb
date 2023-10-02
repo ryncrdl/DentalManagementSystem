@@ -173,7 +173,7 @@ Partial Class AvailRfid
         MessageSuccessfully.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
         MessageSuccessfully.Caption = Nothing
         MessageSuccessfully.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
-        MessageSuccessfully.Parent = Nothing
+        MessageSuccessfully.Parent = Me
         MessageSuccessfully.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
         MessageSuccessfully.Text = "Registered Successfully"
         ' 
