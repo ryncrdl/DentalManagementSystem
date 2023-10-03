@@ -6,7 +6,7 @@ Module RFIDADDPOINTS
     Private ReadOnly connectionString As String = "mongodb+srv://capstone12023:caps2023tone@cluster0.vwa9od5.mongodb.net"
     Private ReadOnly dbName As String = "dentalManagementSystemDB"
 
-    Public Function GetClientCollection() As IMongoCollection(Of BsonDocument)
+    Public Function GetClientCollection1() As IMongoCollection(Of BsonDocument)
         Dim client As New MongoClient(connectionString)
         Dim database As IMongoDatabase = client.GetDatabase(dbName)
         Return database.GetCollection(Of BsonDocument)("clients")
@@ -14,7 +14,7 @@ Module RFIDADDPOINTS
 
     Public Function AddPoints(RfidNumber As String) As Boolean
         Try
-            Dim collection As IMongoCollection(Of BsonDocument) = GetClientsMongoCollection()
+            Dim collection As IMongoCollection(Of BsonDocument) = GetClientCollection1()
 
             Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.And(
             Builders(Of BsonDocument).Filter.Eq(Of String)("rfidNumber", RfidNumber)

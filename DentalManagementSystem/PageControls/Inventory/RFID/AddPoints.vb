@@ -10,6 +10,7 @@ Public Class AddPoints
     End Sub
 
     Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles rfidnumber.TextChanged
+        Me.Focus()
         Dim getRFID As String = rfidnumber.Text
 
         If (getRFID.ToString.Length = 10) Then
@@ -17,9 +18,11 @@ Public Class AddPoints
                 SuccessMessage.Show()
                 rfidnumber.Clear()
                 Me.Close()
+                Me.Focus()
             Else
-                ErrorMessage.Show()
+                MessageBox.Show("error")
                 rfidnumber.Clear()
+                Me.Focus()
             End If
         End If
     End Sub
