@@ -41,6 +41,24 @@ Module REGISTERCONTROLLERS
 
         Return fullNames
     End Function
+    Public Function FindAllRfidnumberByContactNumber(contactNumber As String) As List(Of String)
+
+        Dim collection = GetMongoDBCollection()
+        Dim fullNames As New List(Of String)()
+
+        Dim filter = Builders(Of BsonDocument).Filter.Eq(Of String)("contactNumber", contactNumber)
+
+        Dim documents = collection.Find(filter).ToList()
+
+        For Each doc As BsonDocument In documents
+            If doc.Contains("rfidNumber") Then
+                Dim fullName As String = doc("rfidNumber").AsString
+                fullNames.Add(fullName)
+            End If
+        Next
+
+        Return fullNames
+    End Function
 
 
 

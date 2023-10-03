@@ -23,22 +23,24 @@ Partial Class AvailRfid
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         CustomMessageError = New Guna.UI2.WinForms.Guna2MessageDialog()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CreateMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
@@ -59,6 +61,7 @@ Partial Class AvailRfid
         txterror = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2MessageDialog1 = New Guna.UI2.WinForms.Guna2MessageDialog()
         Timer1 = New Timer(components)
+        BtnClear = New Guna.UI2.WinForms.Guna2GradientButton()
         Guna2CustomGradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -113,13 +116,13 @@ Partial Class AvailRfid
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges15
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges17
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.DarkViolet
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2GradientPanel1.Size = New Size(433, 30)
         Guna2GradientPanel1.TabIndex = 48
         ' 
@@ -128,7 +131,7 @@ Partial Class AvailRfid
         BtnCancel.BorderColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.BorderRadius = 10
         BtnCancel.BorderThickness = 1
-        BtnCancel.CustomizableEdges = CustomizableEdges9
+        BtnCancel.CustomizableEdges = CustomizableEdges11
         BtnCancel.DisabledState.BorderColor = Color.DarkGray
         BtnCancel.DisabledState.CustomBorderColor = Color.DarkGray
         BtnCancel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -143,7 +146,7 @@ Partial Class AvailRfid
         BtnCancel.HoverState.ForeColor = Color.White
         BtnCancel.Location = New Point(222, 404)
         BtnCancel.Name = "BtnCancel"
-        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         BtnCancel.Size = New Size(190, 50)
         BtnCancel.TabIndex = 53
         BtnCancel.Text = "Cancel"
@@ -151,7 +154,7 @@ Partial Class AvailRfid
         ' BtnSave
         ' 
         BtnSave.BorderRadius = 10
-        BtnSave.CustomizableEdges = CustomizableEdges13
+        BtnSave.CustomizableEdges = CustomizableEdges15
         BtnSave.DisabledState.BorderColor = Color.DarkGray
         BtnSave.DisabledState.CustomBorderColor = Color.DarkGray
         BtnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -163,7 +166,7 @@ Partial Class AvailRfid
         BtnSave.ForeColor = Color.White
         BtnSave.Location = New Point(26, 404)
         BtnSave.Name = "BtnSave"
-        BtnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        BtnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         BtnSave.Size = New Size(190, 50)
         BtnSave.TabIndex = 49
         BtnSave.Text = "Save"
@@ -192,7 +195,7 @@ Partial Class AvailRfid
         ' 
         txtContact.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtContact.BorderRadius = 10
-        txtContact.CustomizableEdges = CustomizableEdges5
+        txtContact.CustomizableEdges = CustomizableEdges7
         txtContact.DefaultText = ""
         txtContact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtContact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -210,14 +213,14 @@ Partial Class AvailRfid
         txtContact.PasswordChar = ChrW(0)
         txtContact.PlaceholderText = "Search"
         txtContact.SelectedText = ""
-        txtContact.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        txtContact.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         txtContact.Size = New Size(390, 49)
         txtContact.TabIndex = 63
         ' 
         ' BtnSearch
         ' 
         BtnSearch.BorderRadius = 10
-        BtnSearch.CustomizableEdges = CustomizableEdges1
+        BtnSearch.CustomizableEdges = CustomizableEdges3
         BtnSearch.DisabledState.BorderColor = Color.DarkGray
         BtnSearch.DisabledState.CustomBorderColor = Color.DarkGray
         BtnSearch.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -229,7 +232,7 @@ Partial Class AvailRfid
         BtnSearch.ForeColor = Color.White
         BtnSearch.Location = New Point(100, 3)
         BtnSearch.Name = "BtnSearch"
-        BtnSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        BtnSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         BtnSearch.Size = New Size(188, 41)
         BtnSearch.TabIndex = 65
         BtnSearch.Text = "Search"
@@ -238,7 +241,7 @@ Partial Class AvailRfid
         ' 
         txtFullname.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtFullname.BorderRadius = 10
-        txtFullname.CustomizableEdges = CustomizableEdges11
+        txtFullname.CustomizableEdges = CustomizableEdges13
         txtFullname.DefaultText = ""
         txtFullname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtFullname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -256,7 +259,7 @@ Partial Class AvailRfid
         txtFullname.PasswordChar = ChrW(0)
         txtFullname.PlaceholderText = "FULL NAME"
         txtFullname.SelectedText = ""
-        txtFullname.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        txtFullname.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         txtFullname.Size = New Size(390, 49)
         txtFullname.TabIndex = 50
         txtFullname.Visible = False
@@ -277,7 +280,7 @@ Partial Class AvailRfid
         ' 
         txtRfid.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtRfid.BorderRadius = 10
-        txtRfid.CustomizableEdges = CustomizableEdges7
+        txtRfid.CustomizableEdges = CustomizableEdges9
         txtRfid.DefaultText = ""
         txtRfid.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtRfid.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -294,7 +297,7 @@ Partial Class AvailRfid
         txtRfid.PasswordChar = ChrW(0)
         txtRfid.PlaceholderText = "Type or Scan"
         txtRfid.SelectedText = ""
-        txtRfid.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        txtRfid.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtRfid.Size = New Size(390, 49)
         txtRfid.TabIndex = 61
         txtRfid.Visible = False
@@ -315,10 +318,10 @@ Partial Class AvailRfid
         ' 
         Guna2CustomGradientPanel1.Controls.Add(txterror)
         Guna2CustomGradientPanel1.Controls.Add(BtnSearch)
-        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges3
+        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges5
         Guna2CustomGradientPanel1.Location = New Point(22, 193)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2CustomGradientPanel1.Size = New Size(390, 184)
         Guna2CustomGradientPanel1.TabIndex = 66
         ' 
@@ -343,6 +346,27 @@ Partial Class AvailRfid
         Guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
         Guna2MessageDialog1.Text = Nothing
         ' 
+        ' BtnClear
+        ' 
+        BtnClear.BorderRadius = 10
+        BtnClear.CustomizableEdges = CustomizableEdges1
+        BtnClear.DisabledState.BorderColor = Color.DarkGray
+        BtnClear.DisabledState.CustomBorderColor = Color.DarkGray
+        BtnClear.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        BtnClear.DisabledState.FillColor2 = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        BtnClear.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        BtnClear.FillColor = Color.DarkViolet
+        BtnClear.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        BtnClear.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnClear.ForeColor = Color.White
+        BtnClear.Location = New Point(26, 404)
+        BtnClear.Name = "BtnClear"
+        BtnClear.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        BtnClear.Size = New Size(190, 50)
+        BtnClear.TabIndex = 67
+        BtnClear.Text = "Clear"
+        BtnClear.Visible = False
+        ' 
         ' AvailRfid
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -350,6 +374,7 @@ Partial Class AvailRfid
         BackColor = Color.White
         ClientSize = New Size(433, 483)
         ControlBox = False
+        Controls.Add(BtnClear)
         Controls.Add(Guna2CustomGradientPanel1)
         Controls.Add(txtContact)
         Controls.Add(txtname)
@@ -391,4 +416,5 @@ Partial Class AvailRfid
     Friend WithEvents txterror As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2MessageDialog1 As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents BtnClear As Guna.UI2.WinForms.Guna2GradientButton
 End Class

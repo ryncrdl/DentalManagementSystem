@@ -82,7 +82,7 @@ Public Class EditServices
 
         data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txttitle, txtdescription, txtprice}
 
-        Connection.ConnectToMongoDB("clients")
+        Connection.ConnectToMongoDB("services")
 
         ' Populate the form controls with the fetched data
 
@@ -139,5 +139,9 @@ Public Class EditServices
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
+    End Sub
+
+    Private Sub txttitle_TextChanged(sender As Object, e As EventArgs) Handles txttitle.TextChanged
+
     End Sub
 End Class

@@ -26,19 +26,21 @@ Partial Class AddPoints
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(AddPoints))
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(AddPoints))
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
-        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        BtnClose = New Guna.UI2.WinForms.Guna2ControlBox()
         rfidnumber = New Guna.UI2.WinForms.Guna2TextBox()
-        SuccessMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
-        Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Timer1 = New Timer(components)
+        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
+        messok = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Guna2GradientPanel1.SuspendLayout()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -52,6 +54,7 @@ Partial Class AddPoints
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
+        Guna2GradientPanel1.Controls.Add(BtnClose)
         Guna2GradientPanel1.CustomizableEdges = CustomizableEdges5
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.DarkViolet
@@ -62,18 +65,19 @@ Partial Class AddPoints
         Guna2GradientPanel1.Size = New Size(485, 30)
         Guna2GradientPanel1.TabIndex = 49
         ' 
-        ' Guna2PictureBox1
+        ' BtnClose
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges3
-        Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
-        Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(97, 74)
-        Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2PictureBox1.Size = New Size(291, 287)
-        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        Guna2PictureBox1.TabIndex = 50
-        Guna2PictureBox1.TabStop = False
+        BtnClose.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        BtnClose.BackColor = Color.Transparent
+        BtnClose.CustomizableEdges = CustomizableEdges3
+        BtnClose.FillColor = Color.Transparent
+        BtnClose.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnClose.IconColor = Color.Black
+        BtnClose.Location = New Point(442, 0)
+        BtnClose.Name = "BtnClose"
+        BtnClose.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        BtnClose.Size = New Size(40, 30)
+        BtnClose.TabIndex = 3
         ' 
         ' rfidnumber
         ' 
@@ -95,15 +99,6 @@ Partial Class AddPoints
         rfidnumber.Size = New Size(200, 36)
         rfidnumber.TabIndex = 51
         ' 
-        ' SuccessMessage
-        ' 
-        SuccessMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
-        SuccessMessage.Caption = Nothing
-        SuccessMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
-        SuccessMessage.Parent = Me
-        SuccessMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
-        SuccessMessage.Text = "Points Successfully added."
-        ' 
         ' ErrorMessage
         ' 
         ErrorMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
@@ -113,38 +108,55 @@ Partial Class AddPoints
         ErrorMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
         ErrorMessage.Text = "Invalid RFID!"
         ' 
-        ' Guna2CustomGradientPanel1
+        ' Timer1
         ' 
-        Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges1
-        Guna2CustomGradientPanel1.Location = New Point(101, 345)
-        Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2CustomGradientPanel1.Size = New Size(287, 80)
-        Guna2CustomGradientPanel1.TabIndex = 52
+        ' 
+        ' Guna2PictureBox1
+        ' 
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
+        Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
+        Guna2PictureBox1.ImageRotate = 0F
+        Guna2PictureBox1.Location = New Point(59, 41)
+        Guna2PictureBox1.Name = "Guna2PictureBox1"
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2PictureBox1.Size = New Size(360, 395)
+        Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        Guna2PictureBox1.TabIndex = 53
+        Guna2PictureBox1.TabStop = False
+        ' 
+        ' messok
+        ' 
+        messok.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        messok.Caption = "Succes"
+        messok.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        messok.Parent = Nothing
+        messok.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        messok.Text = "Points Added Successfully!"
         ' 
         ' AddPoints
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(485, 448)
         ControlBox = False
-        Controls.Add(Guna2CustomGradientPanel1)
         Controls.Add(Guna2PictureBox1)
         Controls.Add(Guna2GradientPanel1)
         Controls.Add(rfidnumber)
         FormBorderStyle = FormBorderStyle.None
         Name = "AddPoints"
         StartPosition = FormStartPosition.CenterScreen
+        Guna2GradientPanel1.ResumeLayout(False)
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents rfidnumber As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
-    Friend WithEvents SuccessMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
-    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents messok As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents BtnClose As Guna.UI2.WinForms.Guna2ControlBox
 End Class

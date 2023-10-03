@@ -5,7 +5,19 @@ Imports MongoDB.Driver
 Public Class AvailRfid
     Private data As List(Of Guna.UI2.WinForms.Guna2TextBox)
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        txtFullname.Visible = False
+        txtrfidnumber.Visible = False
+        txtRfid.Visible = False
+        txtname.Visible = False
+        txtContact.Clear()
+        txtFullname.Clear()
+        txtRfid.Clear()
+        txterror.Visible = False
+        Guna2CustomGradientPanel1.Visible = True
+        BtnSave.Enabled = True
+        txtRfid.Enabled = True
         Me.Close()
+
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
@@ -49,6 +61,8 @@ Public Class AvailRfid
             Connection.ConnectToMongoDB("clients")
             Dim contactNumber As String = txtContact.Text.Trim()
             Dim fullNames As List(Of String) = FindAllFullNamesByContactNumber(contactNumber)
+            Dim rfidNumbers As List(Of String) = FindAllRfidnumberByContactNumber(contactNumber)
+
             If fullNames.Count > 0 Then
                 txtFullname.Text = String.Join(Environment.NewLine, fullNames)
                 txtFullname.Visible = True
@@ -56,7 +70,20 @@ Public Class AvailRfid
                 txtRfid.Visible = True
                 txtname.Visible = True
                 Guna2CustomGradientPanel1.Visible = False
+                txtRfid.Text = String.Join(Environment.NewLine, rfidNumbers)
+                BtnClear.Visible = True
+
+                If txtRfid.Enabled = Not String.IsNullOrEmpty(txtRfid.Text.Trim()) Then
+                    BtnSave.Enabled = True
+                    txtRfid.Enabled = False
+                Else
+                    BtnClear.Visible = False
+                End If
+
+
             Else
+
+                ' No clients found for the given contact number
                 txtFullname.Text = ""
                 txterror.Text = "No client found for the given contact number."
                 txterror.Visible = True
@@ -65,6 +92,8 @@ Public Class AvailRfid
             ' Handle any exceptions that occur during MongoDB operations
             txtFullname.Text = "An error occurred: " & ex.Message
         End Try
+
+
     End Sub
 
     Private Sub txtContact_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtContact.KeyPress
@@ -72,5 +101,18 @@ Public Class AvailRfid
             e.Handled = True
             CreateMessageDialog.Show("Numbers Only!", "Input")
         End If
+    End Sub
+
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+        txtFullname.Visible = False
+        txtrfidnumber.Visible = False
+        txtRfid.Visible = False
+        txtname.Visible = False
+        txtContact.Clear()
+        txtFullname.Clear()
+        txtRfid.Clear()
+        txterror.Visible = False
+        Guna2CustomGradientPanel1.Visible = True
+        txtRfid.Enabled = True
     End Sub
 End Class

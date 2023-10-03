@@ -6,24 +6,39 @@ Public Class AddPoints
 
     Private Sub AddPoints_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Connection.ConnectToMongoDB("clients")
-
+        rfidnumber.Focus()
     End Sub
 
     Private Sub Guna2TextBox1_TextChanged(sender As Object, e As EventArgs) Handles rfidnumber.TextChanged
-        Me.Focus()
-        Dim getRFID As String = rfidnumber.Text
 
-        If (getRFID.ToString.Length = 10) Then
+        Timer1.Stop()
+        Timer1.Start()
+
+
+
+
+
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Timer1.Stop() ' Stop the timer
+
+        Dim getRFID As String = rfidnumber.Text.Trim()
+
+        If getRFID.Length = 10 Then
             If RFIDADDPOINTS.AddPoints(getRFID) Then
-                SuccessMessage.Show()
+                messok.Show()
                 rfidnumber.Clear()
                 Me.Close()
-                Me.Focus()
             Else
-                MessageBox.Show("error")
+                ErrorMessage.Show()
+                rfidnumber.Focus()
                 rfidnumber.Clear()
-                Me.Focus()
             End If
         End If
+    End Sub
+
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+        Me.Close()
     End Sub
 End Class
