@@ -62,6 +62,7 @@ Partial Class AvailRfid
         Guna2MessageDialog1 = New Guna.UI2.WinForms.Guna2MessageDialog()
         Timer1 = New Timer(components)
         BtnClear = New Guna.UI2.WinForms.Guna2GradientButton()
+        avail = New Guna.UI2.WinForms.Guna2CheckBox()
         Guna2CustomGradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -367,6 +368,24 @@ Partial Class AvailRfid
         BtnClear.Text = "Clear"
         BtnClear.Visible = False
         ' 
+        ' avail
+        ' 
+        avail.AutoSize = True
+        avail.CheckedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        avail.CheckedState.BorderRadius = 0
+        avail.CheckedState.BorderThickness = 0
+        avail.CheckedState.FillColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        avail.Location = New Point(22, 358)
+        avail.Name = "avail"
+        avail.Size = New Size(79, 19)
+        avail.TabIndex = 68
+        avail.Text = "Avail New"
+        avail.UncheckedState.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        avail.UncheckedState.BorderRadius = 0
+        avail.UncheckedState.BorderThickness = 0
+        avail.UncheckedState.FillColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        avail.Visible = False
+        ' 
         ' AvailRfid
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -386,6 +405,7 @@ Partial Class AvailRfid
         Controls.Add(txtFullname)
         Controls.Add(BtnSave)
         Controls.Add(Guna2GradientPanel1)
+        Controls.Add(avail)
         FormBorderStyle = FormBorderStyle.None
         Name = "AvailRfid"
         StartPosition = FormStartPosition.CenterScreen
@@ -417,4 +437,5 @@ Partial Class AvailRfid
     Friend WithEvents Guna2MessageDialog1 As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Timer1 As Timer
     Friend WithEvents BtnClear As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents avail As Guna.UI2.WinForms.Guna2CheckBox
 End Class

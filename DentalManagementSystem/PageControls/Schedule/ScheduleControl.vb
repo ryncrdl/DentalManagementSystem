@@ -15,14 +15,17 @@
 
 
     Private Sub BtnPending_Click(sender As Object, e As EventArgs) Handles BtnPending.Click
+        BtnDelete.Visible = False
         SwitchTable("Pending", PendingTable)
     End Sub
 
     Private Sub BtnScheduled_Click(sender As Object, e As EventArgs) Handles BtnScheduled.Click
+        BtnDelete.Visible = False
         SwitchTable("Scheduled", ScheduledTable)
     End Sub
 
     Private Sub BtnIneligible_Click(sender As Object, e As EventArgs) Handles BtnIneligible.Click
+        BtnDelete.Visible = True
         SwitchTable("Ineligible", IneligibleTable)
     End Sub
 

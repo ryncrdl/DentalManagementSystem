@@ -1,4 +1,6 @@
 ﻿Imports System.Text
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Button
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
 Imports MongoDB.Bson
 Imports MongoDB.Driver
@@ -16,6 +18,7 @@ Public Class AvailRfid
         Guna2CustomGradientPanel1.Visible = True
         BtnSave.Enabled = True
         txtRfid.Enabled = True
+        avail.Checked = False
         Me.Close()
 
     End Sub
@@ -76,6 +79,7 @@ Public Class AvailRfid
                 If txtRfid.Enabled = Not String.IsNullOrEmpty(txtRfid.Text.Trim()) Then
                     BtnSave.Enabled = True
                     txtRfid.Enabled = False
+                    avail.Visible = True
                 Else
                     BtnClear.Visible = False
                 End If
@@ -114,5 +118,15 @@ Public Class AvailRfid
         txterror.Visible = False
         Guna2CustomGradientPanel1.Visible = True
         txtRfid.Enabled = True
+    End Sub
+
+    Private Sub avail_CheckedChanged(sender As Object, e As EventArgs) Handles avail.CheckedChanged
+        If avail.Checked Then
+            txtRfid.Enabled = True
+            BtnSave.BringToFront()
+        Else
+            txtRfid.Enabled = False
+            BtnSave.SendToBack()
+        End If
     End Sub
 End Class
