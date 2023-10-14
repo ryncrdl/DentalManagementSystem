@@ -38,8 +38,6 @@ Public Class EditServices
     Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
         Dim isValidate As Boolean = False
         DoctorValidation.ValidateData(data, isValidate)
-
-
         If (isValidate) Then
             Try
                 ' Create the equality filter for the doctor ID
@@ -55,18 +53,14 @@ Public Class EditServices
                     service("Price") = txtprice.Text
                     service("Payment") = txtPayment.Text
 
-
-
                     ' Replace the existing document with the updated one
                     collection.FindOneAndUpdate(filter, service)
-
                     messageOK.Show()
                     CreateData(data)
                     Me.Close()
 
                     RaiseEvent Servicesupdated(Me, EventArgs.Empty)
                 Else
-                    ' MessageBox.Show("Doctor not found.")
                     messageOK.Show("Services not found.", MessageBoxIcon.Error)
                 End If
             Catch ex As Exception
@@ -139,9 +133,5 @@ Public Class EditServices
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Close()
-    End Sub
-
-    Private Sub txttitle_TextChanged(sender As Object, e As EventArgs) Handles txttitle.TextChanged
-
     End Sub
 End Class

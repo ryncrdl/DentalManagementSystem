@@ -23,6 +23,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ControlForms\Announcements\AddingAnnouncements.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ControlForms\Announcements\EditAnnouncements.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="My Project\Application.Designer.vb">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

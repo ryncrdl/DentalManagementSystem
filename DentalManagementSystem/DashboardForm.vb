@@ -7,7 +7,7 @@ Public Class DashboardForm
     Private ScheduleControl As New ScheduleControl()
     Private InventoryControl As New InventoryControl()
     Private ServicesControl As New ServicesControl()
-    Private BlogsControl As New BlogControl()
+    Private BlogsControl As New AnnouncementsControl()
 
 
     Private Sub AddControlForm(form As UserControl)

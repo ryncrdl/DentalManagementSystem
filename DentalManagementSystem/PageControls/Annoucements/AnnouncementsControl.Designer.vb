@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class BlogControl
+Partial Class AnnouncementsControl
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -44,16 +44,16 @@ Partial Class BlogControl
         BtnDelete = New Guna.UI2.WinForms.Guna2Button()
         BtnAdd = New Guna.UI2.WinForms.Guna2Button()
         Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        DoctorsTable = New Guna.UI2.WinForms.Guna2DataGridView()
-        ID = New DataGridViewTextBoxColumn()
-        Title = New DataGridViewTextBoxColumn()
-        Context = New DataGridViewTextBoxColumn()
-        Image = New DataGridViewTextBoxColumn()
+        AnnouncementsTable = New Guna.UI2.WinForms.Guna2DataGridView()
         Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
         SuccessfulMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
-        CType(DoctorsTable, ComponentModel.ISupportInitialize).BeginInit()
+        ID = New DataGridViewTextBoxColumn()
+        Image = New DataGridViewTextBoxColumn()
+        Title = New DataGridViewTextBoxColumn()
+        Context = New DataGridViewTextBoxColumn()
+        CType(AnnouncementsTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2HtmlLabel1
@@ -153,21 +153,21 @@ Partial Class BlogControl
         ' Guna2Elipse2
         ' 
         Guna2Elipse2.BorderRadius = 20
-        Guna2Elipse2.TargetControl = DoctorsTable
+        Guna2Elipse2.TargetControl = AnnouncementsTable
         ' 
-        ' DoctorsTable
+        ' AnnouncementsTable
         ' 
-        DoctorsTable.AllowUserToAddRows = False
-        DoctorsTable.AllowUserToDeleteRows = False
-        DoctorsTable.AllowUserToOrderColumns = True
-        DoctorsTable.AllowUserToResizeRows = False
+        AnnouncementsTable.AllowUserToAddRows = False
+        AnnouncementsTable.AllowUserToDeleteRows = False
+        AnnouncementsTable.AllowUserToOrderColumns = True
+        AnnouncementsTable.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.White
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionForeColor = Color.White
-        DoctorsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
-        DoctorsTable.BackgroundColor = SystemColors.Control
+        AnnouncementsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        AnnouncementsTable.BackgroundColor = SystemColors.Control
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         DataGridViewCellStyle2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
@@ -175,9 +175,9 @@ Partial Class BlogControl
         DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        DoctorsTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        DoctorsTable.ColumnHeadersHeight = 44
-        DoctorsTable.Columns.AddRange(New DataGridViewColumn() {ID, Title, Context, Image})
+        AnnouncementsTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        AnnouncementsTable.ColumnHeadersHeight = 44
+        AnnouncementsTable.Columns.AddRange(New DataGridViewColumn() {ID, Image, Title, Context})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -185,15 +185,15 @@ Partial Class BlogControl
         DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle3.SelectionForeColor = Color.White
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
-        DoctorsTable.DefaultCellStyle = DataGridViewCellStyle3
-        DoctorsTable.GridColor = Color.Silver
-        DoctorsTable.ImeMode = ImeMode.NoControl
-        DoctorsTable.Location = New Point(32, 175)
-        DoctorsTable.Margin = New Padding(0)
-        DoctorsTable.MultiSelect = False
-        DoctorsTable.Name = "DoctorsTable"
-        DoctorsTable.ReadOnly = True
-        DoctorsTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        AnnouncementsTable.DefaultCellStyle = DataGridViewCellStyle3
+        AnnouncementsTable.GridColor = Color.Silver
+        AnnouncementsTable.ImeMode = ImeMode.NoControl
+        AnnouncementsTable.Location = New Point(32, 175)
+        AnnouncementsTable.Margin = New Padding(0)
+        AnnouncementsTable.MultiSelect = False
+        AnnouncementsTable.Name = "AnnouncementsTable"
+        AnnouncementsTable.ReadOnly = True
+        AnnouncementsTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
         DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = Color.White
         DataGridViewCellStyle4.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
@@ -201,66 +201,36 @@ Partial Class BlogControl
         DataGridViewCellStyle4.SelectionBackColor = Color.White
         DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
-        DoctorsTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
-        DoctorsTable.RowHeadersVisible = False
+        AnnouncementsTable.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        AnnouncementsTable.RowHeadersVisible = False
         DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
-        DoctorsTable.RowsDefaultCellStyle = DataGridViewCellStyle5
-        DoctorsTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
-        DoctorsTable.RowTemplate.Height = 35
-        DoctorsTable.Size = New Size(650, 386)
-        DoctorsTable.TabIndex = 17
-        DoctorsTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
-        DoctorsTable.ThemeStyle.BackColor = SystemColors.Control
-        DoctorsTable.ThemeStyle.GridColor = Color.Silver
-        DoctorsTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
-        DoctorsTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
-        DoctorsTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        DoctorsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        DoctorsTable.ThemeStyle.HeaderStyle.Height = 44
-        DoctorsTable.ThemeStyle.ReadOnly = True
-        DoctorsTable.ThemeStyle.RowsStyle.BackColor = Color.White
-        DoctorsTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
-        DoctorsTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        DoctorsTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.RowsStyle.Height = 35
-        DoctorsTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
-        DoctorsTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
-        ' 
-        ' ID
-        ' 
-        ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
-        ID.HeaderText = "ID"
-        ID.Name = "ID"
-        ID.ReadOnly = True
-        ID.Visible = False
-        ID.Width = 50
-        ' 
-        ' Title
-        ' 
-        Title.FillWeight = 150F
-        Title.HeaderText = "Title"
-        Title.Name = "Title"
-        Title.ReadOnly = True
-        ' 
-        ' Context
-        ' 
-        Context.FillWeight = 150F
-        Context.HeaderText = "Context"
-        Context.Name = "Context"
-        Context.ReadOnly = True
-        ' 
-        ' Image
-        ' 
-        Image.FillWeight = 150F
-        Image.HeaderText = "Image"
-        Image.Name = "Image"
-        Image.ReadOnly = True
+        AnnouncementsTable.RowsDefaultCellStyle = DataGridViewCellStyle5
+        AnnouncementsTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
+        AnnouncementsTable.RowTemplate.Height = 35
+        AnnouncementsTable.Size = New Size(650, 386)
+        AnnouncementsTable.TabIndex = 17
+        AnnouncementsTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
+        AnnouncementsTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        AnnouncementsTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        AnnouncementsTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        AnnouncementsTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        AnnouncementsTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.White
+        AnnouncementsTable.ThemeStyle.BackColor = SystemColors.Control
+        AnnouncementsTable.ThemeStyle.GridColor = Color.Silver
+        AnnouncementsTable.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
+        AnnouncementsTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        AnnouncementsTable.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        AnnouncementsTable.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        AnnouncementsTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        AnnouncementsTable.ThemeStyle.HeaderStyle.Height = 44
+        AnnouncementsTable.ThemeStyle.ReadOnly = True
+        AnnouncementsTable.ThemeStyle.RowsStyle.BackColor = Color.White
+        AnnouncementsTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        AnnouncementsTable.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        AnnouncementsTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        AnnouncementsTable.ThemeStyle.RowsStyle.Height = 35
+        AnnouncementsTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        AnnouncementsTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
         ' 
         ' Guna2TextBox1
         ' 
@@ -304,15 +274,45 @@ Partial Class BlogControl
         Guna2HtmlLabel2.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         Guna2HtmlLabel2.Location = New Point(32, 34)
         Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Guna2HtmlLabel2.Size = New Size(74, 39)
+        Guna2HtmlLabel2.Size = New Size(194, 39)
         Guna2HtmlLabel2.TabIndex = 16
-        Guna2HtmlLabel2.Text = "Blogs"
+        Guna2HtmlLabel2.Text = "Annoucements"
         ' 
         ' Guna2Elipse3
         ' 
         Guna2Elipse3.BorderRadius = 20
         ' 
-        ' BlogControl
+        ' ID
+        ' 
+        ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        ID.HeaderText = "ID"
+        ID.Name = "ID"
+        ID.ReadOnly = True
+        ID.Visible = False
+        ID.Width = 50
+        ' 
+        ' Image
+        ' 
+        Image.FillWeight = 150F
+        Image.HeaderText = "Image"
+        Image.Name = "Image"
+        Image.ReadOnly = True
+        ' 
+        ' Title
+        ' 
+        Title.FillWeight = 150F
+        Title.HeaderText = "Title"
+        Title.Name = "Title"
+        Title.ReadOnly = True
+        ' 
+        ' Context
+        ' 
+        Context.FillWeight = 150F
+        Context.HeaderText = "Context"
+        Context.Name = "Context"
+        Context.ReadOnly = True
+        ' 
+        ' AnnouncementsControl
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -321,12 +321,12 @@ Partial Class BlogControl
         Controls.Add(BtnDelete)
         Controls.Add(BtnAdd)
         Controls.Add(Guna2TextBox1)
-        Controls.Add(DoctorsTable)
+        Controls.Add(AnnouncementsTable)
         Controls.Add(Guna2HtmlLabel2)
         Controls.Add(Guna2HtmlLabel1)
-        Name = "BlogControl"
+        Name = "AnnouncementsControl"
         Size = New Size(714, 597)
-        CType(DoctorsTable, ComponentModel.ISupportInitialize).EndInit()
+        CType(AnnouncementsTable, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -337,15 +337,15 @@ Partial Class BlogControl
     Friend WithEvents BtnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnAdd As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents DoctorsTable As Guna.UI2.WinForms.Guna2DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents Title As DataGridViewTextBoxColumn
-    Friend WithEvents Context As DataGridViewTextBoxColumn
-    Friend WithEvents Image As DataGridViewTextBoxColumn
+    Friend WithEvents AnnouncementsTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents QuestionMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents SuccessfulMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents ID As DataGridViewTextBoxColumn
+    Friend WithEvents Image As DataGridViewTextBoxColumn
+    Friend WithEvents Title As DataGridViewTextBoxColumn
+    Friend WithEvents Context As DataGridViewTextBoxColumn
 End Class

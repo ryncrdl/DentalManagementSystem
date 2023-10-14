@@ -234,7 +234,7 @@ Partial Class DashboardForm
         BtnBlogs.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         BtnBlogs.Size = New Size(201, 45)
         BtnBlogs.TabIndex = 9
-        BtnBlogs.Text = "Blogs"
+        BtnBlogs.Text = "Announcements"
         BtnBlogs.TextAlign = HorizontalAlignment.Left
         BtnBlogs.TextOffset = New Point(15, 0)
         BtnBlogs.UseTransparentBackground = True

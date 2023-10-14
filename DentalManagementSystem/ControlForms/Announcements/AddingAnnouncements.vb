@@ -1,7 +1,8 @@
-﻿Public Class AddingServices
+﻿
+Public Class AddingAnnouncements
     Private datas As List(Of Guna.UI2.WinForms.Guna2TextBox)
-    Public Event ServicesAdded As EventHandler
-    Private imagePath As String ' Variable to store the image file path
+    Public Event AnnouncementAdded As EventHandler
+    Private imagePath As String
 
     Private Sub BtnBrowse_Click(sender As Object, e As EventArgs) Handles BtnBrowse.Click
         Try
@@ -28,47 +29,39 @@
         Me.Close()
     End Sub
 
-    Private Sub AddingServices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        datas = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txttitle, txtdescription, txtprice}
-        Connection.ConnectToMongoDB("services")
+    Private Sub AddingAnnouncements_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        datas = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txttitle, txtcontext}
+        Connection.ConnectToMongoDB("announcements")
     End Sub
 
     Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
         Dim isValidate As Boolean = False
-        ServicesValidation.ValidateData(datas, isValidate)
+        AnnouncementsValidation.ValidateData(datas, isValidate)
         Dim title As String = txttitle.Text
-        Dim description As String = txtdescription.Text
-        Dim price As String = txtprice.Text
-        Dim payment As String = txtPayment.Text
+        Dim context As String = txtcontext.Text
 
         If (isValidate) Then
             Try
                 ' Check if an image has been selected
                 If String.IsNullOrEmpty(imagePath) Then
-                    messageOK.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
-                    messageOK.Show("Please select an image.", "Error")
+                    MessageBox.Show("Please select an image.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     Return
                 End If
 
-                If InsertServices(imagePath, title, description, price, payment) Then
-                    messageOK.Show("Services added successfully!", "Services Success")
+                If InsertAnnouncement(imagePath, title, context) Then
+                    messageOK.Show("Announcement added successfully!", "Announcement Success")
 
-                    ' Clear the input fields after successful addition
                     Me.Close()
-                    ServicesValidation.CreateDatas(datas)
+                    AnnouncementsValidation.ClearData(datas)
 
-                    RaiseEvent ServicesAdded(Me, EventArgs.Empty)
+                    RaiseEvent AnnouncementAdded(Me, EventArgs.Empty)
                 End If
             Catch ex As Exception
-                MessageBox.Show("Error adding services: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Error adding announcement: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         Else
             messageOK.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
-            messageOK.Show("All fields are required.", "Adding Services Error")
+            messageOK.Show("All fields are required.", "Adding Announcement Error")
         End If
-    End Sub
-
-    Private Sub Guna2GradientPanel1_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel1.Paint
-
     End Sub
 End Class

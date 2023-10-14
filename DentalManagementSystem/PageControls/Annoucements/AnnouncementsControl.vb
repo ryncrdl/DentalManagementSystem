@@ -1,40 +1,37 @@
 ﻿Imports MongoDB.Bson
 Imports MongoDB.Driver
-Public Class ServicesControl
+Public Class AnnouncementsControl
     Private collection As IMongoCollection(Of BsonDocument)
     Private Sub LoadUpdatedDataS(sender As Object, e As EventArgs)
-        ServicesControllers.loaddatas("services", ServicesTable)
+        AnnouncementsControllers.loaddatas("announcements", AnnouncementsTable)
     End Sub
-    Private Sub ServicesControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ServicesControllers.loaddatas("services", ServicesTable)
-        Connection.ConnectToMongoDB("services")
+    Private Sub AnnouncementsControl_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        AnnouncementsControllers.loaddatas("announcements", AnnouncementsTable)
+        Connection.ConnectToMongoDB("announcements")
         Me.collection = Connection.GetMongoDBCollection()
     End Sub
 
     Private Function GetSelectedRowData() As Dictionary(Of String, String)
         ' Check if a row is selected
-        If ServicesTable.CurrentRow Is Nothing Then
+        If AnnouncementsTable.CurrentRow Is Nothing Then
             Return Nothing
         End If
 
         ' Get the selected row index
-        Dim selectedRowIndex As Integer = ServicesTable.CurrentRow.Index
+        Dim selectedRowIndex As Integer = AnnouncementsTable.CurrentRow.Index
 
         ' Get the data from the selected row
         Dim rowData As New Dictionary(Of String, String)
-        rowData("Id") = ServicesTable.Rows(selectedRowIndex).Cells("Id").Value.ToString()
-        rowData("Title") = ServicesTable.Rows(selectedRowIndex).Cells("Title").Value.ToString()
-        rowData("Description") = ServicesTable.Rows(selectedRowIndex).Cells("Description").Value.ToString()
-        rowData("Price") = ServicesTable.Rows(selectedRowIndex).Cells("Price").Value.ToString()
-        rowData("Payment") = ServicesTable.Rows(selectedRowIndex).Cells("Payment").Value.ToString()
+        rowData("ID") = AnnouncementsTable.Rows(selectedRowIndex).Cells("ID").Value.ToString()
+        rowData("Title") = AnnouncementsTable.Rows(selectedRowIndex).Cells("Title").Value.ToString()
+        rowData("Context") = AnnouncementsTable.Rows(selectedRowIndex).Cells("Context").Value.ToString()
         Return rowData
     End Function
 
-
     Private Sub BtnAdd_Click(sender As Object, e As EventArgs) Handles BtnAdd.Click
-        Dim AddingServices As New AddingServices()
-        AddHandler AddingServices.ServicesAdded, AddressOf LoadUpdatedDataS
-        AddingServices.ShowDialog()
+        Dim AddingAnnouncement As New AddingAnnouncements()
+        AddHandler AddingAnnouncement.AnnouncementAdded, AddressOf LoadUpdatedDataS
+        AddingAnnouncement.ShowDialog()
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
@@ -46,32 +43,28 @@ Public Class ServicesControl
         End If
 
         ' Create a new instance of EditDoctorForm and pass the data to it
-        Dim editServices As New EditServices(rowData, collection)
-        AddHandler editServices.ServicesUpdated, AddressOf LoadUpdatedDataS
-        editServices.ShowDialog()
+        Dim editAnnouncement As New EditAnnouncements(rowData, collection)
+        AddHandler editAnnouncement.AnnouncementUpdated, AddressOf LoadUpdatedDataS
+        editAnnouncement.ShowDialog()
     End Sub
 
     Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
-        If ServicesTable.CurrentRow Is Nothing Then
+        If AnnouncementsTable.CurrentRow Is Nothing Then
             ErrorMessage.Show("Please select a row to delete.")
             Return
         End If
 
-        Dim selectedRowIndex As Integer = ServicesTable.CurrentRow.Index
-        Dim servicesId As String = ServicesTable.Rows(selectedRowIndex).Cells("ID").Value.ToString()
-
-
+        Dim selectedRowIndex As Integer = AnnouncementsTable.CurrentRow.Index
+        Dim announcementId As String = AnnouncementsTable.Rows(selectedRowIndex).Cells("ID").Value.ToString()
 
         Dim result = QuestionMessage.Show("Are you sure do you want to delete this record?")
         If result = DialogResult.Yes Then
 
             Try
-                ServicesControllers.DeleteServices(servicesId, ServicesTable)
+                AnnouncementsControllers.DeleteAnnouncement(announcementId, AnnouncementsTable)
             Catch ex As Exception
                 ErrorMessage.Show("Error deleting doctor: ")
             End Try
         End If
     End Sub
-
-
 End Class
