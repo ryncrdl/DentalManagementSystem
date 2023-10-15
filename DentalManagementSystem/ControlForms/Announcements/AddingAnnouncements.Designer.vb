@@ -36,11 +36,11 @@ Partial Class AddingAnnouncements
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         BtnCancel = New Guna.UI2.WinForms.Guna2GradientButton()
         BtnCreate = New Guna.UI2.WinForms.Guna2GradientButton()
         txttitle = New Guna.UI2.WinForms.Guna2TextBox()
         BtnBrowse = New Guna.UI2.WinForms.Guna2GradientButton()
-        Guna2CirclePictureBox1 = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
         txtcontext = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -50,7 +50,8 @@ Partial Class AddingAnnouncements
         messageOK = New Guna.UI2.WinForms.Guna2MessageDialog()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(components)
-        CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        txtimage = New Guna.UI2.WinForms.Guna2PictureBox()
+        CType(txtimage, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' BtnCancel
@@ -113,7 +114,7 @@ Partial Class AddingAnnouncements
         txttitle.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txttitle.IconRightOffset = New Point(20, 0)
         txttitle.IconRightSize = New Size(25, 25)
-        txttitle.Location = New Point(13, 369)
+        txttitle.Location = New Point(15, 369)
         txttitle.Margin = New Padding(4, 4, 4, 4)
         txttitle.Name = "txttitle"
         txttitle.PasswordChar = ChrW(0)
@@ -136,35 +137,23 @@ Partial Class AddingAnnouncements
         BtnBrowse.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnBrowse.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnBrowse.ForeColor = Color.White
-        BtnBrowse.Location = New Point(147, 299)
+        BtnBrowse.Location = New Point(140, 296)
         BtnBrowse.Name = "BtnBrowse"
         BtnBrowse.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         BtnBrowse.Size = New Size(172, 38)
         BtnBrowse.TabIndex = 22
         BtnBrowse.Text = "Browse"
         ' 
-        ' Guna2CirclePictureBox1
-        ' 
-        Guna2CirclePictureBox1.ImageRotate = 0F
-        Guna2CirclePictureBox1.Location = New Point(92, 65)
-        Guna2CirclePictureBox1.Name = "Guna2CirclePictureBox1"
-        Guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges9
-        Guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Guna2CirclePictureBox1.Size = New Size(290, 218)
-        Guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.Zoom
-        Guna2CirclePictureBox1.TabIndex = 21
-        Guna2CirclePictureBox1.TabStop = False
-        ' 
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges10
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges9
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.DarkViolet
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges11
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         Guna2GradientPanel1.Size = New Size(460, 30)
         Guna2GradientPanel1.TabIndex = 20
         ' 
@@ -173,7 +162,7 @@ Partial Class AddingAnnouncements
         txtcontext.AcceptsTab = True
         txtcontext.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtcontext.BorderRadius = 10
-        txtcontext.CustomizableEdges = CustomizableEdges12
+        txtcontext.CustomizableEdges = CustomizableEdges11
         txtcontext.DefaultText = ""
         txtcontext.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtcontext.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -184,7 +173,7 @@ Partial Class AddingAnnouncements
         txtcontext.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtcontext.IconRightOffset = New Point(20, 0)
         txtcontext.IconRightSize = New Size(25, 25)
-        txtcontext.Location = New Point(12, 455)
+        txtcontext.Location = New Point(15, 455)
         txtcontext.Margin = New Padding(4, 4, 4, 4)
         txtcontext.Multiline = True
         txtcontext.Name = "txtcontext"
@@ -192,7 +181,7 @@ Partial Class AddingAnnouncements
         txtcontext.PlaceholderText = "Context"
         txtcontext.ScrollBars = ScrollBars.Vertical
         txtcontext.SelectedText = ""
-        txtcontext.ShadowDecoration.CustomizableEdges = CustomizableEdges13
+        txtcontext.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         txtcontext.Size = New Size(423, 143)
         txtcontext.TabIndex = 28
         ' 
@@ -223,7 +212,7 @@ Partial Class AddingAnnouncements
         Guna2HtmlLabel4.BackColor = Color.Transparent
         Guna2HtmlLabel4.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         Guna2HtmlLabel4.ForeColor = Color.Black
-        Guna2HtmlLabel4.Location = New Point(188, 36)
+        Guna2HtmlLabel4.Location = New Point(182, 36)
         Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
         Guna2HtmlLabel4.Size = New Size(89, 23)
         Guna2HtmlLabel4.TabIndex = 32
@@ -255,12 +244,26 @@ Partial Class AddingAnnouncements
         Guna2DragControl1.TargetControl = Guna2GradientPanel1
         Guna2DragControl1.UseTransparentDrag = True
         ' 
+        ' txtimage
+        ' 
+        txtimage.BorderRadius = 15
+        txtimage.CustomizableEdges = CustomizableEdges13
+        txtimage.ImageRotate = 0F
+        txtimage.Location = New Point(17, 78)
+        txtimage.Name = "txtimage"
+        txtimage.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        txtimage.Size = New Size(418, 200)
+        txtimage.SizeMode = PictureBoxSizeMode.StretchImage
+        txtimage.TabIndex = 33
+        txtimage.TabStop = False
+        ' 
         ' AddingAnnouncements
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(460, 699)
         ControlBox = False
+        Controls.Add(txtimage)
         Controls.Add(Guna2HtmlLabel4)
         Controls.Add(Guna2HtmlLabel2)
         Controls.Add(Guna2HtmlLabel1)
@@ -269,12 +272,11 @@ Partial Class AddingAnnouncements
         Controls.Add(BtnCreate)
         Controls.Add(txttitle)
         Controls.Add(BtnBrowse)
-        Controls.Add(Guna2CirclePictureBox1)
         Controls.Add(Guna2GradientPanel1)
         FormBorderStyle = FormBorderStyle.None
         Name = "AddingAnnouncements"
         StartPosition = FormStartPosition.CenterScreen
-        CType(Guna2CirclePictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(txtimage, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -283,7 +285,6 @@ Partial Class AddingAnnouncements
     Friend WithEvents BtnCreate As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents txttitle As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BtnBrowse As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2CirclePictureBox1 As Guna.UI2.WinForms.Guna2CirclePictureBox
     Friend WithEvents Guna2GradientPanel1 As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents txtcontext As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -293,4 +294,5 @@ Partial Class AddingAnnouncements
     Friend WithEvents messageOK As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents txtimage As Guna.UI2.WinForms.Guna2PictureBox
 End Class

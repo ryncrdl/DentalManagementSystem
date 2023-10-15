@@ -15,7 +15,7 @@ Public Class AddingAnnouncements
 
             If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
                 ' Load the selected image into Guna2CirclePictureBox1
-                Guna2CirclePictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+                txtimage.Image = Image.FromFile(OpenFileDialog1.FileName)
 
                 ' Store the image file path
                 imagePath = OpenFileDialog1.FileName

@@ -29,7 +29,7 @@ Module AnnouncementsControllers
                     Dim Image As Image = ByteArrayToImage(imageBytes)
                     rdata.Add(Image)
                 Else
-                    rowData.Add(Nothing) ' Add a placeholder for missing images
+                    rowData.Add("No Image") ' Add a placeholder for missing images
                 End If
 
                 For Each element In doc.Elements

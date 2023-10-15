@@ -159,7 +159,7 @@ Partial Class AnnouncementsControl
         ' 
         AnnouncementsTable.AllowUserToAddRows = False
         AnnouncementsTable.AllowUserToDeleteRows = False
-        AnnouncementsTable.AllowUserToOrderColumns = True
+        AnnouncementsTable.AllowUserToResizeColumns = False
         AnnouncementsTable.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = Color.White
         DataGridViewCellStyle1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -167,6 +167,8 @@ Partial Class AnnouncementsControl
         DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         DataGridViewCellStyle1.SelectionForeColor = Color.White
         AnnouncementsTable.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        AnnouncementsTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None
+        AnnouncementsTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         AnnouncementsTable.BackgroundColor = SystemColors.Control
         DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = Color.FromArgb(CByte(0), CByte(118), CByte(212))
@@ -188,7 +190,7 @@ Partial Class AnnouncementsControl
         AnnouncementsTable.DefaultCellStyle = DataGridViewCellStyle3
         AnnouncementsTable.GridColor = Color.Silver
         AnnouncementsTable.ImeMode = ImeMode.NoControl
-        AnnouncementsTable.Location = New Point(32, 175)
+        AnnouncementsTable.Location = New Point(32, 174)
         AnnouncementsTable.Margin = New Padding(0)
         AnnouncementsTable.MultiSelect = False
         AnnouncementsTable.Name = "AnnouncementsTable"
@@ -208,7 +210,7 @@ Partial Class AnnouncementsControl
         AnnouncementsTable.RowTemplate.DefaultCellStyle.WrapMode = DataGridViewTriState.True
         AnnouncementsTable.RowTemplate.Height = 35
         AnnouncementsTable.Size = New Size(650, 386)
-        AnnouncementsTable.TabIndex = 17
+        AnnouncementsTable.TabIndex = 49
         AnnouncementsTable.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Blue
         AnnouncementsTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         AnnouncementsTable.ThemeStyle.AlternatingRowsStyle.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -293,21 +295,24 @@ Partial Class AnnouncementsControl
         ' 
         ' Image
         ' 
-        Image.FillWeight = 150F
+        Image.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Image.FillWeight = 168.107956F
         Image.HeaderText = "Image"
         Image.Name = "Image"
         Image.ReadOnly = True
         ' 
         ' Title
         ' 
-        Title.FillWeight = 150F
+        Title.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Title.FillWeight = 112.182739F
         Title.HeaderText = "Title"
         Title.Name = "Title"
         Title.ReadOnly = True
         ' 
         ' Context
         ' 
-        Context.FillWeight = 150F
+        Context.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        Context.FillWeight = 122.590652F
         Context.HeaderText = "Context"
         Context.Name = "Context"
         Context.ReadOnly = True
@@ -317,11 +322,11 @@ Partial Class AnnouncementsControl
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
+        Controls.Add(AnnouncementsTable)
         Controls.Add(BtnEdit)
         Controls.Add(BtnDelete)
         Controls.Add(BtnAdd)
         Controls.Add(Guna2TextBox1)
-        Controls.Add(AnnouncementsTable)
         Controls.Add(Guna2HtmlLabel2)
         Controls.Add(Guna2HtmlLabel1)
         Name = "AnnouncementsControl"
@@ -337,13 +342,13 @@ Partial Class AnnouncementsControl
     Friend WithEvents BtnDelete As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BtnAdd As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents AnnouncementsTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents QuestionMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2Elipse2 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents SuccessfulMessage As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents AnnouncementsTable As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents ID As DataGridViewTextBoxColumn
     Friend WithEvents Image As DataGridViewTextBoxColumn
     Friend WithEvents Title As DataGridViewTextBoxColumn
