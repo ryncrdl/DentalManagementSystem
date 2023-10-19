@@ -4,6 +4,7 @@ Imports MongoDB.Bson
 Imports MongoDB.Driver
 Imports System.IO.Ports
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports RJCP.IO.Ports
 
 
 Public Class AcceptReject
@@ -12,6 +13,20 @@ Public Class AcceptReject
     Private rowImage As Dictionary(Of String, Image)
     Private collection As IMongoCollection(Of BsonDocument)
     Private AppointmentsId As String
+    Private serialport1 As SerialPortStream
+    Sub InitializeSerialPort()
+        serialport1 = New SerialPortStream()
+        serialport1.PortName = "COM3"
+        serialport1.BaudRate = 115200
+        serialport1.Parity = Parity.None
+        serialport1.StopBits = StopBits.One
+        serialport1.DataBits = 8
+        serialport1.Handshake = Handshake.None
+        serialport1.DtrEnable = True
+        serialport1.RtsEnable = True
+        serialport1.NewLine = vbCrLf
+        serialport1.Open()
+    End Sub
 
     Public Sub New(ByVal rowData As Dictionary(Of String, String), ByVal rowImage As Dictionary(Of String, Image), ByVal collection As IMongoCollection(Of BsonDocument))
         InitializeComponent()
@@ -103,11 +118,39 @@ Public Class AcceptReject
 
 
 
+        ' Format the AT command to send the message
+        Dim atCommand As String = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
+
+        If serialport1.IsOpen = True Then
+            serialport1.Write("AT" & vbCrLf)
+            serialport1.Write("AT+CMGF=1" & vbCrLf)
+            serialport1.Write(atCommand)
+            Dim response As String = serialport1.ReadExisting()
+            Do Until response.Contains(">")
+                response &= serialport1.ReadExisting()
+            Loop
+            serialport1.Write("Your " & services & " appointment is successfully booked on " & messageContent & "." & Chr(26))
+            System.Threading.Thread.Sleep(5000)
+            Dim newresponse = serialport1.ReadExisting()
+
+            If newresponse.Contains("OK") Then
+                MessageBox.Show("Message sent successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName, AppointmentsId)
+                MessageSuccessfully.Show()
+            Else
+                MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+            serialport1.Close()
+
+        Else
+            MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
         ' Call the MoveCollectionData function from the MongoDBHelper module
-        AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName, AppointmentsId)
-        SendMessage(receiverNumber, services, messageContent)
+
+
         ' Display a success message or perform any other necessary actions
-        MessageSuccessfully.Show()
+
         Me.Close()
     End Sub
 
@@ -120,15 +163,46 @@ Public Class AcceptReject
         Dim sourceCollectionName As String = "appointments"
         Dim destCollectionName As String = "rejected"
 
+
+        ' Format the AT command to send the message
+        Dim atCommand As String = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
+
+        If serialport1.IsOpen = True Then
+            serialport1.Write("AT" & vbCrLf)
+            serialport1.Write("AT+CMGF=1" & vbCrLf)
+            serialport1.Write(atCommand)
+            Dim response As String = serialport1.ReadExisting()
+            Do Until response.Contains(">")
+                response &= serialport1.ReadExisting()
+            Loop
+            serialport1.Write("Sorry your " & services & " appointment on " & messageContent & " is rejected due to invalid receipt or information. " & Chr(26))
+            System.Threading.Thread.Sleep(5000)
+            Dim newresponse = serialport1.ReadExisting()
+
+            If newresponse.Contains("OK") Then
+                MessageBox.Show("Message sent successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+            serialport1.Close()
+
+        Else
+            MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
         ' Call the MoveCollectionData function from the MongoDBHelper module
         RejectControllers.TransferDataByOne(sourceCollectionName, destCollectionName, AppointmentsId)
-        SendMessage1(receiverNumber, services, messageContent)
+
         ' Display a success message or perform any other necessary actions
         rejectsuccessfully.Show()
         Me.Close()
     End Sub
 
     Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
+
+    End Sub
+
+    Private Sub txtdoctor_TextChanged(sender As Object, e As EventArgs) Handles txtdoctor.TextChanged
 
     End Sub
 End Class

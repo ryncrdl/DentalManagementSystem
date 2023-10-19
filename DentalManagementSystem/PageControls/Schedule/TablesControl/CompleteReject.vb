@@ -97,8 +97,15 @@ Public Class CompleteReject
         Completed.completed(sourceCollectionName, destCollectionName, CompleteId)
 
         ' Display a success message or perform any other necessary actions
-        MessageSuccessfully.Show()
-        Me.Close()
+        Dim result As DialogResult = QuestionMessage.Show("Do you want to use Points?", "RFID Question")
+        If result = DialogResult.Yes Then
+            UsePoints.Show()
+        Else
+            MessageSuccessfully.Show()
+            Me.Close()
+        End If
+
+
     End Sub
 
     Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click

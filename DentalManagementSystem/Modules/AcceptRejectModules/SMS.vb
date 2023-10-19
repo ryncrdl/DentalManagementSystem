@@ -39,6 +39,7 @@ Module SMS
 
             If newresponse.Contains("OK") Then
                 MessageBox.Show("Message sent successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             Else
                 MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
