@@ -100,7 +100,7 @@ Public Class AcceptReject
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
-        cancelport()
+        serialport1.Close()
         Me.Close()
     End Sub
 

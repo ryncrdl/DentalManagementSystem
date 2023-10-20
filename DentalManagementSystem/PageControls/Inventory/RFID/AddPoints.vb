@@ -17,12 +17,11 @@ Public Class AddPoints
 
 
 
-
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Timer1.Stop() ' Stop the timer
-
+        rfidnumber.Focus()
         Dim getRFID As String = rfidnumber.Text.Trim()
 
         If getRFID.Length = 10 Then

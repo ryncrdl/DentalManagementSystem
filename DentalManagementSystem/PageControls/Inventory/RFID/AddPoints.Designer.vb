@@ -71,7 +71,7 @@ Partial Class AddPoints
         BtnClose.BackColor = Color.Transparent
         BtnClose.CustomizableEdges = CustomizableEdges3
         BtnClose.FillColor = Color.Transparent
-        BtnClose.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnClose.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
         BtnClose.IconColor = Color.Black
         BtnClose.Location = New Point(442, 0)
         BtnClose.Name = "BtnClose"
@@ -88,7 +88,7 @@ Partial Class AddPoints
         rfidnumber.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         rfidnumber.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         rfidnumber.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        rfidnumber.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point)
+        rfidnumber.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         rfidnumber.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         rfidnumber.Location = New Point(144, 345)
         rfidnumber.Name = "rfidnumber"
@@ -135,7 +135,7 @@ Partial Class AddPoints
         ' 
         ' AddPoints
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         ClientSize = New Size(485, 448)

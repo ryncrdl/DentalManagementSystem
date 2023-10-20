@@ -63,7 +63,7 @@ Public Class AnnouncementsControl
             Try
                 AnnouncementsControllers.DeleteAnnouncement(announcementId, AnnouncementsTable)
             Catch ex As Exception
-                ErrorMessage.Show("Error deleting doctor: ")
+                ErrorMessage.Show("Error deleting announcements: ")
             End Try
         End If
     End Sub
