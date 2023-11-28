@@ -56,4 +56,8 @@ Public Class AdminRegistration
     Private Sub txtconfirmpassword_IconRightClick(sender As Object, e As EventArgs) Handles txtconfirmpassword.IconRightClick
         IconsPassword.ShowHidePasswordRegister(txtpassword, txtconfirmpassword)
     End Sub
+
+    Private Sub txtconfirmpassword_TextChanged(sender As Object, e As EventArgs) Handles txtconfirmpassword.TextChanged
+
+    End Sub
 End Class

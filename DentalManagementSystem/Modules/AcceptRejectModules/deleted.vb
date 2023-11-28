@@ -1,6 +1,6 @@
 ﻿Imports MongoDB.Bson
 Imports MongoDB.Driver
-Module canceled
+Module deleted
     Private client As MongoClient
     Private database As IMongoDatabase
 
@@ -15,10 +15,10 @@ Module canceled
         End Try
     End Sub
 
-    Sub canceled(approved As String, canceled As String, selectedDocumentId As String)
+    Sub canceled(rejected As String, deleted As String, selectedDocumentId As String)
         ' Get references to the source and destination collections
-        Dim sourceCollection As IMongoCollection(Of BsonDocument) = database.GetCollection(Of BsonDocument)(approved)
-        Dim destCollection As IMongoCollection(Of BsonDocument) = database.GetCollection(Of BsonDocument)(canceled)
+        Dim sourceCollection As IMongoCollection(Of BsonDocument) = database.GetCollection(Of BsonDocument)(rejected)
+        Dim destCollection As IMongoCollection(Of BsonDocument) = database.GetCollection(Of BsonDocument)(deleted)
 
         Try
             ' Define a filter to target the selected document by its _id

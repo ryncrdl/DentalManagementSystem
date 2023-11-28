@@ -175,7 +175,7 @@ Partial Class InventoryControl
         BtnPoints.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnPoints.FillColor = Color.Empty
         BtnPoints.FillColor2 = Color.Empty
-        BtnPoints.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnPoints.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnPoints.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnPoints.Location = New Point(196, 210)
         BtnPoints.Name = "BtnPoints"
@@ -226,7 +226,7 @@ Partial Class InventoryControl
         BtnDeleted.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnDeleted.FillColor = Color.Empty
         BtnDeleted.FillColor2 = Color.Empty
-        BtnDeleted.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnDeleted.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnDeleted.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnDeleted.Location = New Point(500, 210)
         BtnDeleted.Name = "BtnDeleted"
@@ -277,7 +277,7 @@ Partial Class InventoryControl
         BtnHistory.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnHistory.FillColor = Color.Empty
         BtnHistory.FillColor2 = Color.Empty
-        BtnHistory.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnHistory.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnHistory.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnHistory.Location = New Point(350, 210)
         BtnHistory.Name = "BtnHistory"
@@ -329,7 +329,7 @@ Partial Class InventoryControl
         BtnAvail.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnAvail.FillColor = Color.Empty
         BtnAvail.FillColor2 = Color.Empty
-        BtnAvail.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnAvail.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnAvail.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnAvail.Location = New Point(40, 210)
         BtnAvail.Name = "BtnAvail"
@@ -340,7 +340,7 @@ Partial Class InventoryControl
         ' 
         ' InventoryControl
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         Controls.Add(BtnDeleted)

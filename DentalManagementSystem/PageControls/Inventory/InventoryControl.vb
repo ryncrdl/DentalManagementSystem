@@ -10,4 +10,8 @@
     Private Sub BtnHistory_Click(sender As Object, e As EventArgs) Handles BtnHistory.Click
         History.ShowDialog()
     End Sub
+
+    Private Sub BtnDeleted_Click(sender As Object, e As EventArgs) Handles BtnDeleted.Click
+        deletedrejected.ShowDialog()
+    End Sub
 End Class
