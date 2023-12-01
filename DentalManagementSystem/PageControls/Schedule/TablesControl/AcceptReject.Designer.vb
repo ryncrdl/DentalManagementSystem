@@ -23,12 +23,10 @@ Partial Class AcceptReject
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -37,6 +35,10 @@ Partial Class AcceptReject
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -66,6 +68,7 @@ Partial Class AcceptReject
         Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
         Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         rejectsuccessfully = New Guna.UI2.WinForms.Guna2MessageDialog()
+        txtDocCon = New Guna.UI2.WinForms.Guna2TextBox()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -148,7 +151,7 @@ Partial Class AcceptReject
         ' 
         txtfullname.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtfullname.BorderRadius = 10
-        txtfullname.CustomizableEdges = CustomizableEdges7
+        txtfullname.CustomizableEdges = CustomizableEdges9
         txtfullname.DefaultText = ""
         txtfullname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtfullname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -166,7 +169,7 @@ Partial Class AcceptReject
         txtfullname.PasswordChar = ChrW(0)
         txtfullname.PlaceholderText = "Full Name"
         txtfullname.SelectedText = ""
-        txtfullname.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        txtfullname.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         txtfullname.Size = New Size(387, 49)
         txtfullname.TabIndex = 47
         ' 
@@ -179,13 +182,13 @@ Partial Class AcceptReject
         ' Guna2GradientPanel1
         ' 
         Guna2GradientPanel1.BackColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges19
+        Guna2GradientPanel1.CustomizableEdges = CustomizableEdges21
         Guna2GradientPanel1.Dock = DockStyle.Top
         Guna2GradientPanel1.FillColor = Color.DarkViolet
         Guna2GradientPanel1.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
-        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2GradientPanel1.Size = New Size(762, 30)
         Guna2GradientPanel1.TabIndex = 48
         ' 
@@ -194,7 +197,7 @@ Partial Class AcceptReject
         BtnCancel.BorderColor = Color.FromArgb(CByte(94), CByte(105), CByte(255))
         BtnCancel.BorderRadius = 10
         BtnCancel.BorderThickness = 1
-        BtnCancel.CustomizableEdges = CustomizableEdges9
+        BtnCancel.CustomizableEdges = CustomizableEdges11
         BtnCancel.DisabledState.BorderColor = Color.DarkGray
         BtnCancel.DisabledState.CustomBorderColor = Color.DarkGray
         BtnCancel.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -209,7 +212,7 @@ Partial Class AcceptReject
         BtnCancel.HoverState.ForeColor = Color.White
         BtnCancel.Location = New Point(492, 534)
         BtnCancel.Name = "BtnCancel"
-        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        BtnCancel.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         BtnCancel.Size = New Size(231, 50)
         BtnCancel.TabIndex = 53
         BtnCancel.Text = "Cancel"
@@ -218,7 +221,7 @@ Partial Class AcceptReject
         ' 
         txtservice.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtservice.BorderRadius = 10
-        txtservice.CustomizableEdges = CustomizableEdges11
+        txtservice.CustomizableEdges = CustomizableEdges13
         txtservice.DefaultText = ""
         txtservice.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtservice.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -236,7 +239,7 @@ Partial Class AcceptReject
         txtservice.PasswordChar = ChrW(0)
         txtservice.PlaceholderText = "Service"
         txtservice.SelectedText = ""
-        txtservice.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        txtservice.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         txtservice.Size = New Size(387, 49)
         txtservice.TabIndex = 52
         ' 
@@ -244,7 +247,7 @@ Partial Class AcceptReject
         ' 
         txtdate.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtdate.BorderRadius = 10
-        txtdate.CustomizableEdges = CustomizableEdges13
+        txtdate.CustomizableEdges = CustomizableEdges15
         txtdate.DefaultText = ""
         txtdate.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtdate.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -262,7 +265,7 @@ Partial Class AcceptReject
         txtdate.PasswordChar = ChrW(0)
         txtdate.PlaceholderText = "Date"
         txtdate.SelectedText = ""
-        txtdate.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        txtdate.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         txtdate.Size = New Size(387, 49)
         txtdate.TabIndex = 51
         ' 
@@ -270,7 +273,7 @@ Partial Class AcceptReject
         ' 
         txtcontact.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtcontact.BorderRadius = 10
-        txtcontact.CustomizableEdges = CustomizableEdges15
+        txtcontact.CustomizableEdges = CustomizableEdges17
         txtcontact.DefaultText = ""
         txtcontact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtcontact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -288,14 +291,14 @@ Partial Class AcceptReject
         txtcontact.PasswordChar = ChrW(0)
         txtcontact.PlaceholderText = "Contact"
         txtcontact.SelectedText = ""
-        txtcontact.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        txtcontact.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         txtcontact.Size = New Size(387, 49)
         txtcontact.TabIndex = 50
         ' 
         ' BtnSave
         ' 
         BtnSave.BorderRadius = 10
-        BtnSave.CustomizableEdges = CustomizableEdges17
+        BtnSave.CustomizableEdges = CustomizableEdges19
         BtnSave.DisabledState.BorderColor = Color.DarkGray
         BtnSave.DisabledState.CustomBorderColor = Color.DarkGray
         BtnSave.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -307,7 +310,7 @@ Partial Class AcceptReject
         BtnSave.ForeColor = Color.White
         BtnSave.Location = New Point(12, 534)
         BtnSave.Name = "BtnSave"
-        BtnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        BtnSave.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         BtnSave.Size = New Size(234, 50)
         BtnSave.TabIndex = 49
         BtnSave.Text = "Approve"
@@ -336,7 +339,7 @@ Partial Class AcceptReject
         ' 
         txtdoctor.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         txtdoctor.BorderRadius = 10
-        txtdoctor.CustomizableEdges = CustomizableEdges5
+        txtdoctor.CustomizableEdges = CustomizableEdges7
         txtdoctor.DefaultText = ""
         txtdoctor.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         txtdoctor.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -354,7 +357,7 @@ Partial Class AcceptReject
         txtdoctor.PasswordChar = ChrW(0)
         txtdoctor.PlaceholderText = "Requested Doctor"
         txtdoctor.SelectedText = ""
-        txtdoctor.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        txtdoctor.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         txtdoctor.Size = New Size(387, 49)
         txtdoctor.TabIndex = 59
         ' 
@@ -371,12 +374,12 @@ Partial Class AcceptReject
         ' 
         ' Guna2PictureBox1
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges3
+        Guna2PictureBox1.CustomizableEdges = CustomizableEdges5
         Guna2PictureBox1.Image = My.Resources.Resources.logo
         Guna2PictureBox1.ImageRotate = 0F
         Guna2PictureBox1.Location = New Point(448, 75)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2PictureBox1.Size = New Size(300, 432)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 61
@@ -385,7 +388,7 @@ Partial Class AcceptReject
         ' Guna2GradientButton1
         ' 
         Guna2GradientButton1.BorderRadius = 10
-        Guna2GradientButton1.CustomizableEdges = CustomizableEdges1
+        Guna2GradientButton1.CustomizableEdges = CustomizableEdges3
         Guna2GradientButton1.DisabledState.BorderColor = Color.DarkGray
         Guna2GradientButton1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2GradientButton1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -397,7 +400,7 @@ Partial Class AcceptReject
         Guna2GradientButton1.ForeColor = Color.White
         Guna2GradientButton1.Location = New Point(252, 534)
         Guna2GradientButton1.Name = "Guna2GradientButton1"
-        Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2GradientButton1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2GradientButton1.Size = New Size(234, 50)
         Guna2GradientButton1.TabIndex = 62
         Guna2GradientButton1.Text = "Reject"
@@ -422,12 +425,40 @@ Partial Class AcceptReject
         rejectsuccessfully.Style = Guna.UI2.WinForms.MessageDialogStyle.Default
         rejectsuccessfully.Text = "Pending Rejected Successfully"
         ' 
+        ' txtDocCon
+        ' 
+        txtDocCon.BorderColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
+        txtDocCon.BorderRadius = 10
+        txtDocCon.CustomizableEdges = CustomizableEdges1
+        txtDocCon.DefaultText = ""
+        txtDocCon.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        txtDocCon.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        txtDocCon.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtDocCon.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        txtDocCon.Enabled = False
+        txtDocCon.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtDocCon.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        txtDocCon.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        txtDocCon.IconRightOffset = New Point(20, 0)
+        txtDocCon.IconRightSize = New Size(25, 25)
+        txtDocCon.Location = New Point(168, 425)
+        txtDocCon.Margin = New Padding(4, 4, 4, 4)
+        txtDocCon.Name = "txtDocCon"
+        txtDocCon.PasswordChar = ChrW(0)
+        txtDocCon.PlaceholderText = "Requested Doctor"
+        txtDocCon.SelectedText = ""
+        txtDocCon.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        txtDocCon.Size = New Size(387, 49)
+        txtDocCon.TabIndex = 64
+        txtDocCon.Visible = False
+        ' 
         ' AcceptReject
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(762, 599)
         ControlBox = False
+        Controls.Add(txtDocCon)
         Controls.Add(Guna2HtmlLabel7)
         Controls.Add(Guna2GradientButton1)
         Controls.Add(Guna2PictureBox1)
@@ -476,4 +507,5 @@ Partial Class AcceptReject
     Friend WithEvents Guna2GradientButton1 As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents rejectsuccessfully As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents txtDocCon As Guna.UI2.WinForms.Guna2TextBox
 End Class

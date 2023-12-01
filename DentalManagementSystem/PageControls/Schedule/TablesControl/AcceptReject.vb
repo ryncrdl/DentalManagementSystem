@@ -36,7 +36,7 @@ Public Class AcceptReject
     End Sub
     Private Sub AcceptReject_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txtfullname, txtcontact, txtdate, txtservice, txtdoctor}
+        data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txtfullname, txtcontact, txtdate, txtservice, txtdoctor, txtDocCon}
         Connection.ConnectToMongoDB("appointments")
         ' Populate the form controls with the fetched data
 
@@ -61,6 +61,9 @@ Public Class AcceptReject
         If rowImage.ContainsKey("Payment") Then
             Guna2PictureBox1.Image = DirectCast(rowImage("Payment"), Image)
         End If
+        If rowData.ContainsKey("DocCon") Then
+            txtDocCon.Text = rowData("DocCon")
+        End If
 
         If rowData.ContainsKey("ID") Then
             Me.AppointmentsId = rowData("ID")
@@ -82,6 +85,7 @@ Public Class AcceptReject
             appointments("Date") = txtdate.Text
             appointments("Service") = txtservice.Text
             appointments("Doctor") = txtdoctor.Text
+
 
             If Guna2PictureBox1.Image IsNot Nothing Then
                 ' Convert the image to a base64 string
@@ -109,6 +113,7 @@ Public Class AcceptReject
         Dim receiverNumber As String = txtcontact.Text
         Dim messageContent As String = txtdate.Text
         Dim services As String = txtservice.Text
+        Dim docnumber As String = txtDocCon.Text
 
         ' Check if the receiver's number and message content are not empty
 
@@ -116,15 +121,37 @@ Public Class AcceptReject
         Dim sourceCollectionName As String = "appointments"
         Dim destCollectionName As String = "approved"
 
-
-
-        ' Format the AT command to send the message
-        Dim atCommand As String = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
+        Dim atCommand As String = "AT+CMGS=" & """" & docnumber & """" & vbCr
 
         If serialport1.IsOpen = True Then
             serialport1.Write("AT" & vbCrLf)
             serialport1.Write("AT+CMGF=1" & vbCrLf)
             serialport1.Write(atCommand)
+            Dim response As String = serialport1.ReadExisting()
+            Do Until response.Contains(">")
+                response &= serialport1.ReadExisting()
+            Loop
+            serialport1.Write("You have " & services & " appointment  scheduled on " & messageContent & "." & Chr(26))
+            System.Threading.Thread.Sleep(5000)
+            Dim newresponse = serialport1.ReadExisting()
+
+            If newresponse.Contains("OK") Then
+
+            Else
+                MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+        Else
+            MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+        ' Format the AT command to send the message
+        Dim atCommands = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
+
+        If serialport1.IsOpen = True Then
+            serialport1.Write("AT" & vbCrLf)
+            serialport1.Write("AT+CMGF=1" & vbCrLf)
+            serialport1.Write(atCommands)
             Dim response As String = serialport1.ReadExisting()
             Do Until response.Contains(">")
                 response &= serialport1.ReadExisting()

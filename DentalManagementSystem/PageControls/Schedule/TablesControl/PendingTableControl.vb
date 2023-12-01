@@ -74,6 +74,7 @@ Public Class PendingTableControl
         rowData("Dates") = PendingTable.Rows(selectedRowIndex).Cells("Dates").Value.ToString()
         rowData("Service") = PendingTable.Rows(selectedRowIndex).Cells("Service").Value.ToString()
         rowData("Doctor") = PendingTable.Rows(selectedRowIndex).Cells("Doctor").Value.ToString()
+        rowData("DocCon") = PendingTable.Rows(selectedRowIndex).Cells("DocCon").Value.ToString()
 
         Return rowData
     End Function

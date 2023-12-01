@@ -30,6 +30,7 @@ Partial Class PendingTableControl
         Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         PendingTable = New Guna.UI2.WinForms.Guna2DataGridView()
+        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
         ID = New DataGridViewTextBoxColumn()
         ClientsId = New DataGridViewTextBoxColumn()
         Fullname = New DataGridViewTextBoxColumn()
@@ -38,7 +39,7 @@ Partial Class PendingTableControl
         Service = New DataGridViewTextBoxColumn()
         Doctor = New DataGridViewTextBoxColumn()
         Payment = New DataGridViewImageColumn()
-        Guna2Elipse2 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        DocCon = New DataGridViewTextBoxColumn()
         CType(PendingTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -69,7 +70,7 @@ Partial Class PendingTableControl
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
         PendingTable.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         PendingTable.ColumnHeadersHeight = 44
-        PendingTable.Columns.AddRange(New DataGridViewColumn() {ID, ClientsId, Fullname, Contact, Dates, Service, Doctor, Payment})
+        PendingTable.Columns.AddRange(New DataGridViewColumn() {ID, ClientsId, Fullname, Contact, Dates, Service, Doctor, Payment, DocCon})
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
@@ -123,6 +124,10 @@ Partial Class PendingTableControl
         PendingTable.ThemeStyle.RowsStyle.Height = 35
         PendingTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         PendingTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.White
+        ' 
+        ' Guna2Elipse2
+        ' 
+        Guna2Elipse2.BorderRadius = 20
         ' 
         ' ID
         ' 
@@ -194,9 +199,13 @@ Partial Class PendingTableControl
         Payment.SortMode = DataGridViewColumnSortMode.Automatic
         Payment.Width = 101
         ' 
-        ' Guna2Elipse2
+        ' DocCon
         ' 
-        Guna2Elipse2.BorderRadius = 20
+        DocCon.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        DocCon.HeaderText = "DocCon"
+        DocCon.Name = "DocCon"
+        DocCon.ReadOnly = True
+        DocCon.Visible = False
         ' 
         ' PendingTableControl
         ' 
@@ -219,4 +228,5 @@ Partial Class PendingTableControl
     Friend WithEvents Service As DataGridViewTextBoxColumn
     Friend WithEvents Doctor As DataGridViewTextBoxColumn
     Friend WithEvents Payment As DataGridViewImageColumn
+    Friend WithEvents DocCon As DataGridViewTextBoxColumn
 End Class
