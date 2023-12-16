@@ -69,7 +69,7 @@ Partial Class AdminRegistration
         Guna2GradientPanel3.Location = New Point(0, 30)
         Guna2GradientPanel3.Name = "Guna2GradientPanel3"
         Guna2GradientPanel3.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2GradientPanel3.Size = New Size(347, 463)
+        Guna2GradientPanel3.Size = New Size(347, 562)
         Guna2GradientPanel3.TabIndex = 5
         ' 
         ' txtconfirmpassword

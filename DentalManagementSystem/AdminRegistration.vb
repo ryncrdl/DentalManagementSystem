@@ -29,35 +29,26 @@ Public Class AdminRegistration
         Dim password As String = txtpassword.Text
         Dim confirmPassword As String = txtconfirmpassword.Text
 
-        If String.IsNullOrWhiteSpace(username) Or String.IsNullOrWhiteSpace(password) Or String.IsNullOrWhiteSpace(confirmPassword) Then
-            ErrorMessage.Show("All fields are required.", "Registration Error")
+        If String.IsNullOrEmpty(username) Or String.IsNullOrEmpty(password) Then
+            ErrorMessage.Show("All fields are required.", "Registation Error")
         Else
-            Try
-                Dim admin As BsonDocument = New BsonDocument()
-                admin.Add("name", username)
-                admin.Add("password", password)
+            If confirmPassword = password Then
+                verifyRegistration()
+                Dim getOTP As String = GMAIL_OTP_CODE()
 
-                If confirmPassword = password Then
-                    AdminControllers.InsertDataIntoMongoDB(admin)
-                    SuccessMessage.Show("Registration successful!", "Registration Success")
-                    txtusername.Clear()
-                    txtpassword.Clear()
-                    txtconfirmpassword.Clear()
-                    Me.Hide()
-                Else
-                    ErrorMessage.Show("Passwords do not match. Please re-enter your password.", "Registation Error")
-                End If
-            Catch ex As Exception
-                ErrorMessage.Show(ex.Message, "Registration Error")
-            End Try
+                txtusername.Clear()
+                txtpassword.Clear()
+                txtconfirmpassword.Clear()
+                Dim verification As New Verification(username, password, getOTP)
+                verification.ShowDialog()
+                Me.Close()
+            Else
+                ErrorMessage.Show("Passwords do not match. Please re-enter your password.", "Registation Error")
+            End If
         End If
     End Sub
 
     Private Sub txtconfirmpassword_IconRightClick(sender As Object, e As EventArgs) Handles txtconfirmpassword.IconRightClick
         IconsPassword.ShowHidePasswordRegister(txtpassword, txtconfirmpassword)
-    End Sub
-
-    Private Sub txtconfirmpassword_TextChanged(sender As Object, e As EventArgs) Handles txtconfirmpassword.TextChanged
-
     End Sub
 End Class

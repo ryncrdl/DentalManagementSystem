@@ -58,6 +58,8 @@ Public Class OverviewControl
         noOfCompleted.Text = GetOverviewCount("completed")
         noOfCancelled.Text = GetOverviewCount("canceled")
 
+
+
     End Sub
 
     Private Sub BtnPending_Click(sender As Object, e As EventArgs) Handles BtnPending.Click
@@ -76,12 +78,5 @@ Public Class OverviewControl
         DisplayTime.Text = "Time: " + currentTime.ToString("hh:mm:ss tt")
     End Sub
 
-    Private Sub Guna2Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel5.Paint
-
-    End Sub
-
-    Private Sub Guna2Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2Panel2.Paint
-
-    End Sub
 
 End Class
