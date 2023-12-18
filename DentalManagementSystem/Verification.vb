@@ -47,4 +47,8 @@ Public Class Verification
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
     End Sub
+
+    Private Sub txtCode_TextChanged(sender As Object, e As EventArgs) Handles txtCode.TextChanged
+
+    End Sub
 End Class

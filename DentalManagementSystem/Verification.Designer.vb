@@ -68,7 +68,7 @@ Partial Class Verification
         txtCode.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtCode.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         txtCode.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        txtCode.Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point)
+        txtCode.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
         txtCode.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         txtCode.IconLeftOffset = New Point(10, 0)
         txtCode.IconLeftSize = New Size(25, 25)
@@ -95,7 +95,7 @@ Partial Class Verification
         BtnVerify.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnVerify.FillColor = Color.DarkViolet
         BtnVerify.FillColor2 = Color.FromArgb(CByte(94), CByte(105), CByte(255))
-        BtnVerify.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnVerify.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnVerify.ForeColor = Color.White
         BtnVerify.Location = New Point(34, 240)
         BtnVerify.Name = "BtnVerify"
@@ -161,7 +161,7 @@ Partial Class Verification
         BtnCancel.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         BtnCancel.FillColor = Color.Empty
         BtnCancel.FillColor2 = Color.Empty
-        BtnCancel.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point)
+        BtnCancel.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
         BtnCancel.ForeColor = Color.FromArgb(CByte(125), CByte(137), CByte(149))
         BtnCancel.Location = New Point(34, 298)
         BtnCancel.Name = "BtnCancel"
@@ -190,7 +190,7 @@ Partial Class Verification
         ' 
         ' Verification
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(330, 376)
         Controls.Add(BtnCancel)
@@ -201,7 +201,7 @@ Partial Class Verification
         Controls.Add(txtCode)
         Controls.Add(Guna2GradientPanel1)
         FormBorderStyle = FormBorderStyle.None
-        name = "Verification"
+        Name = "Verification"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Verification"
         ResumeLayout(False)

