@@ -72,10 +72,10 @@ Partial Class UsePoints
         Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
         Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), Image)
         Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(0, -15)
+        Guna2PictureBox1.Location = New Point(-32, -33)
         Guna2PictureBox1.Name = "Guna2PictureBox1"
         Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2PictureBox1.Size = New Size(360, 395)
+        Guna2PictureBox1.Size = New Size(447, 423)
         Guna2PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         Guna2PictureBox1.TabIndex = 56
         Guna2PictureBox1.TabStop = False
@@ -141,7 +141,7 @@ Partial Class UsePoints
         rfidnumber.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         rfidnumber.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
         rfidnumber.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        rfidnumber.Location = New Point(54, 354)
+        rfidnumber.Location = New Point(94, 333)
         rfidnumber.Name = "rfidnumber"
         rfidnumber.PasswordChar = ChrW(0)
         rfidnumber.PlaceholderText = ""

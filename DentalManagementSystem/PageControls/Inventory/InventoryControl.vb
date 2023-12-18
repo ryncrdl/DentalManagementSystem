@@ -14,4 +14,8 @@
     Private Sub BtnDeleted_Click(sender As Object, e As EventArgs) Handles BtnDeleted.Click
         deletedrejected.ShowDialog()
     End Sub
+
+    Private Sub BtnNotify_Click(sender As Object, e As EventArgs) Handles BtnNotify.Click
+        notify.Show()
+    End Sub
 End Class
