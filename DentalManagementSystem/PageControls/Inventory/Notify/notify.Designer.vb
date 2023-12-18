@@ -52,6 +52,9 @@ Partial Class notify
         Guna2Elipse3 = New Guna.UI2.WinForms.Guna2Elipse(components)
         BtnIneligible = New Guna.UI2.WinForms.Guna2GradientButton()
         BtnNotify = New Guna.UI2.WinForms.Guna2GradientButton()
+        ErrorMessage = New Guna.UI2.WinForms.Guna2MessageDialog()
+        messok = New Guna.UI2.WinForms.Guna2MessageDialog()
+        er = New Guna.UI2.WinForms.Guna2MessageDialog()
         CType(PendingTable, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -304,6 +307,33 @@ Partial Class notify
         BtnNotify.TabIndex = 82
         BtnNotify.Text = "Notify"
         ' 
+        ' ErrorMessage
+        ' 
+        ErrorMessage.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        ErrorMessage.Caption = Nothing
+        ErrorMessage.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error
+        ErrorMessage.Parent = Nothing
+        ErrorMessage.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        ErrorMessage.Text = Nothing
+        ' 
+        ' messok
+        ' 
+        messok.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        messok.Caption = "Notify"
+        messok.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        messok.Parent = Nothing
+        messok.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        messok.Text = "Sent Successfully"
+        ' 
+        ' er
+        ' 
+        er.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        er.Caption = "Notify"
+        er.Icon = Guna.UI2.WinForms.MessageDialogIcon.Warning
+        er.Parent = Nothing
+        er.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        er.Text = "Error Sending Message"
+        ' 
         ' notify
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -339,4 +369,7 @@ Partial Class notify
     Friend WithEvents Guna2Elipse3 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents BtnIneligible As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents BtnNotify As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents ErrorMessage As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents messok As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents er As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

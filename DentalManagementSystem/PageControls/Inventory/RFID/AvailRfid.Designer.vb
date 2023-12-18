@@ -320,7 +320,7 @@ Partial Class AvailRfid
         Guna2CustomGradientPanel1.Controls.Add(txterror)
         Guna2CustomGradientPanel1.Controls.Add(BtnSearch)
         Guna2CustomGradientPanel1.CustomizableEdges = CustomizableEdges5
-        Guna2CustomGradientPanel1.Location = New Point(22, 193)
+        Guna2CustomGradientPanel1.Location = New Point(154, 193)
         Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
         Guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2CustomGradientPanel1.Size = New Size(390, 184)

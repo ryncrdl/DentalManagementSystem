@@ -69,6 +69,7 @@ Partial Class AcceptReject
         Guna2HtmlLabel7 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         rejectsuccessfully = New Guna.UI2.WinForms.Guna2MessageDialog()
         txtDocCon = New Guna.UI2.WinForms.Guna2TextBox()
+        goods = New Guna.UI2.WinForms.Guna2MessageDialog()
         CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -452,6 +453,15 @@ Partial Class AcceptReject
         txtDocCon.TabIndex = 64
         txtDocCon.Visible = False
         ' 
+        ' goods
+        ' 
+        goods.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        goods.Caption = "Approved"
+        goods.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        goods.Parent = Nothing
+        goods.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark
+        goods.Text = "Sent Successfully"
+        ' 
         ' AcceptReject
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -508,4 +518,5 @@ Partial Class AcceptReject
     Friend WithEvents Guna2HtmlLabel7 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents rejectsuccessfully As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents txtDocCon As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents goods As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

@@ -123,6 +123,7 @@ Public Class AvailRfid
     Private Sub avail_CheckedChanged(sender As Object, e As EventArgs) Handles avail.CheckedChanged
         If avail.Checked Then
             txtRfid.Enabled = True
+            txtRfid.Clear()
             BtnSave.BringToFront()
         Else
             txtRfid.Enabled = False

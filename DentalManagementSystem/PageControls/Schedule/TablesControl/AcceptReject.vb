@@ -161,7 +161,7 @@ Public Class AcceptReject
             Dim newresponse = serialport1.ReadExisting()
 
             If newresponse.Contains("OK") Then
-                MessageBox.Show("Message sent successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                goods.Show()
                 AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName, AppointmentsId)
                 MessageSuccessfully.Show()
             Else
@@ -207,7 +207,7 @@ Public Class AcceptReject
             Dim newresponse = serialport1.ReadExisting()
 
             If newresponse.Contains("OK") Then
-                MessageBox.Show("Message sent successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                goods.Show()
             Else
                 MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
