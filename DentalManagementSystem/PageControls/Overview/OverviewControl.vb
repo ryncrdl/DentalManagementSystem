@@ -62,12 +62,6 @@ Public Class OverviewControl
 
     End Sub
 
-    Private Sub BtnPending_Click(sender As Object, e As EventArgs) Handles BtnPending.Click
-        If DashboardForm IsNot Nothing Then
-            DashboardForm.BtnClients.PerformClick()
-        End If
-    End Sub
-
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         DisplayDate.Text = "Date: " + DateTime.Now.ToString("MMMM dd, yyyy")
