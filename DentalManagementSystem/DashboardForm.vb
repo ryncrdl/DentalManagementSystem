@@ -71,7 +71,10 @@ Public Class DashboardForm
         End If
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
+    Private Sub BtnClose_Click(sender As Object, e As EventArgs) Handles BtnClose.Click
+        Dim result As DialogResult = QuestionMessage.Show("Are you sure you want to exit?", "Confirm Exit")
+        If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class

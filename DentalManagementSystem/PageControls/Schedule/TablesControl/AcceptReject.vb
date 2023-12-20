@@ -68,8 +68,11 @@ Public Class AcceptReject
         If rowData.ContainsKey("ID") Then
             Me.AppointmentsId = rowData("ID")
         End If
-        InitializeSerialPort()
+        If IsGSMModuleAvailable() Then
+            InitializeSerialPort()
+        Else
 
+        End If
     End Sub
     Private Sub FetchDoctorData(clientsId As String, collectionName As String)
         Dim database As IMongoDatabase = Connection.database
@@ -104,84 +107,48 @@ Public Class AcceptReject
     End Sub
 
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
-        serialport1.Close()
+        If IsGSMModuleAvailable() Then
+            serialport1.Close()
+        End If
+
         Me.Close()
     End Sub
 
 
-    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
+    Private Async Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
         Dim receiverNumber As String = txtcontact.Text
         Dim messageContent As String = txtdate.Text
         Dim services As String = txtservice.Text
         Dim docnumber As String = txtDocCon.Text
 
-        ' Check if the receiver's number and message content are not empty
-
-
         Dim sourceCollectionName As String = "appointments"
         Dim destCollectionName As String = "approved"
 
-        Dim atCommand As String = "AT+CMGS=" & """" & docnumber & """" & vbCr
-
-        If serialport1.IsOpen = True Then
-            serialport1.Write("AT" & vbCrLf)
-            serialport1.Write("AT+CMGF=1" & vbCrLf)
-            serialport1.Write(atCommand)
-            Dim response As String = serialport1.ReadExisting()
-            Do Until response.Contains(">")
-                response &= serialport1.ReadExisting()
-            Loop
-            serialport1.Write("You have " & services & " appointment  scheduled on " & messageContent & "." & Chr(26))
-            System.Threading.Thread.Sleep(5000)
-            Dim newresponse = serialport1.ReadExisting()
-
-            If newresponse.Contains("OK") Then
-
-            Else
-                MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-
+        If IsGSMModuleAvailable() Then
+            Try
+                SendSMSWithGSM(docnumber, services, messageContent, receiverNumber, sourceCollectionName, destCollectionName)
+            Catch ex As Exception
+                MessageBox.Show($"Failed to send SMS using GSM module. Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+            Me.Close()
         Else
-            MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End If
+            Dim message As String = $"Your {services} appointment is successfully booked on {messageContent}."
+            Dim result As String = Await SMSNotification.SendSMSNotification(receiverNumber, message)
 
-        ' Format the AT command to send the message
-        Dim atCommands = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
-
-        If serialport1.IsOpen = True Then
-            serialport1.Write("AT" & vbCrLf)
-            serialport1.Write("AT+CMGF=1" & vbCrLf)
-            serialport1.Write(atCommands)
-            Dim response As String = serialport1.ReadExisting()
-            Do Until response.Contains(">")
-                response &= serialport1.ReadExisting()
-            Loop
-            serialport1.Write("Your " & services & " appointment is successfully booked on " & messageContent & "." & Chr(26))
-            System.Threading.Thread.Sleep(5000)
-            Dim newresponse = serialport1.ReadExisting()
-
-            If newresponse.Contains("OK") Then
-                goods.Show()
+            If Not String.IsNullOrEmpty(result) Then ' Check if the result is not empty or null
                 AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName, AppointmentsId)
-                MessageSuccessfully.Show()
+                goods.Show()
+                Me.Close()
             Else
-                MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Failed to send SMS using Semaphore API.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-            serialport1.Close()
-
-        Else
-            MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
-        ' Call the MoveCollectionData function from the MongoDBHelper module
 
 
-        ' Display a success message or perform any other necessary actions
-
-        Me.Close()
     End Sub
 
-    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
+    Private Async Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles Guna2GradientButton1.Click
         Dim receiverNumber As String = txtcontact.Text
         Dim messageContent As String = txtdate.Text
         Dim services As String = txtservice.Text
@@ -191,10 +158,56 @@ Public Class AcceptReject
         Dim destCollectionName As String = "rejected"
 
 
-        ' Format the AT command to send the message
-        Dim atCommand As String = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
+        If IsGSMModuleAvailable() Then
+            Dim atCommand As String = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
 
-        If serialport1.IsOpen = True Then
+            If serialport1.IsOpen = True Then
+                serialport1.Write("AT" & vbCrLf)
+                serialport1.Write("AT+CMGF=1" & vbCrLf)
+                serialport1.Write(atCommand)
+                Dim response As String = serialport1.ReadExisting()
+                Do Until response.Contains(">")
+                    response &= serialport1.ReadExisting()
+                Loop
+                serialport1.Write("Sorry your " & services & " appointment on " & messageContent & " is rejected due to invalid receipt or information. " & Chr(26))
+                System.Threading.Thread.Sleep(5000)
+                Dim newresponse = serialport1.ReadExisting()
+
+                If newresponse.Contains("OK") Then
+                    goods.Show()
+                Else
+                    MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+                serialport1.Close()
+
+            Else
+                MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+            RejectControllers.TransferDataByOne(sourceCollectionName, destCollectionName, AppointmentsId)
+
+            rejectsuccessfully.Show()
+
+
+        Else
+            Dim message As String = "Sorry your " & services & " appointment on " & messageContent & " is rejected due to invalid receipt or information. " & Chr(26)
+            Dim result As String = Await SMSNotification.SendSMSNotification(receiverNumber, message)
+            If Not String.IsNullOrEmpty(result) Then
+                RejectControllers.TransferDataByOne(sourceCollectionName, destCollectionName, AppointmentsId)
+                rejectsuccessfully.Show()
+                Me.Close()
+            Else
+                MessageBox.Show("Failed to send SMS using Semaphore API.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
+
+        End If
+        Me.Close()
+    End Sub
+
+    Private Sub SendSMSWithGSM(docnumber As String, services As String, messageContent As String, receiverNumber As String, sourceCollectionName As String, destCollectionName As String)
+        Dim atCommand As String = "AT+CMGS=" & """" & docnumber & """" & vbCr
+
+        If serialport1.IsOpen Then
             serialport1.Write("AT" & vbCrLf)
             serialport1.Write("AT+CMGF=1" & vbCrLf)
             serialport1.Write(atCommand)
@@ -202,34 +215,42 @@ Public Class AcceptReject
             Do Until response.Contains(">")
                 response &= serialport1.ReadExisting()
             Loop
-            serialport1.Write("Sorry your " & services & " appointment on " & messageContent & " is rejected due to invalid receipt or information. " & Chr(26))
+            serialport1.Write($"You have {services} appointment scheduled on {messageContent}.{Chr(26)}")
             System.Threading.Thread.Sleep(5000)
             Dim newresponse = serialport1.ReadExisting()
 
-            If newresponse.Contains("OK") Then
-                goods.Show()
-            Else
-                MessageBox.Show("Failed to send message.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            If Not newresponse.Contains("OK") Then
+                Throw New Exception("Failed to send message using GSM module.")
             End If
+
+            ' Format the AT command to send the message
+            Dim atCommands = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
+
+            serialport1.Write("AT" & vbCrLf)
+            serialport1.Write("AT+CMGF=1" & vbCrLf)
+            serialport1.Write(atCommands)
+            response = serialport1.ReadExisting()
+            Do Until response.Contains(">")
+                response &= serialport1.ReadExisting()
+            Loop
+            serialport1.Write($"Your {services} appointment is successfully booked on {messageContent}.{Chr(26)}")
+            System.Threading.Thread.Sleep(5000)
+            newresponse = serialport1.ReadExisting()
+
+            If Not newresponse.Contains("OK") Then
+                Throw New Exception("Failed to send message using GSM module.")
+            End If
+
+            goods.Show()
+            AcceptControllers.TransferDataOneByOne(sourceCollectionName, destCollectionName, AppointmentsId)
+            MessageSuccessfully.Show()
             serialport1.Close()
-
         Else
-            MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Throw New Exception("Error: Invalid Port")
         End If
-
-        ' Call the MoveCollectionData function from the MongoDBHelper module
-        RejectControllers.TransferDataByOne(sourceCollectionName, destCollectionName, AppointmentsId)
-
-        ' Display a success message or perform any other necessary actions
-        rejectsuccessfully.Show()
-        Me.Close()
     End Sub
 
-    Private Sub Guna2PictureBox1_Click(sender As Object, e As EventArgs) Handles Guna2PictureBox1.Click
-
-    End Sub
-
-    Private Sub txtdoctor_TextChanged(sender As Object, e As EventArgs) Handles txtdoctor.TextChanged
-
-    End Sub
+    Private Function IsGSMModuleAvailable() As Boolean
+        Return serialport1 IsNot Nothing AndAlso serialport1.IsOpen
+    End Function
 End Class
