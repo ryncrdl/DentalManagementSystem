@@ -1,4 +1,5 @@
-﻿Imports MongoDB.Bson
+﻿Imports Guna.UI2.WinForms
+Imports MongoDB.Bson
 Imports MongoDB.Driver
 
 Public Class UsePoints
@@ -50,13 +51,8 @@ Public Class UsePoints
     End Sub
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-        txt3.Text = "0"
-        If RFIDADDPOINTS.ClearPointsBypoints(txt3.Text) Then
-            MessageBox.Show("ok")
-        Else
-            MessageBox.Show("error")
-        End If
 
+        txt3.Text = "0"
 
     End Sub
 
@@ -98,6 +94,24 @@ Public Class UsePoints
             Return 0
         End Try
     End Function
+
+    Private Sub Guna2GradientButton1_Click(sender As Object, e As EventArgs) Handles save.Click
+        Dim rfidnumber1 As String = rfidnumber.Text
+        Dim suc As String = txt3.Text
+        If RFIDADDPOINTS.ClearPoints(rfidnumber1, suc) Then
+
+            pts.Text = "use"
+            messok.Show()
+
+        Else
+            MessageBox.Show("error")
+        End If
+
+
+
+
+
+    End Sub
 
 
 End Class
