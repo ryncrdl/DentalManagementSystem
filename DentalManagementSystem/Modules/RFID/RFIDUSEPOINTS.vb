@@ -7,7 +7,7 @@ Module RFIDUSEPOINTS
         End If
         Return Connection.collection
     End Function
-    Public Function findallByRfid(rfidNumber As String) As (String, String, Integer)
+    Public Function findallByRfid(rfidNumber As String) As (ObjectId, String, String, Integer)
         Dim collection = GetMongoDBCollection12() ' Replace with the actual name of the "CLIENTs" collection
 
         ' Define a filter based on the rfidNumber
@@ -20,13 +20,14 @@ Module RFIDUSEPOINTS
         Dim document = collection.Find(filter).Project(projection).FirstOrDefault()
 
         If document IsNot Nothing Then
+            Dim id As ObjectId = document("_id").AsObjectId
             Dim RFID As String = document("rfidNumber").AsString
             Dim fullName As String = document("fullName").AsString
             Dim points As Integer = document("points").AsInt32
-            Return (RFID, fullName, points)
+            Return (id, RFID, fullName, points)
         Else
             ' Return a default value or handle the case where no matching document is found
-            Return ("", "", 0)
+            Return (ObjectId.Empty, "", "", 0)
         End If
     End Function
 
@@ -97,12 +98,32 @@ Module RFIDUSEPOINTS
         Dim documents = collection.Find(filter).ToList()
 
         For Each doc As BsonDocument In documents
-            If doc.Contains("rfidNumber") Then
+            If doc.Contains("_id") Then
                 Dim fullName As String = doc("rfidNumber").AsString
                 fullNames.Add(fullName)
             End If
         Next
 
         Return fullNames
+    End Function
+
+    Public Function FindAllrfidById(rfidNumber As String) As List(Of ObjectId)
+
+        Dim collection = GetMongoDBCollection12()
+        Dim getId As New List(Of ObjectId)()
+
+        Dim filter = Builders(Of BsonDocument).Filter.Eq(Of String)("rfidNumber", rfidNumber)
+
+        Dim documents = collection.Find(filter).ToList()
+
+        For Each doc As BsonDocument In documents
+
+            If doc.Contains("rfidNumber") Then
+                Dim id As ObjectId = doc("_id").AsObjectId
+                getId.Add(id)
+            End If
+        Next
+
+        Return getId
     End Function
 End Module

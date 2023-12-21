@@ -30,7 +30,12 @@ Public Class notify
 
         ' Start monitoring for changes in a separate task
         Task.Run(AddressOf MonitorForChanges)
-        InitializeSerialPort()
+        Try
+            InitializeSerialPort()
+            MessageBox.Show("GSM has been Activated")
+        Catch ex As Exception
+            MessageBox.Show("SMS Api Activated")
+        End Try
     End Sub
     Private Async Sub MonitorForChanges()
         Await changeStream.ForEachAsync(Sub(change)
@@ -93,10 +98,14 @@ Public Class notify
 
     Private Sub BtnIneligible_Click(sender As Object, e As EventArgs) Handles BtnIneligible.Click
         Me.Close()
-        serialport1.Close()
+        If IsGSMModuleAvailable() Then
+            serialport1.Close()
+        End If
+
     End Sub
 
-    Private Sub BtnNotify_Click(sender As Object, e As EventArgs) Handles BtnNotify.Click
+    Private Async Sub BtnNotify_Click(sender As Object, e As EventArgs) Handles BtnNotify.Click
+
         If PendingTable.CurrentRow Is Nothing Then
             ErrorMessage.Show("Please select a row to notify.")
             Return
@@ -110,34 +119,59 @@ Public Class notify
         Dim service As String = rowData("Service")
         Dim fname As String = rowData("Fullname")
 
-        Try
-            Dim atCommands = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
 
-            If serialport1.IsOpen = True Then
-                serialport1.Write("AT" & vbCrLf)
-                serialport1.Write("AT+CMGF=1" & vbCrLf)
-                serialport1.Write(atCommands)
-                Dim response As String = serialport1.ReadExisting()
-                Do Until response.Contains(">")
-                    response &= serialport1.ReadExisting()
-                Loop
-                serialport1.Write("Hi " & fname & ", this is a reminder for your " & service & " appointment that successfully booked on " & messageContent & "." & Chr(26))
-                System.Threading.Thread.Sleep(5000)
-                Dim newresponse = serialport1.ReadExisting()
+        If IsGSMModuleAvailable() Then
+            Try
+                Dim atCommands = "AT+CMGS=" & """" & receiverNumber & """" & vbCr
 
-                If newresponse.Contains("OK") Then
-                    messok.Show()
+                If serialport1.IsOpen = True Then
+                    serialport1.Write("AT" & vbCrLf)
+                    serialport1.Write("AT+CMGF=1" & vbCrLf)
+                    serialport1.Write(atCommands)
+                    Dim response As String = serialport1.ReadExisting()
+                    Do Until response.Contains(">")
+                        response &= serialport1.ReadExisting()
+                    Loop
+                    serialport1.Write("Hi " & fname & ", this is a reminder for your " & service & " appointment that successfully booked on " & messageContent & "." & Chr(26))
+                    System.Threading.Thread.Sleep(5000)
+                    Dim newresponse = serialport1.ReadExisting()
+
+                    If newresponse.Contains("OK") Then
+                        messok.Show()
+                    Else
+                        er.Show()
+                    End If
+
+
                 Else
-                    er.Show()
+                    MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
+            Catch ex As Exception
+                ErrorMessage.Show("Error deleting doctor: ")
+            End Try
+        Else
+
+            Dim message As String = $"Hi " & fname & ", this is a reminder for your " & service & " appointment that successfully booked on " & messageContent & "." & Chr(26)
+            Dim result As String = Await SMSNotification.SendSMSNotification(receiverNumber, message)
 
 
+            If Not String.IsNullOrEmpty(result) Then
+                messok.Show()
+                Me.Close()
             Else
-                MessageBox.Show("Error: Invalid Port", "Port", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Failed to send SMS using Semaphore API.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-        Catch ex As Exception
-            ErrorMessage.Show("Error deleting doctor: ")
-        End Try
+
+
+
+        End If
+
+
+
 
     End Sub
+
+    Private Function IsGSMModuleAvailable() As Boolean
+        Return serialport1 IsNot Nothing AndAlso serialport1.IsOpen
+    End Function
 End Class

@@ -33,4 +33,30 @@ Module RFIDADDPOINTS
             Return False
         End Try
     End Function
+    Public Function ClearPointsBypoints(points As String) As Boolean
+        Try
+            Dim collection As IMongoCollection(Of BsonDocument) = GetClientsMongoCollection()
+
+            Dim filter As FilterDefinition(Of BsonDocument) = Builders(Of BsonDocument).Filter.And(
+                Builders(Of BsonDocument).Filter.Eq(Of String)("points", points)
+            )
+
+            ' Set the "points" field to 0 to clear it
+            Dim update As UpdateDefinition(Of BsonDocument) = Builders(Of BsonDocument).Update.Set(Of String)("points", 0)
+
+            Dim result As UpdateResult = collection.UpdateOne(filter, update)
+
+            If result.ModifiedCount > 0 Then
+                ' The update was successful
+                Return True
+            Else
+                ' No document matched the filter, or the field already had the desired value
+                Return False
+            End If
+        Catch ex As Exception
+            ' Handle exceptions if necessary
+            Return False
+        End Try
+
+    End Function
 End Module
