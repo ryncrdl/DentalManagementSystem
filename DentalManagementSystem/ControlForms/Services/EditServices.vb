@@ -37,7 +37,7 @@ Public Class EditServices
     End Sub
     Private Sub BtnCreate_Click(sender As Object, e As EventArgs) Handles BtnCreate.Click
         Dim isValidate As Boolean = False
-        DoctorValidation.ValidateData(data, isValidate)
+        ServicesValidation.ValidateData(data, isValidate)
         If (isValidate) Then
             Try
                 ' Create the equality filter for the doctor ID
@@ -56,7 +56,7 @@ Public Class EditServices
                     ' Replace the existing document with the updated one
                     collection.FindOneAndUpdate(filter, service)
                     messageOK.Show()
-                    CreateData(data)
+                    ServicesValidation.CreateDatas(data)
                     Me.Close()
 
                     RaiseEvent Servicesupdated(Me, EventArgs.Empty)
@@ -72,6 +72,9 @@ Public Class EditServices
     End Sub
 
     Private Sub EditServices_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+        Dim txtPayment As Control = txtPayment
 
 
         data = New List(Of Guna.UI2.WinForms.Guna2TextBox) From {txttitle, txtdescription, txtprice}
@@ -92,22 +95,25 @@ Public Class EditServices
             txtprice.Text = rowData("Price")
         End If
 
-        If rowData.ContainsKey("Payment") Then
+        If rowData.ContainsKey("Payment") AndAlso rowData("Payment") IsNot Nothing Then
             ' Check if txtPayment is a Guna2ComboBox
             If TypeOf txtPayment Is Guna.UI2.WinForms.Guna2ComboBox Then
                 ' Cast txtPayment to Guna2ComboBox and set its selected item or text
                 Dim comboBoxPayment As Guna.UI2.WinForms.Guna2ComboBox = DirectCast(txtPayment, Guna.UI2.WinForms.Guna2ComboBox)
-                comboBoxPayment.Text = rowData("Payment")
+                comboBoxPayment.Text = rowData("Payment").ToString()
             Else
                 ' Handle the case where txtPayment is not a Guna2ComboBox
                 ' You might want to display an error message or handle it accordingly
             End If
+        Else
+            ' Handle the case where "Payment" is null
+            ' You might want to set a default value or handle it according to your logic
         End If
+
 
         If rowData.ContainsKey("ID") Then
             Me.clientsId = rowData("ID")
         End If
-
     End Sub
 
     Private Sub BtnBrowse_Click(sender As Object, e As EventArgs) Handles BtnBrowse.Click
